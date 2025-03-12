@@ -234,7 +234,7 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMOD/La Rata Tostada Toca un Temazo.fspro
+  sourceProjectPath: Assets/FMOD/La_Rata_Tostada_Toca_un_Temazo.fspro
   sourceBankPath: Assets/FMOD/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
@@ -256,7 +256,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
@@ -270,7 +271,7 @@ MonoBehaviour:
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131623
-  HideSetupWizard: 0
+  HideSetupWizard: 1
   LastEventReferenceScanVersion: 131623
   Platforms:
   - {fileID: 3891770569311264707}
