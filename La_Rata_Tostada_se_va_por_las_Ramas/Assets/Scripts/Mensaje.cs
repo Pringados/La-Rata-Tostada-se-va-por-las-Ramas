@@ -13,24 +13,19 @@ public class Mensaje
     float tiempoEntreEstados;
     int nEstados;
     int estadoActual; float tActual;
-    Image UIrepresentation;
-    Inventario inventario;
+    GameObject UIrepresentation;
     bool destroyed;
 
-    public void setAtributos(Image im, int dest, int tEntreEstados, int nEstados)
+    public void setAtributos(GameObject im, int dest, int tEntreEstados, int nEstados)
     {
         destinatario = dest;
         tiempoEntreEstados = tEntreEstados;
         UIrepresentation = im;
-        color = im.tintColor;
+        color = im.GetComponent<Image>().tintColor;
         estadoActual = 0;
-        destroyed = true;
+        destroyed = false;
     }
-
-    public void setInventario(Inventario i)
-    {
-        inventario = i;
-    }
+    public bool isDestroyed() { return destroyed; }
     public void updateEstado()
     {
         tActual += Time.deltaTime;

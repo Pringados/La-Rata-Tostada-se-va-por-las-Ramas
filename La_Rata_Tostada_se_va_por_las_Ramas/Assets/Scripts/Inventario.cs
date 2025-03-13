@@ -34,7 +34,7 @@ public class Inventario : MonoBehaviour
 
     public Mensaje addMensaje(int destinatario)
     {
-        Image im = UI.getFreeLetterSpace();
+        GameObject im = UI.getFreeLetterSpace();
         if (im == null)
         {
             Debug.LogError("esto no debería pasar nunca Eduardo por favor detente");
@@ -52,6 +52,19 @@ public class Inventario : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        for (int i = 0; i < mensajes.Count; i++)
+
+        {
+            if (mensajes[i] != null)
+            {
+                mensajes[i].updateEstado();
+                if (mensajes[i].isDestroyed())
+                {
+                    //comprobación de q está yendo el jugador
+                    mensajes[i] = null;
+
+                }
+            }
+        }
     }
 }

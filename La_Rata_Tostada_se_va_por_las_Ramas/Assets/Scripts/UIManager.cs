@@ -34,13 +34,30 @@ public class UIManager : MonoBehaviour
         
     }
 
-    public Image getFreeLetterSpace()
+    public GameObject getFreeLetterSpace()
     {
         for(int i = 0; i <letters.Count; i++)
         {
             if (!busyLetters[i])
-                return letters[i].GetComponent<Image>();
+            {
+                //resetear el sprite de ruptura o desde fuera me la pela
+                busyLetters[i] = true;
+                return letters[i];
+            }
+                
         }
         return null;
+    }
+
+    public void deleteLetter(GameObject im)
+    {
+        for(int i =0; i < letters.Count;i++)
+        {
+            if (letters[i] == im)
+            {
+                busyLetters[i] = false;
+                im.SetActive(false);
+            }
+        }
     }
 }
