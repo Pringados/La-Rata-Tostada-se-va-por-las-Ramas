@@ -32,7 +32,16 @@ public class Mensaje
         if (tActual >= tiempoEntreEstados)
         {
             estadoActual++;
-            destroyed = true;
+            if(estadoActual >= nEstados)
+            {
+                destroyed = true;
+            }
+            else
+            {
+                //llamar al inventario o algo apra q cambie su sprite
+            }
+            tActual = 0;
+            
         }
     }
 }

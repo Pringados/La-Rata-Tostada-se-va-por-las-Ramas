@@ -25,6 +25,10 @@ public class Inventario : MonoBehaviour
     void Start()
     {
         gManager = gameObject.GetComponent<GameManager>();
+        for (int i = 0; i < mensajesMáximos; i++)
+        {
+            mensajes.Add(null);
+        }
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -41,9 +45,17 @@ public class Inventario : MonoBehaviour
         }
         else
         {
+            mensajesActuales++;
             Mensaje men = new Mensaje();
             men.setAtributos(im, destinatario, nTiempoEntreEstados, nEstados);
-            return men;
+            for (int i = 0; i < mensajes.Count; i++)
+            {
+                if (mensajes[i] == null)
+                {
+                    mensajes[i] = men;
+                    return men;
+                }
+            }
         }
 
         return null;
@@ -62,6 +74,7 @@ public class Inventario : MonoBehaviour
                 {
                     //comprobación de q está yendo el jugador
                     mensajes[i] = null;
+                    mensajesActuales--;
 
                 }
             }
