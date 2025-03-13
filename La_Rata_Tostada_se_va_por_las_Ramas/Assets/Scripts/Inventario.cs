@@ -13,7 +13,9 @@ public class Inventario : MonoBehaviour
     int mensajesActuales;
     private UIManager UI;
     private GameManager gManager;
+    [SerializeField]
     int nEstados;
+    [SerializeField]
     int nTiempoEntreEstados;
 
     private void Awake()
@@ -26,11 +28,11 @@ public class Inventario : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("INVENTARIO ACTUALIZADO");
+        Debug.Log("INVENTARIO PILLA EL UI MANAGER");
         UI = UIManager.Instance;
     }
 
-    public void addMensaje(int destinatario)
+    public Mensaje addMensaje(int destinatario)
     {
         Image im = UI.getFreeLetterSpace();
         if (im == null)
@@ -40,8 +42,11 @@ public class Inventario : MonoBehaviour
         else
         {
             Mensaje men = new Mensaje();
-            men.setAtributos(im, destinatario, )
+            men.setAtributos(im, destinatario, nTiempoEntreEstados, nEstados);
+            return men;
         }
+
+        return null;
 
     }
     // Update is called once per frame

@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 //Esto es básicamente un contenedor de datos del mensaje y poco más
-public struct Mensaje 
+public class Mensaje 
 {
 
     int destinatario;
@@ -21,7 +22,7 @@ public struct Mensaje
         destinatario = dest;
         tiempoEntreEstados = tEntreEstados;
         UIrepresentation = im;
-        color = im.color;
+        color = im.tintColor;
         estadoActual = 0;
         destroyed = true;
     }
