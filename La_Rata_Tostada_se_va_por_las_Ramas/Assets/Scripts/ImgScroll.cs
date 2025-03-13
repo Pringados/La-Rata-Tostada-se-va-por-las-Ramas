@@ -36,7 +36,6 @@ public class ImgScroll : MonoBehaviour
         if (scrolling)
         {
             mat.mainTextureOffset += new Vector2 (scrollDirection.x, -scrollDirection.y).normalized * scrollSpeed * Time.deltaTime;
-            Debug.Log(mat.mainTextureOffset);
         }
     }
 
