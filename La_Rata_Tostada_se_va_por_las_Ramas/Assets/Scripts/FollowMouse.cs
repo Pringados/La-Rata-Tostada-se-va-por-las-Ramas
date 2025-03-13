@@ -6,6 +6,13 @@ public class FollowMouse : MonoBehaviour
 {
     [SerializeField]
     float moveSpeed;
+
+    [SerializeField, Tooltip("Límite en el eje X hasta el cual se puede mover.")]
+    float xLimit;
+
+    [SerializeField, Tooltip("Límite en el eje Y hasta el cual se puede mover.")]
+    float yLimit;
+
     [SerializeField]
     bool followX = true;
     [SerializeField]
@@ -23,8 +30,13 @@ public class FollowMouse : MonoBehaviour
 
         if (!followX)
             camPos.x = transform.position.x;
+        else
+            camPos.x = Mathf.Clamp(camPos.x, -xLimit, xLimit);
+
         if (!followY)
             camPos.y = transform.position.y;
+        else
+            camPos.y = Mathf.Clamp(camPos.y, -yLimit, yLimit);
 
         transform.position = Vector3.MoveTowards(transform.position, camPos, moveSpeed * Time.deltaTime);
     }
