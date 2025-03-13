@@ -2,16 +2,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class KeyCodeCard : MonoBehaviour
+public class KeyCodeCard : IMinigame
 {
-    [SerializeField] Text cardCode;
+    [SerializeField] private Text cardCode;
+    [SerializeField] private Text cardInput;
 
-    [SerializeField] Text cardInput;
+    [SerializeField] private float resetTime;
 
-    [SerializeField] float resetTime;
+    [SerializeField] private int points;
 
     private bool reset = false;
-
     private bool correct; 
 
     string letters = "ABC"; 
@@ -28,7 +28,7 @@ public class KeyCodeCard : MonoBehaviour
         string code = string.Empty;
 
         code += letters[Random.Range(0, letters.Length)];
-        code += Random.Range(0, 4);
+        code += Random.Range(1, 5);
 
         cardCode.text = code;
 
@@ -46,6 +46,8 @@ public class KeyCodeCard : MonoBehaviour
             correct = true; 
 
             cardInput.text = "CORRECT";
+
+            MinigameComplete(correct); 
 
             StartCoroutine(ResetCode()); 
         }
@@ -70,4 +72,9 @@ public class KeyCodeCard : MonoBehaviour
 
         reset = false;
     }
+
+    public override int CalculateScore()
+    {
+        return points; 
+    } 
 }
