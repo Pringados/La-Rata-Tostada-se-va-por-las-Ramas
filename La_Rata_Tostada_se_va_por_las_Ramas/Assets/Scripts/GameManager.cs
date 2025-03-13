@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if ((int)time < (int)(time += Time.deltaTime))
-            Debug.Log((int)time);
+        //if ((int)time < (int)(time += Time.deltaTime))
+            //Debug.Log((int)time);
 
         if (Input.GetKeyDown(KeyCode.Space))
             ChangeScene();
