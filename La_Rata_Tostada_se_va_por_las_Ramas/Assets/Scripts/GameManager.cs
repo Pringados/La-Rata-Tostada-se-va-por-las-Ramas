@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    static GameManager instance;
+    public static GameManager instance;
     float time = 0f;
+
+    public int score;
 
     void Start()
     {
@@ -35,5 +37,10 @@ public class GameManager : MonoBehaviour
     public void ChangeScene()
     {
         SceneManager.LoadScene("Example minigame");
+    }
+
+    public void OpenMapScene()
+    {
+        Debug.LogError("NOT IMPLEMENTED");
     }
 }
