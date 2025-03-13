@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(this.gameObject);
-
-        GetComponentInChildren<StudioEventEmitter>().Play();
     }
 
     void Update()
