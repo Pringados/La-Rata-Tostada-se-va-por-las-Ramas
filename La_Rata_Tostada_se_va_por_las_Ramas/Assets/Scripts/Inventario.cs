@@ -38,8 +38,8 @@ public class Inventario : MonoBehaviour
 
     public Mensaje addMensaje(int destinatario)
     {
-        GameObject im = UI.getFreeLetterSpace();
-        if (im == null)
+        int im = UI.getFreeLetterSpace();
+        if (im == -1)
         {
             Debug.LogError("esto no debería pasar nunca Eduardo por favor detente");
         }
@@ -47,7 +47,7 @@ public class Inventario : MonoBehaviour
         {
             mensajesActuales++;
             Mensaje men = new Mensaje();
-            men.setAtributos(im, destinatario, nTiempoEntreEstados, nEstados);
+            men.setAtributos(im, destinatario, nTiempoEntreEstados, nEstados, this);
             for (int i = 0; i < mensajes.Count; i++)
             {
                 if (mensajes[i] == null)
@@ -79,5 +79,11 @@ public class Inventario : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void changeUIstate(GameObject UIrep, int nextState)
+    {
+
+
     }
 }

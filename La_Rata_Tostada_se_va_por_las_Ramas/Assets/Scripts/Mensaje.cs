@@ -4,25 +4,30 @@ using UnityEngine;
 //using UnityEngine.UI;
 using UnityEngine.UIElements;
 
+enum coloresIndex
+{
+    red = 0, green, blue
+}
 //Esto es básicamente un contenedor de datos del mensaje y poco más
 public class Mensaje 
 {
 
     int destinatario;
-    Color color;
     float tiempoEntreEstados;
     int nEstados;
     int estadoActual; float tActual;
     GameObject UIrepresentation;
     bool destroyed;
+    Inventario i;
+    coloresIndex col;
 
-    public void setAtributos(GameObject im, int dest, int tEntreEstados, int nEstados)
+    public void setAtributos(int id, int dest, int tEntreEstados, int nEstados, Inventario inv)
     {
         destinatario = dest;
         tiempoEntreEstados = tEntreEstados;
-        UIrepresentation = im;
-        color = im.GetComponent<Image>().tintColor;
+        col = (coloresIndex)id;
         estadoActual = 0;
+        i = inv;
         destroyed = false;
     }
     public bool isDestroyed() { return destroyed; }

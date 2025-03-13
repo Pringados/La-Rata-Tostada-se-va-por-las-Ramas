@@ -28,13 +28,18 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    void setInitialState(List<int> estados)
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
         
     }
 
-    public GameObject getFreeLetterSpace()
+    public int getFreeLetterSpace()
     {
         for(int i = 0; i <letters.Count; i++)
         {
@@ -42,22 +47,16 @@ public class UIManager : MonoBehaviour
             {
                 //resetear el sprite de ruptura o desde fuera me la pela
                 busyLetters[i] = true;
-                return letters[i];
+                return i;
             }
                 
         }
-        return null;
+        return -1;
     }
 
-    public void deleteLetter(GameObject im)
+    public void deleteLetter(int im)
     {
-        for(int i =0; i < letters.Count;i++)
-        {
-            if (letters[i] == im)
-            {
-                busyLetters[i] = false;
-                im.SetActive(false);
-            }
-        }
+        letters[im].SetActive(false);
+        busyLetters[im] = false;
     }
 }
