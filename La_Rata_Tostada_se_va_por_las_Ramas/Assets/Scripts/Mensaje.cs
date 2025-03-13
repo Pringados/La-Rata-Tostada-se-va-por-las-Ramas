@@ -8,7 +8,7 @@ public struct Mensaje
 {
 
     int destinatario;
-    int color;
+    Color color;
     float tiempoEntreEstados;
     int nEstados;
     int estadoActual; float tActual;
@@ -16,11 +16,12 @@ public struct Mensaje
     Inventario inventario;
     bool destroyed;
 
-    public void setAtributos(int dest, int col, int tEntreEstados, int nEstados)
+    public void setAtributos(Image im, int dest, int tEntreEstados, int nEstados)
     {
         destinatario = dest;
-        color = col;
         tiempoEntreEstados = tEntreEstados;
+        UIrepresentation = im;
+        color = im.color;
         estadoActual = 0;
         destroyed = true;
     }

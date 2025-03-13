@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
         
     }
 
-    Image getFreeLetterSpace()
+    public Image getFreeLetterSpace()
     {
         for(int i = 0; i <letters.Count; i++)
         {
