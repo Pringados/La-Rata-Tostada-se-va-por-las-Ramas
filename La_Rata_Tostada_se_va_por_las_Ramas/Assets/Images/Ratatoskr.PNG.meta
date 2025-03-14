@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -95,18 +95,370 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ratatoskr_0
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 2390
+        width: 499
+        height: 1022
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3221aaa5893242944813e3768361d960
+      internalID: 795317715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_1
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 2392
+        width: 501
+        height: 1020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be515c33e6fd99845a0d283e35086b9c
+      internalID: 1830137179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_2
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 2402
+        width: 501
+        height: 1019
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1b9b321d2779c4f89ea8b4f5962c86
+      internalID: -557251208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_3
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 2376
+        width: 502
+        height: 1021
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec59b28341ea014ca27904e2c76a43b
+      internalID: -1208324691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_4
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1419
+        width: 604
+        height: 797
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a39010e286e6b549a75d6a6ed15d149
+      internalID: -1726378199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_5
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1419
+        width: 603
+        height: 797
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2d0d56528fede4bb4d1b705c4ead6b
+      internalID: 1039068978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_6
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 1404
+        width: 603
+        height: 797
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31da566a6813a74fa043cef5439cfb1
+      internalID: 527168615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_7
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 1401
+        width: 604
+        height: 797
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060df9e883245174db6d38ea36db9110
+      internalID: -2091863966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_8
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1282
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42751c7b3ca56754b9aaf36272379628
+      internalID: -572959657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_9
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1282
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac60e632e33a444a9e74653ff8a3886
+      internalID: -1426224070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_10
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 1269
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a832eaa725589194a928426fa60744aa
+      internalID: 1771791464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_11
+      rect:
+        serializedVersion: 2
+        x: 2445
+        y: 1264
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf31bc7055947e54c846d100f5aebf8c
+      internalID: -1159052566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_12
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 284
+        width: 564
+        height: 921
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de52c00041b9a154083d259a5c7898eb
+      internalID: -1132406560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_13
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 255
+        width: 564
+        height: 919
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788a3d94585197046b675d8d6f1ca561
+      internalID: 787091398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_14
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 250
+        width: 565
+        height: 925
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b439cb2f440a6244a1c94c9d5d8b166
+      internalID: -2072614901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratatoskr_15
+      rect:
+        serializedVersion: 2
+        x: 2180
+        y: 248
+        width: 564
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520dabc7d0d1ebb4a870690cc8a47c79
+      internalID: 556184562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ratatoskr_0: 795317715
+      Ratatoskr_1: 1830137179
+      Ratatoskr_10: 1771791464
+      Ratatoskr_11: -1159052566
+      Ratatoskr_12: -1132406560
+      Ratatoskr_13: 787091398
+      Ratatoskr_14: -2072614901
+      Ratatoskr_15: 556184562
+      Ratatoskr_2: -557251208
+      Ratatoskr_3: -1208324691
+      Ratatoskr_4: -1726378199
+      Ratatoskr_5: 1039068978
+      Ratatoskr_6: 527168615
+      Ratatoskr_7: -2091863966
+      Ratatoskr_8: -572959657
+      Ratatoskr_9: -1426224070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
