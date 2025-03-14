@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowMouse : MonoBehaviour
 {
     [SerializeField]
-    float moveSpeed;
+    float maxSpeed;
 
     [SerializeField, Tooltip("Límite en el eje X hasta el cual se puede mover.")]
     float xLimit;
@@ -18,7 +18,14 @@ public class FollowMouse : MonoBehaviour
     [SerializeField]
     bool followY = true;
 
+    [SerializeField]
+    float maxRotation = 0.12f;
+
+    [SerializeField]
+    float rotationSpeed = 4f;
+
     public bool stunned;
+
 
     void Start()
     {
@@ -42,6 +49,9 @@ public class FollowMouse : MonoBehaviour
         else
             camPos.y = Mathf.Clamp(camPos.y, -yLimit, yLimit);
 
-        transform.position = Vector3.MoveTowards(transform.position, camPos, moveSpeed * Time.deltaTime);
+        float oldPos = transform.position.x;
+        transform.position = Vector3.MoveTowards(transform.position, camPos, maxSpeed * Time.deltaTime);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, (-maxRotation * (transform.position.x - oldPos) / (maxSpeed * Time.deltaTime))), rotationSpeed * Time.deltaTime);
     }
 }
