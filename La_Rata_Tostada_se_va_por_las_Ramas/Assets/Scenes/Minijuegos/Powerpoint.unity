@@ -1117,7 +1117,7 @@ MonoBehaviour:
   window: {fileID: 1708723382}
   text: {fileID: 493573015}
   nextButton: {fileID: 1041304145}
-  endButton: {fileID: 0}
+  endButton: {fileID: 508198843}
 --- !u!1001 &8601126942397160775
 PrefabInstance:
   m_ObjectHideFlags: 0
