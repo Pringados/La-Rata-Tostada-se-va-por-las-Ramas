@@ -21,6 +21,11 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     List<Sprite> estadosCartas = new List<Sprite>();
 
+    [SerializeField] protected Slider snake;
+
+    [SerializeField] private float increaseTime;
+    private float time; 
+
     private void Awake()
     {
         if (Instance == null)
@@ -28,16 +33,21 @@ public class UIManager : MonoBehaviour
         else
             Destroy(this.gameObject);
 
-        for (int i = 0; i < letters.Count; i++)
+    }
+    void Start()
+    {
+        for(int i = 0; i < letters.Count; i++)
         {
             busyLetters.Add(false);
             letters[i].SetActive(false);
         }
 
-    }
-    void Start()
-    {
-        
+        if (snake != null)
+        {
+            snake.value = GameManager.instance.getTimeToRagnarok();
+
+            time = increaseTime;
+        }
     }
 
     public void setInitialState(List<Mensaje> mensajes)
@@ -59,13 +69,22 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        time -= Time.deltaTime; 
+
+        if (time < 0f)
+        {
+            time = increaseTime;
+
+            GameManager.instance.increaseTimeToRagnarok(0.05f);
+
+            if (snake != null)
+                snake.value += 0.05f; 
+        }
     }
 
     public int getFreeLetterSpace()
     {
-        Debug.Log("getting free space");
-        for(int i = 0; i <busyLetters.Count; i++)
+        for(int i = 0; i <letters.Count; i++)
         {
             if (!busyLetters[i])
             {

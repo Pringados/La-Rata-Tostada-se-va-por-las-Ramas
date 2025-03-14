@@ -8,7 +8,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    float time = 0f;
+
+    [SerializeField] protected float timeToRagnarok;
+
+    //float time = 0f;
 
     public int score;
 
@@ -41,4 +44,22 @@ public class GameManager : MonoBehaviour
     {
         Debug.LogError("NOT IMPLEMENTED");
     }
+
+    public void increaseTimeToRagnarok(float n)
+    {
+        timeToRagnarok += n;
+
+        if (timeToRagnarok >= 1)
+            return; 
+    }
+
+    public void decreaseTimeToRagnarok(float n)
+    {
+        timeToRagnarok -= n;
+
+        if (timeToRagnarok <= 0)
+            timeToRagnarok = 0;
+    }
+
+    public float getTimeToRagnarok() { return timeToRagnarok; }
 }
