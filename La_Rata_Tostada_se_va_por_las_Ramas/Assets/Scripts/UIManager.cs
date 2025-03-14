@@ -28,20 +28,23 @@ public class UIManager : MonoBehaviour
         else
             Destroy(this.gameObject);
 
-    }
-    void Start()
-    {
-        for(int i = 0; i < letters.Count; i++)
+        for (int i = 0; i < letters.Count; i++)
         {
             busyLetters.Add(false);
             letters[i].SetActive(false);
         }
+
+    }
+    void Start()
+    {
+        
     }
 
     public void setInitialState(List<Mensaje> mensajes)
     {
         for (int i = 0;i < mensajes.Count;i++)
         {
+            Debug.Log(i);
             if (mensajes[i] != null && !mensajes[i].isDestroyed())
             {
                 busyLetters[mensajes[i].getID()] = true;
@@ -61,11 +64,11 @@ public class UIManager : MonoBehaviour
 
     public int getFreeLetterSpace()
     {
-        for(int i = 0; i <letters.Count; i++)
+        Debug.Log("getting free space");
+        for(int i = 0; i <busyLetters.Count; i++)
         {
             if (!busyLetters[i])
             {
-                //resetear el sprite de ruptura o desde fuera me la pela
                 letters[i].SetActive(true);
                 changeLetterState(i, 0);
                 busyLetters[i] = true;

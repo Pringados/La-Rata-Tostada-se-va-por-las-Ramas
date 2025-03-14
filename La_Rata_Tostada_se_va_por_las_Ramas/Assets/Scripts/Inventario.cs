@@ -28,13 +28,15 @@ public class Inventario : MonoBehaviour
     {
         gManager = gameObject.GetComponent<GameManager>();
 
-        addMensaje(0);
+        mensajes.Add(new Mensaje());
+        mensajes[0].setAtributos(0, 0, nTiempoEntreEstados, nEstados, this);
+        UI.setInitialState(mensajes);
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         //Debug.Log("INVENTARIO PILLA EL UI MANAGER");
         UI = UIManager.Instance;
-        UI.setInitialState(mensajes);
+        //UI.setInitialState(mensajes);
     }
 
     public Mensaje addMensaje(int destinatario)
