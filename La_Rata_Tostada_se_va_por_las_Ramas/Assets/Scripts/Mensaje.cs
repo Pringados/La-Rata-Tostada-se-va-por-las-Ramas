@@ -21,12 +21,14 @@ public class Mensaje
     Inventario i;
     coloresIndex col;
 
-    public void setAtributos(int id, int dest, int tEntreEstados, int nEstados, Inventario inv)
+    public void setAtributos(int id, int dest, int tEntreEstados, int nE, Inventario inv)
     {
         destinatario = dest;
         tiempoEntreEstados = tEntreEstados;
         col = (coloresIndex)id;
+        tActual = 0;
         estadoActual = 0;
+        nEstados = nE;
         i = inv;
         destroyed = false;
     }
@@ -37,16 +39,21 @@ public class Mensaje
         if (tActual >= tiempoEntreEstados)
         {
             estadoActual++;
+            
             if(estadoActual >= nEstados)
             {
                 destroyed = true;
             }
             else
             {
-                //llamar al inventario o algo apra q cambie su sprite
+                i.changeUIstate((int)col, estadoActual);
             }
+            Debug.Log("reseteando tiempo");
             tActual = 0;
             
         }
     }
+
+    public int getEstado() { return estadoActual; }
+    public int getID() { return (int) col; }
 }

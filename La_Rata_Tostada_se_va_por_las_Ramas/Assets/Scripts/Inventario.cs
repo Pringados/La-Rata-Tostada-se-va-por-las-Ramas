@@ -8,9 +8,10 @@ using UnityEngine.UIElements;
 public class Inventario : MonoBehaviour
 {
     // Start is called before the first frame update
-    List<Mensaje> mensajes;
+    List<Mensaje> mensajes = new List<Mensaje>();
+    [SerializeField]
     int mensajesMáximos;
-    int mensajesActuales;
+    int mensajesActuales = 0;
     private UIManager UI;
     private GameManager gManager;
     [SerializeField]
@@ -21,24 +22,25 @@ public class Inventario : MonoBehaviour
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded; // Suscribirse al evento
+        Debug.Log("awakening");
     }
     void Start()
     {
         gManager = gameObject.GetComponent<GameManager>();
-        for (int i = 0; i < mensajesMáximos; i++)
-        {
-            mensajes.Add(null);
-        }
+
+        addMensaje(0);
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("INVENTARIO PILLA EL UI MANAGER");
+        //Debug.Log("INVENTARIO PILLA EL UI MANAGER");
         UI = UIManager.Instance;
+        UI.setInitialState(mensajes);
     }
 
     public Mensaje addMensaje(int destinatario)
     {
         int im = UI.getFreeLetterSpace();
+        Debug.Log(im);
         if (im == -1)
         {
             Debug.LogError("esto no debería pasar nunca Eduardo por favor detente");
@@ -48,14 +50,8 @@ public class Inventario : MonoBehaviour
             mensajesActuales++;
             Mensaje men = new Mensaje();
             men.setAtributos(im, destinatario, nTiempoEntreEstados, nEstados, this);
-            for (int i = 0; i < mensajes.Count; i++)
-            {
-                if (mensajes[i] == null)
-                {
-                    mensajes[i] = men;
-                    return men;
-                }
-            }
+            mensajes.Add(men);
+            return men;
         }
 
         return null;
@@ -74,16 +70,18 @@ public class Inventario : MonoBehaviour
                 {
                     //comprobación de q está yendo el jugador
                     mensajes[i] = null;
+                    mensajes.RemoveAt(i);
                     mensajesActuales--;
+                    UI.deleteLetter(i);
 
                 }
             }
         }
     }
 
-    public void changeUIstate(GameObject UIrep, int nextState)
+    public void changeUIstate(int id, int nextState)
     {
-
+        UI.changeLetterState(id, nextState);
 
     }
 }
