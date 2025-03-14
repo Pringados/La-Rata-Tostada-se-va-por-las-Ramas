@@ -48,3 +48,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  estadosCartas:
+  - {fileID: 21300000, guid: 8e4bffc3856494b4c99d8879cefa3c97, type: 3}
+  - {fileID: 21300000, guid: ff712d6f4b117d445998c905af5948ee, type: 3}
+  - {fileID: 21300000, guid: 4d7b5844c0750ea49b75d2a09398563d, type: 3}
+  - {fileID: 21300000, guid: e4dda64c9a68ec1408d9950d77ba203b, type: 3}
