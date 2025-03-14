@@ -35,6 +35,7 @@ public class Powerpoint : IMinigame
 
     public void OnButtonClick(bool next)
     {
+        if (reset) return;
 
         if (next)
         {
