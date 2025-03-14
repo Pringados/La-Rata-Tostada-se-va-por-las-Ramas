@@ -18,13 +18,17 @@ public class FollowMouse : MonoBehaviour
     [SerializeField]
     bool followY = true;
 
+    public bool stunned;
+
     void Start()
     {
-        
+        stunned = false;
     }
 
     void Update()
     {
+        if (stunned) return;
+
         var camPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         camPos.z = 0f;
 

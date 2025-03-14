@@ -11,15 +11,12 @@ public class ImgScroll : MonoBehaviour
     Vector2 scrollDirection;
 
     [SerializeField]
-    float scrollSpeed;
+    public float scrollSpeed;
 
     [SerializeField]
-    bool scrolling;
+    public bool scrolling;
 
     SpriteRenderer img;
-
-    // En el caso de que se hagan varias llamadas a pausar el scroll, esto asegura que no se retoma hasta que caduquen todas las pausas
-    private int pauseCounter;
 
     Material mat;
 
@@ -37,18 +34,5 @@ public class ImgScroll : MonoBehaviour
         {
             mat.mainTextureOffset += new Vector2 (scrollDirection.x, -scrollDirection.y).normalized * scrollSpeed * Time.deltaTime;
         }
-    }
-
-    public void pauseScroll(float seconds)
-    {
-        ++pauseCounter;
-        scrolling = false;
-        StartCoroutine(restoreScroll(seconds));
-    }
-
-    IEnumerator restoreScroll(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        if (--pauseCounter <= 0) scrolling = true;
     }
 }

@@ -12,12 +12,11 @@ public class HazardSpawner : MonoBehaviour
     float maxCooldown;
 
     [SerializeField]
-    ImgScroll scroller;
+    public DeliveryRoadManager manager;
 
     [SerializeField]
-    GameObject[] hazards; 
+    GameObject[] hazards;
 
-    float cooldown;
     void Start()
     {
         StartCoroutine(SpawnObstacle());
@@ -26,8 +25,15 @@ public class HazardSpawner : MonoBehaviour
     IEnumerator SpawnObstacle()
     {
         Instantiate(hazards[Random.Range(0, hazards.Length)], new Vector3(transform.position.x + Random.Range(-transform.localScale.x, transform.localScale.x), 
-            transform.position.y, 0f), Quaternion.identity).GetComponent<DeliveryHazard>().scroller = scroller;
-        yield return new WaitForSeconds(Random.Range(minCooldown, maxCooldown));
+            transform.position.y, 0f), Quaternion.identity).GetComponent<DeliveryHazard>().manager = manager;
+
+        float cooldown = Random.Range(minCooldown, maxCooldown);
+        while (cooldown > 0f)
+        {
+            yield return null;
+            if (manager.scrolling)
+                cooldown -= Time.deltaTime;
+        }
         StartCoroutine(SpawnObstacle());
     }
 }

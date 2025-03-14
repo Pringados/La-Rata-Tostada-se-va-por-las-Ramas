@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 9122668154959593643}
   - component: {fileID: 5293580565966264217}
   - component: {fileID: 5166534922912718758}
-  - component: {fileID: -796606436040685076}
   - component: {fileID: -2105630383627670822}
   - component: {fileID: -1747523864274544090}
+  - component: {fileID: -577348430161523697}
   m_Layer: 7
   m_Name: Branch
   m_TagString: Untagged
@@ -100,34 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06446a22e85e0d842a6eff2c17f33966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scroller: {fileID: 0}
---- !u!50 &-796606436040685076
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6667923449311467203}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  speed: 0
+  manager: {fileID: 0}
+  isBranch: 1
 --- !u!61 &-2105630383627670822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204,3 +179,30 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!50 &-577348430161523697
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6667923449311467203}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

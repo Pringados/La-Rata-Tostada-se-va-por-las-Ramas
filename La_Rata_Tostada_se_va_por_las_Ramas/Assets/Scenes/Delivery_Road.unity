@@ -345,6 +345,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e2bbaa75c9f294dbbd2c7efc202305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 12
+  scrollSpeed: 4
+  playerImmuneTime: 0.2
+  spawner: {fileID: 1823180686}
+  trunk: {fileID: 23546781}
+  player: {fileID: 1300509317}
+  scrolling: 0
 --- !u!4 &382671117
 Transform:
   m_ObjectHideFlags: 0
@@ -513,6 +520,7 @@ MonoBehaviour:
   yLimit: 0
   followX: 1
   followY: 0
+  stunned: 0
 --- !u!212 &1300509318
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -623,7 +631,7 @@ GameObject:
   m_Layer: 0
   m_Name: Killzone
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -759,7 +767,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -777,7 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minCooldown: 0.5
   maxCooldown: 1.2
-  scroller: {fileID: 23546781}
+  manager: {fileID: 0}
   hazards:
   - {fileID: 6667923449311467203, guid: cd565f4d6cf7d714db488d6d03956b36, type: 3}
 --- !u!23 &1823180687
