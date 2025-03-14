@@ -14,10 +14,17 @@ public class Powerpoint : IMinigame
 
     [SerializeField] private Image window;
 
+    [SerializeField] private Text text;
+
+    [SerializeField] private Image nextButton;
+
+    [SerializeField] private GameObject endButton;
+
     private bool reset = false; 
 
     private int counter;
     private int maxCounter;
+    private bool terminado = false;
 
     private int[] powerpoint; 
 
@@ -28,30 +35,36 @@ public class Powerpoint : IMinigame
 
     public void OnButtonClick(bool next)
     {
-        if (reset) return; 
 
         if (next)
         {
             counter++;
 
-            if (maxCounter <= counter)
+            if (maxCounter <= counter && !terminado)
             {
-                StartCoroutine(ResetPowerPoint());
-
-                MinigameComplete(true); 
+                nextButton.enabled = true;
+                text.text = "NO ME HE ENTERADO, REPITELO POR FAVOR";
+                terminado = true;
+                StartCoroutine(ButtonSpawn());
+                //MinigameComplete(true); 
             }
-
+            else if (terminado)
+            {
+                text.text = "";
+                nextButton.enabled = false;
+                endButton.SetActive(false);
+                terminado = false;
+                ModifyPowerPoint();
+            }
             else
                 window.sprite = slides[powerpoint[counter]];
         }
 
         else
         {
-            counter--;
+            StartCoroutine(ResetPowerPoint());
 
-            if (counter < 0) counter = 0;
-
-            window.sprite = slides[powerpoint[counter]];
+            MinigameComplete(true);
         }
     }
 
@@ -59,7 +72,7 @@ public class Powerpoint : IMinigame
     {
         counter = 0; 
 
-        maxCounter = Random.Range(1, maxWindows + 1);
+        maxCounter = Random.Range(3, maxWindows + 1);
 
         powerpoint = new int[maxCounter];
 
@@ -69,13 +82,21 @@ public class Powerpoint : IMinigame
         window.sprite = slides[powerpoint[counter]];
     }
 
+    private IEnumerator ButtonSpawn()
+    {
+
+        yield return new WaitForSeconds(resetTime);
+
+        endButton.SetActive(true);
+    }
+
     private IEnumerator ResetPowerPoint()
     {
         reset = true;
 
         yield return new WaitForSeconds(resetTime);
 
-        ModifyPowerPoint(); 
+        ModifyPowerPoint();
 
         reset = false;
     }
