@@ -205,12 +205,12 @@ TextureImporter:
       name: Ratatoskr_5
       rect:
         serializedVersion: 2
-        x: 805
-        y: 1419
+        x: 802
+        y: 1416
         width: 603
         height: 797
       alignment: 9
-      pivot: {x: 0.38638595, y: 0.68112797}
+      pivot: {x: 0.4446997, y: 0.623433}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,7 +231,7 @@ TextureImporter:
         width: 603
         height: 797
       alignment: 9
-      pivot: {x: 0.3782708, y: 0.67498803}
+      pivot: {x: 0.4545273, y: 0.6206871}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,7 +252,7 @@ TextureImporter:
         width: 604
         height: 797
       alignment: 9
-      pivot: {x: 0.38657445, y: 0.68112797}
+      pivot: {x: 0.45374787, y: 0.61325186}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +378,7 @@ TextureImporter:
         width: 564
         height: 919
       alignment: 9
-      pivot: {x: 0.6127943, y: 0.7209806}
+      pivot: {x: 0.56790227, y: 0.6658794}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +399,7 @@ TextureImporter:
         width: 565
         height: 925
       alignment: 9
-      pivot: {x: 0.6125944, y: 0.7221923}
+      pivot: {x: 0.5677812, y: 0.65692055}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +420,7 @@ TextureImporter:
         width: 564
         height: 920
       alignment: 9
-      pivot: {x: 0.61713296, y: 0.7207405}
+      pivot: {x: 0.5584284, y: 0.6551145}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

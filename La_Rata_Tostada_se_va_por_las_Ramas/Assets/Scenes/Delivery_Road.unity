@@ -456,7 +456,7 @@ BoxCollider2D:
   m_Offset: {x: -0.12080872, y: 1.9782431}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.50000024, y: 0.7446763}
     oldSize: {x: 5.01, y: 10.2}
     newSize: {x: 4.58, y: 4.63}
     adaptiveTilingThreshold: 0.5
@@ -604,10 +604,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 12
-  scrollSpeed: 4
+  scrollSpeed: 16
   playerImmuneTime: 0.2
   spawner: {fileID: 1823180686}
   trunk: {fileID: 23546781}
+  bgBranches: {fileID: 1575510387}
+  galaxy: {fileID: 405026378}
   player: {fileID: 358940429}
   scrolling: 0
 --- !u!4 &382671117
@@ -1222,8 +1224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b661e0465fe804db7db15ae135dfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minCooldown: 0.5
-  maxCooldown: 1.2
+  minCooldown: 0.7
+  maxCooldown: 1.3
   manager: {fileID: 0}
   hazards:
   - {fileID: 8526977802199381687, guid: e83e019723c9c1f428c6aa6768f6bb27, type: 3}

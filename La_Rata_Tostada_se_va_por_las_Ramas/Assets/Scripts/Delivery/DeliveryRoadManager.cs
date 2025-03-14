@@ -17,6 +17,12 @@ public class DeliveryRoadManager : MonoBehaviour
     ImgScroll trunk;
 
     [SerializeField]
+    ImgScroll bgBranches;
+
+    [SerializeField]
+    ImgScroll galaxy;
+
+    [SerializeField]
     FollowMouse player;
 
     BoxCollider2D playerCol;
@@ -34,6 +40,8 @@ public class DeliveryRoadManager : MonoBehaviour
         remainingTime = duration;
         spawner.manager = this;
         trunk.scrollSpeed = scrollSpeed / trunk.GetComponent<SpriteRenderer>().bounds.size.y;
+        bgBranches.scrollSpeed = trunk.scrollSpeed * 0.7f;
+        galaxy.scrollSpeed = trunk.scrollSpeed * 0.2f;
         scrolling = true;
         playerCol = player.GetComponent<BoxCollider2D>();
     }
@@ -62,6 +70,8 @@ public class DeliveryRoadManager : MonoBehaviour
         ++pauseCounter;
         scrolling = false;
         trunk.scrolling = false;
+        bgBranches.scrolling = false;
+        galaxy.scrolling = false;
         playerCol.enabled = false;
         player.stunned = true;
         StartCoroutine(restoreScroll(seconds));
@@ -74,6 +84,8 @@ public class DeliveryRoadManager : MonoBehaviour
         {
             scrolling = true;
             trunk.scrolling = true;
+            bgBranches.scrolling = true;
+            galaxy.scrolling = true;
 
             player.stunned = false;
             //Esperamos un poquito más para rehabilitar la colisión del jugador
