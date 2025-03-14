@@ -39,7 +39,7 @@ public class ImgScroll : MonoBehaviour
         }
     }
 
-    void pauseScroll(float seconds)
+    public void pauseScroll(float seconds)
     {
         ++pauseCounter;
         scrolling = false;

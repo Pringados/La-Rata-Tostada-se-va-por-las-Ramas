@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e94aa37f-7724-4c20-baac-340934640444}">
+		<property name="assetPath">
+			<value>Bonk.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.68408333333333338</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6d7aff4b-7989-4c6c-b185-8c2a620793cb}</destination>
+		</relationship>
+	</object>
+</objects>
