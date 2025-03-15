@@ -1,0 +1,1500 @@
+fileFormatVersion: 2
+guid: 37c56d33f6be77c46945b4ecc462264f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1027
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711e27c72af1fd3448db6f7ae95c2899
+      internalID: 687340963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1031
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8222d875d7663504089b265f1fdb9887
+      internalID: -1733283252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1029
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442c00a0b672cf94e8237cdb617b6864
+      internalID: 36456047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_3
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1028
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49818c7dd2e3e2e49bdeb5d049ee0911
+      internalID: -1236941784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_4
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 1025
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 15, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa2d6a85e14e304a9bd8dd00574ed6b
+      internalID: -284954523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_5
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1026
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0800d852238e34fa766e67ade2ab19
+      internalID: 2039504813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_6
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1028
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9dba1c0f8916c146b17c0118a7ad640
+      internalID: 261645894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 886
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c93720b3bcdea4f872af26cace8f96
+      internalID: -1540418174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_8
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 891
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4434c9c624b4aec4d9ce645c3da2d24a
+      internalID: -287615340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_9
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 888
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150b5af16ed72204ab3ffd467552ce7b
+      internalID: -2024553066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_10
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 886
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc58dc268aaca5841acff89719cb43bf
+      internalID: -751961689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_11
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 898
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacf7ba7f4e2043479c52331de500bc3
+      internalID: 462809704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_12
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 894
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d01fb159731bbd499f22cd9da4b6718
+      internalID: -1999229865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_13
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 898
+        width: 166
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d15356c8b3d28c489fb47ede5329cd8
+      internalID: 954705213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_14
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 800.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4739b306771ccfe43984382569a963f7
+      internalID: 1733818242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_15
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 800.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7de9d54bc3309646bfd32c82098053b
+      internalID: 1030957230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_16
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 800.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cb14c32158de34a89f8439fa78cdd5
+      internalID: -1091476144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_17
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 800.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e635fc7faf4cf8645bf3938df197e62d
+      internalID: -491422806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_18
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 800.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8c812624056994daf8dab1bb285d8c
+      internalID: -1084258243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_19
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 800.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98317372fa6157b44865298bcd3b17cb
+      internalID: -1962208702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_20
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 800.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436091951367bca4ea72114d74d016ec
+      internalID: 1607277940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_21
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 667.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15497aa888cff964ea6b46f13c338e39
+      internalID: 1756059504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_22
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 667.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275b9cefdfc1edc40b6839e171cde973
+      internalID: 202232104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_23
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 667.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09da7771225b11149925c2230375e5a5
+      internalID: -979474297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_24
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 667.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640b4b82db926de45899c107cfe766df
+      internalID: 1003264406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_25
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 667.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c5d59dc700d944e848b4b91128e7a8
+      internalID: -29980082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_26
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 667.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d9688fa95493349b04e8ba3308bc4e
+      internalID: -307377601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_27
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 667.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b62ec59794dbb4b90fdb71f6456f88
+      internalID: -1981394198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_28
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 534.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a055e4215ae4e254dbc9c2088407f4ff
+      internalID: -1017046714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_29
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 534.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5748704d8407d124abb4056bcb8ef2da
+      internalID: -213819537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_30
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 534.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115c7131a31a9834e8c844ba6c30d37f
+      internalID: -529708809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_31
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 534.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77aedb9b14f80b344ac59502d4710206
+      internalID: -1963584029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_32
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 534.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46696cf3634675643a90a06ad1613559
+      internalID: 1381903576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_33
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 534.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c56d7028d00394383cea7a0d298c3e
+      internalID: -895344720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_34
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 534.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed40852fbcd93ee49baba8edf77d91b9
+      internalID: 1083840175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_35
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 401.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d845dae64e8a04abe982d94962e538
+      internalID: -1619965993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_36
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 401.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc9ec04d877a5140a2ad21292f25116
+      internalID: 415237219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_37
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 401.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129286db9819ff94aa266b9cc71fdaf4
+      internalID: -695924838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_38
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 401.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60b0b20d27e53f4daa0f9ca49630397
+      internalID: 1528165348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_39
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 401.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32690e61526e8c54ca39daf19d0ff2d3
+      internalID: -172720249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_40
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 401.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a7ec9eb3ed9224c83c85c69a84d865
+      internalID: -1368063003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_41
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 401.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebeca1d9cb76a545aded3d85ba0cc33
+      internalID: -605652429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_42
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 268.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81f0bf5055f3244dac0c3dea8cdceec
+      internalID: -1108320670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_43
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 268.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fb7a0bc866de74fb11ac1328e854e0
+      internalID: -2061739649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_44
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 268.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d3843de698d2c468ef414a1fc0815f
+      internalID: 1404901359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_45
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 268.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9cdb561c04be14a82d420e74a6368a
+      internalID: 819143601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_46
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 268.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956b9167b67dbf14eaf7923931364f64
+      internalID: 1593988043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_47
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 268.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e416114ab679285428e72b779e885ab6
+      internalID: 1333683414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_48
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 268.6667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27077456ca01aea48b631d9312fe9da1
+      internalID: -195629121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_49
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 135.66667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2c091fc5b139f4a93616e634c4d1dd
+      internalID: 550167187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_50
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 135.66667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943096efcbe6bc24cb79f440fcf50052
+      internalID: -1215600774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_51
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 135.66667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f83819384a809439db4f2bf71853bd
+      internalID: -370701368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_52
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 135.66667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be0db04d839f0b4094c027ca63f533d
+      internalID: 1304610091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_53
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 135.66667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8b402a490fc3f4ebb4c68892fdd445
+      internalID: 1028313669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_54
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 135.66667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4eb55430a1c0c499902a519a2c5f28
+      internalID: -23083431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_55
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 135.66667
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf1a7c6fce3a9a4c8a2a6049655dac2
+      internalID: -1452995436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_56
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 2.6666718
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898ed9d4ddd887f4fb11dcf4795bb0ad
+      internalID: -2138779631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_57
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2.6666718
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4bbc4c86ff97d44b9c650f7323a5831
+      internalID: -238984635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_58
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 2.6666718
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a4270f51832d84da8be53619a735fc
+      internalID: -977416114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_59
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 2.6666718
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c435f255dbca34a983921c03258964
+      internalID: 1083272264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_60
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2.6666718
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09139764219ebca449d90f1e5537d847
+      internalID: 62501411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_61
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 2.6666718
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d35d5250509c0d4f91a45bffdd22792
+      internalID: 1116509707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-a-new-set-of-emojis-png-image_9103965_62
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 2.6666718
+        width: 165.71428
+        height: 133.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab13f80e095c66c44acbacbe88298a87
+      internalID: -611800882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pngtree-a-new-set-of-emojis-png-image_9103965_0: 687340963
+      pngtree-a-new-set-of-emojis-png-image_9103965_1: -1733283252
+      pngtree-a-new-set-of-emojis-png-image_9103965_10: -751961689
+      pngtree-a-new-set-of-emojis-png-image_9103965_11: 462809704
+      pngtree-a-new-set-of-emojis-png-image_9103965_12: -1999229865
+      pngtree-a-new-set-of-emojis-png-image_9103965_13: 954705213
+      pngtree-a-new-set-of-emojis-png-image_9103965_14: 1733818242
+      pngtree-a-new-set-of-emojis-png-image_9103965_15: 1030957230
+      pngtree-a-new-set-of-emojis-png-image_9103965_16: -1091476144
+      pngtree-a-new-set-of-emojis-png-image_9103965_17: -491422806
+      pngtree-a-new-set-of-emojis-png-image_9103965_18: -1084258243
+      pngtree-a-new-set-of-emojis-png-image_9103965_19: -1962208702
+      pngtree-a-new-set-of-emojis-png-image_9103965_2: 36456047
+      pngtree-a-new-set-of-emojis-png-image_9103965_20: 1607277940
+      pngtree-a-new-set-of-emojis-png-image_9103965_21: 1756059504
+      pngtree-a-new-set-of-emojis-png-image_9103965_22: 202232104
+      pngtree-a-new-set-of-emojis-png-image_9103965_23: -979474297
+      pngtree-a-new-set-of-emojis-png-image_9103965_24: 1003264406
+      pngtree-a-new-set-of-emojis-png-image_9103965_25: -29980082
+      pngtree-a-new-set-of-emojis-png-image_9103965_26: -307377601
+      pngtree-a-new-set-of-emojis-png-image_9103965_27: -1981394198
+      pngtree-a-new-set-of-emojis-png-image_9103965_28: -1017046714
+      pngtree-a-new-set-of-emojis-png-image_9103965_29: -213819537
+      pngtree-a-new-set-of-emojis-png-image_9103965_3: -1236941784
+      pngtree-a-new-set-of-emojis-png-image_9103965_30: -529708809
+      pngtree-a-new-set-of-emojis-png-image_9103965_31: -1963584029
+      pngtree-a-new-set-of-emojis-png-image_9103965_32: 1381903576
+      pngtree-a-new-set-of-emojis-png-image_9103965_33: -895344720
+      pngtree-a-new-set-of-emojis-png-image_9103965_34: 1083840175
+      pngtree-a-new-set-of-emojis-png-image_9103965_35: -1619965993
+      pngtree-a-new-set-of-emojis-png-image_9103965_36: 415237219
+      pngtree-a-new-set-of-emojis-png-image_9103965_37: -695924838
+      pngtree-a-new-set-of-emojis-png-image_9103965_38: 1528165348
+      pngtree-a-new-set-of-emojis-png-image_9103965_39: -172720249
+      pngtree-a-new-set-of-emojis-png-image_9103965_4: -284954523
+      pngtree-a-new-set-of-emojis-png-image_9103965_40: -1368063003
+      pngtree-a-new-set-of-emojis-png-image_9103965_41: -605652429
+      pngtree-a-new-set-of-emojis-png-image_9103965_42: -1108320670
+      pngtree-a-new-set-of-emojis-png-image_9103965_43: -2061739649
+      pngtree-a-new-set-of-emojis-png-image_9103965_44: 1404901359
+      pngtree-a-new-set-of-emojis-png-image_9103965_45: 819143601
+      pngtree-a-new-set-of-emojis-png-image_9103965_46: 1593988043
+      pngtree-a-new-set-of-emojis-png-image_9103965_47: 1333683414
+      pngtree-a-new-set-of-emojis-png-image_9103965_48: -195629121
+      pngtree-a-new-set-of-emojis-png-image_9103965_49: 550167187
+      pngtree-a-new-set-of-emojis-png-image_9103965_5: 2039504813
+      pngtree-a-new-set-of-emojis-png-image_9103965_50: -1215600774
+      pngtree-a-new-set-of-emojis-png-image_9103965_51: -370701368
+      pngtree-a-new-set-of-emojis-png-image_9103965_52: 1304610091
+      pngtree-a-new-set-of-emojis-png-image_9103965_53: 1028313669
+      pngtree-a-new-set-of-emojis-png-image_9103965_54: -23083431
+      pngtree-a-new-set-of-emojis-png-image_9103965_55: -1452995436
+      pngtree-a-new-set-of-emojis-png-image_9103965_56: -2138779631
+      pngtree-a-new-set-of-emojis-png-image_9103965_57: -238984635
+      pngtree-a-new-set-of-emojis-png-image_9103965_58: -977416114
+      pngtree-a-new-set-of-emojis-png-image_9103965_59: 1083272264
+      pngtree-a-new-set-of-emojis-png-image_9103965_6: 261645894
+      pngtree-a-new-set-of-emojis-png-image_9103965_60: 62501411
+      pngtree-a-new-set-of-emojis-png-image_9103965_61: 1116509707
+      pngtree-a-new-set-of-emojis-png-image_9103965_62: -611800882
+      pngtree-a-new-set-of-emojis-png-image_9103965_7: -1540418174
+      pngtree-a-new-set-of-emojis-png-image_9103965_8: -287615340
+      pngtree-a-new-set-of-emojis-png-image_9103965_9: -2024553066
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
