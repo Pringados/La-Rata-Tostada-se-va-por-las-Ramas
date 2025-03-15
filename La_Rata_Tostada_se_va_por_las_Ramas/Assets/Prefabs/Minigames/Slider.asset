@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Slider
   m_EditorClassIdentifier: 
   minigameType: 0
-  showHint: 1
+  textHint: Reestructura la imagen
+  character: {fileID: 21300000, guid: 7e0fd5db32a36644f954a75351fe085d, type: 3}
+  hint: {fileID: 21300000, guid: f24cc344dc6f44f4a9c01992e73f5890, type: 3}

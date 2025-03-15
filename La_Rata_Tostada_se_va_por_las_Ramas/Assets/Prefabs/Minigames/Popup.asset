@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Popup
   m_EditorClassIdentifier: 
   minigameType: 0
-  showHint: 0
+  textHint: Cierra las ventanas
+  character: {fileID: 21300000, guid: 156cfaa6425471140ae0c8a1d4315184, type: 3}
+  hint: {fileID: 21300000, guid: 1a1097557e90dac4eb10e1ef459436c6, type: 3}

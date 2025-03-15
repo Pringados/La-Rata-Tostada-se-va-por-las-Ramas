@@ -1,23 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class IMinigame : MonoBehaviour
 {
-    [SerializeField]
-    protected GameObject hintCanvas;
-    [SerializeField]
-    protected MinigameData data;
+    [SerializeField] protected Text textHint;
+
+    [SerializeField] protected Image hintImage;
+
+    [SerializeField] protected Image NPC;
+
+    [SerializeField] protected MinigameData data;
 
     void Awake()
     {
-        if (data.showHint)
-        {
-            hintCanvas.SetActive(true);
-            data.showHint = false;
-        }
-        else
-            hintCanvas.SetActive(false);
+        hintImage.sprite = data.hint;
+
+        NPC.sprite = data.character; 
+
+        textHint.text = data.textHint; 
     }
 
     public void MinigameComplete(bool success)

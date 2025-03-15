@@ -11,12 +11,16 @@ public class GameManager : MonoBehaviour
 
     public float totalTimeToRagnarok;
     public float remainingTimeToRagnarok;
+    [SerializeField] protected int playerMapPosition;
+
+    //float time = 0f;
 
     public int score;
     public bool timerPaused = false;
 
     void Awake()
     {
+        this.updatePlayerMapPosition(10);
         if (instance == null)
         {
             instance = this;
@@ -69,6 +73,12 @@ public class GameManager : MonoBehaviour
             remainingTimeToRagnarok = 0;
     }
 
-    // Devuelve el tiempo restante como float de 0 a 1 (tiempo máximo)
+    // Devuelve el tiempo restante como float de 0 a 1 (tiempo mï¿½ximo)
     public float GetRemainingTimePortion() { return remainingTimeToRagnarok / totalTimeToRagnarok; }
+
+
+    public void updatePlayerMapPosition(int n) { 
+        playerMapPosition = n;
+    }
+    public int getPlayerMapPosition() { return playerMapPosition; }
 }

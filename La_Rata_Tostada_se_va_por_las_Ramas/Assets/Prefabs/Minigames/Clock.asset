@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Clock
   m_EditorClassIdentifier: 
   minigameType: 0
-  showHint: 1
+  textHint: Haz click hasta que la hora sea correcta
+  character: {fileID: 21300000, guid: 9164261ff6b578c4abed71d963a87e2b, type: 3}
+  hint: {fileID: 21300000, guid: 9e0b24e6f434c7647abbc3d5b641dfcf, type: 3}

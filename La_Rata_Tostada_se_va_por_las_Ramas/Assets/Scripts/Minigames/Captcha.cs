@@ -4,16 +4,20 @@ using System.Collections;
 
 public class Captcha : IMinigame
 {
-    [SerializeField] private Sprite[] correct;
-    [SerializeField] private Sprite[] incorrect;
+    [SerializeField] private Sprite[] squirrel;
+    [SerializeField] private Sprite[] wood;
+    [SerializeField] private Sprite[] thor;
 
-    [SerializeField] private Image[] buttons;
+    [SerializeField] private GameObject[] buttons;
 
     [SerializeField] private Text message;
 
     [SerializeField] private float resetTime;
 
     [SerializeField] private int points;
+
+    private Sprite[] correct;
+    private Sprite[] incorrect;
 
     private bool[] answers;
 
@@ -36,17 +40,51 @@ public class Captcha : IMinigame
 
         message.text = string.Empty;
 
-        answers = new bool[buttons.Length]; 
+        answers = new bool[buttons.Length];
+
+        int img = Random.Range(0, 3); 
+
+        if (img == 0)
+        {
+            correct = new Sprite[squirrel.Length]; 
+            correct = squirrel;
+
+            message.text = "Selecciona a la rata"; 
+
+            CreateGroups(wood, thor); 
+        }
+
+        else if (img == 1)
+        {
+            correct = new Sprite[wood.Length];
+            correct = wood;
+
+            message.text = "Toca madera";
+
+            CreateGroups(squirrel, thor); 
+        }
+
+        else
+        {
+            correct = new Sprite[thor.Length];
+            correct = thor;
+
+            message.text = "Busca a Cleon";
+
+            CreateGroups(squirrel, wood);
+        }
 
         for (int i = 0; i < buttons.Length; i++)
         {
             int n = Random.Range(1, 3);
 
+            buttons[i].GetComponent<Button>().interactable = true; 
+
             if (n % 2 == 0)
             {
                 if (right < correct.Length)
                 {
-                    buttons[i].sprite = correct[right];
+                    buttons[i].GetComponent<Image>().sprite = correct[right];
 
                     answers[i] = true; 
 
@@ -55,7 +93,7 @@ public class Captcha : IMinigame
 
                 else if (wrong < incorrect.Length)
                 {
-                    buttons[i].sprite = incorrect[wrong];
+                    buttons[i].GetComponent<Image>().sprite = incorrect[wrong];
 
                     answers[i] = false;
 
@@ -70,7 +108,7 @@ public class Captcha : IMinigame
             {
                 if (wrong < incorrect.Length)
                 {
-                    buttons[i].sprite = incorrect[wrong];
+                    buttons[i].GetComponent<Image>().sprite = incorrect[wrong];
 
                     answers[i] = false;
 
@@ -79,7 +117,7 @@ public class Captcha : IMinigame
 
                 else if (right < correct.Length)
                 {
-                    buttons[i].sprite = correct[right];
+                    buttons[i].GetComponent<Image>().sprite = correct[right];
 
                     answers[i] = true;
 
@@ -92,11 +130,60 @@ public class Captcha : IMinigame
         }
     }
 
+    private void CreateGroups(Sprite[] first, Sprite[] second)
+    {
+        incorrect = new Sprite[first.Length + second.Length];
+
+        int f = 0;
+        int s = 0;
+
+        for (int i = 0; i < first.Length + second.Length; i++)
+        {
+            int n = Random.Range(0, 2);
+
+            if (n == 0)
+            {
+                if (f < first.Length)
+                {
+                    incorrect[i] = first[f];
+
+                    f++;
+                }
+
+                else if (s < second.Length)
+                {
+                    incorrect[i] = second[s];
+
+                    s++;
+                }
+            }
+
+            else
+            {
+                if (s < second.Length)
+                {
+                    incorrect[i] = second[s];
+
+                    s++;
+                }
+
+                else if (f < first.Length)
+                {
+                    incorrect[i] = first[f];
+
+                    f++;
+                }
+            }
+        }
+    }
+
     public void OnButtonSelect(int value)
     {
         if (reset) return;
 
-        if (answers[value]) counter++; 
+        if (answers[value]) counter++;
+
+        buttons[value].GetComponent<Button>().interactable = false; 
     }
     public void OnAcceptSelect()
     {
