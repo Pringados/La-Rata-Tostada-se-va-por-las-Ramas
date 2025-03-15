@@ -25,6 +25,9 @@ public class DeliveryRoadManager : MonoBehaviour
     [SerializeField]
     FollowMouse player;
 
+    [SerializeField]
+    GradientTransition gradient;
+
     BoxCollider2D playerCol;
     Animator playerAnim;
 
@@ -46,15 +49,23 @@ public class DeliveryRoadManager : MonoBehaviour
         scrolling = true;
         playerCol = player.GetComponent<BoxCollider2D>();
         playerAnim = player.GetComponent<Animator>();
+
+        player.transform.position = new Vector3(0f, -15f, 0f);
+        LeanTween.moveY(player.gameObject, -2.65f, 2f);
     }
 
     void Update()
     {
         if (scrolling)
             remainingTime -= Time.deltaTime;
-        if (remainingTime < 0f)
+
+        if (remainingTime < 0f && !GameManager.instance.timerPaused)
         {
+            GameManager.instance.timerPaused = true;
+            gradient.LevelEnd();
             Debug.Log("Delivery Complete");
+            playerCol.enabled = false;
+            LeanTween.moveY(player.gameObject, 17f, 2f);
         }
     }
 

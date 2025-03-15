@@ -48,7 +48,6 @@ public class UIManager : MonoBehaviour
         {
             snakeStartingPos = snake.transform.position.x;
         }
-        Debug.Log(GameManager.instance + ",   " + snake + "    " + snakeEndPos);
         snakeTween = LeanTween.moveX(snake.gameObject, snakeEndPos, GameManager.instance.totalTimeToRagnarok);
     }
 
