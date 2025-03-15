@@ -17,6 +17,8 @@ public class HazardSpawner : MonoBehaviour
     [SerializeField]
     GameObject[] hazards;
 
+    private int branchRenderOrder = 300;
+
     void Start()
     {
         StartCoroutine(SpawnObstacle());
@@ -27,7 +29,10 @@ public class HazardSpawner : MonoBehaviour
         float posX = transform.position.x + Random.Range(-transform.localScale.x / 2, transform.localScale.x / 2);
         //float posX = transform.position.x + transform.localScale.x - 0.01f;
         float angle = -90 * Mathf.Asin(posX / transform.localScale.x);
-        Instantiate(hazards[Random.Range(0, hazards.Length)], new Vector3(posX, transform.position.y, 0f), Quaternion.Euler(0f, 0f, angle)).GetComponent<DeliveryHazard>().manager = manager;
+        GameObject nuevo = Instantiate(hazards[Random.Range(0, hazards.Length)], new Vector3(posX, transform.position.y, 0f), Quaternion.Euler(0f, 0f, angle));
+        nuevo.GetComponent<DeliveryHazard>().manager = manager;
+        nuevo.GetComponent<SpriteRenderer>().sortingOrder = branchRenderOrder;
+        branchRenderOrder--;
 
         float cooldown = Random.Range(minCooldown, maxCooldown);
         while (cooldown > 0f)
