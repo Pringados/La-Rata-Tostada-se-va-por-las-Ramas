@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Powerpoint
   m_EditorClassIdentifier: 
   minigameType: 0
-  showHint: 1
+  textHint: Termina el powerpoint
+  character: {fileID: 21300000, guid: 156cfaa6425471140ae0c8a1d4315184, type: 3}
+  hint: {fileID: 21300000, guid: 7e018aaedf9cafa4d9526edaeba352a4, type: 3}

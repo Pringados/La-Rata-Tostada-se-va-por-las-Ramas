@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Captcha
   m_EditorClassIdentifier: 
   minigameType: 0
-  showHint: 1
+  textHint: Selecciona los objetos que esten bien
+  character: {fileID: 21300000, guid: e69e3fd11e2647d42a4232dbcce596f3, type: 3}
+  hint: {fileID: 21300000, guid: 9088984f41c32974ab53b909c6475e87, type: 3}
