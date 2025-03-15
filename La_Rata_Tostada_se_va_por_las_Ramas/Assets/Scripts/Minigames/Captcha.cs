@@ -4,9 +4,10 @@ using System.Collections;
 
 public class Captcha : IMinigame
 {
-    [SerializeField] private Sprite[] squirrel;
-    [SerializeField] private Sprite[] wood;
+    [SerializeField] private Sprite[] loki;
     [SerializeField] private Sprite[] thor;
+    [SerializeField] private Sprite[] odin;
+    [SerializeField] private Sprite[] extras;
 
     [SerializeField] private GameObject[] buttons;
 
@@ -42,26 +43,26 @@ public class Captcha : IMinigame
 
         answers = new bool[buttons.Length];
 
-        int img = Random.Range(0, 3); 
+        int img = Random.Range(0, 4); 
 
         if (img == 0)
         {
-            correct = new Sprite[squirrel.Length]; 
-            correct = squirrel;
+            correct = new Sprite[odin.Length];
+            correct = odin;
 
-            message.text = "Selecciona a la rata"; 
+            message.text = "Padre de todos, él reina en Asgard";
 
-            CreateGroups(wood, thor); 
+            CreateGroups(thor, loki);
         }
 
         else if (img == 1)
         {
-            correct = new Sprite[wood.Length];
-            correct = wood;
+            correct = new Sprite[loki.Length];
+            correct = loki;
 
-            message.text = "Toca madera";
+            message.text = "No te vuelvas Loki";
 
-            CreateGroups(squirrel, thor); 
+            CreateGroups(odin, thor); 
         }
 
         else
@@ -69,9 +70,9 @@ public class Captcha : IMinigame
             correct = new Sprite[thor.Length];
             correct = thor;
 
-            message.text = "Busca a Cleon";
+            message.text = "Porque yo. soy. THOR";
 
-            CreateGroups(squirrel, wood);
+            CreateGroups(loki, odin);
         }
 
         for (int i = 0; i < buttons.Length; i++)
@@ -132,14 +133,15 @@ public class Captcha : IMinigame
 
     private void CreateGroups(Sprite[] first, Sprite[] second)
     {
-        incorrect = new Sprite[first.Length + second.Length];
+        incorrect = new Sprite[first.Length + second.Length + extras.Length];
 
         int f = 0;
         int s = 0;
+        int aux = 0; 
 
-        for (int i = 0; i < first.Length + second.Length; i++)
+        for (int i = 0; i < first.Length + second.Length + extras.Length; i++)
         {
-            int n = Random.Range(0, 2);
+            int n = Random.Range(0, 3);
 
             if (n == 0)
             {
@@ -150,15 +152,23 @@ public class Captcha : IMinigame
                     f++;
                 }
 
+                else if (aux < extras.Length)
+                {
+                    incorrect[i] = extras[aux];
+
+                    aux++;
+                }
+
                 else if (s < second.Length)
                 {
                     incorrect[i] = second[s];
 
                     s++;
                 }
+
             }
 
-            else
+            else if (n == 1)
             {
                 if (s < second.Length)
                 {
@@ -172,6 +182,37 @@ public class Captcha : IMinigame
                     incorrect[i] = first[f];
 
                     f++;
+                }
+
+                else
+                {
+                    incorrect[i] = extras[aux];
+
+                    aux++;
+                }
+            }
+
+            else
+            {
+                if (aux < extras.Length)
+                {
+                    incorrect[i] = extras[aux];
+
+                    aux++;   
+                }
+
+                else if (f < first.Length)
+                {
+                    incorrect[i] = first[f];
+
+                    f++;
+                }
+
+                else
+                {
+                    incorrect[i] = second[s];
+
+                    s++;
                 }
             }
         }

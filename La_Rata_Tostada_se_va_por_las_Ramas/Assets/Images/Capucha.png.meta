@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Capucha_0
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 860
+        width: 323
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f472b16276a6e429c44e268bb99eff
+      internalID: 1012686807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Capucha_1
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 862
+        width: 321
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4b337110c7dae469cb0ec8ad63beba
+      internalID: 2021154000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Capucha_2
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 862
+        width: 327
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e03bcc8c1377ab488a4b093e3d78ee1
+      internalID: 1331804068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Capucha_3
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 532
+        width: 325
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94ab11a42013844b8a277cd9808527e
+      internalID: -1310833330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Capucha_4
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 206
+        width: 320
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6c06d603019ab4babc2d065dd1caf0
+      internalID: -220941254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Capucha_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 529
+        width: 319
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f2d9ea1fc6f2f4f87f8ffc708f0dff
+      internalID: 1110667958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Capucha_6
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 532
+        width: 321
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef30692ec383c74db01fcd0d05502b5
+      internalID: -469652172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Capucha_7
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 204
+        width: 322
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be0ff1b1704f844baf821cd068b7497
+      internalID: 671916773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Capucha_8
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 206
+        width: 322
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfa9fe2f99b87243868ec414d886784
+      internalID: 770466324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +334,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Capucha_0: 1012686807
+      Capucha_1: 2021154000
+      Capucha_2: 1331804068
+      Capucha_3: -1310833330
+      Capucha_4: -220941254
+      Capucha_5: 1110667958
+      Capucha_6: -469652172
+      Capucha_7: 671916773
+      Capucha_8: 770466324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
