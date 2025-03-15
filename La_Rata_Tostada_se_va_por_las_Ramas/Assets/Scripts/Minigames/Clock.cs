@@ -48,7 +48,7 @@ public class Clock : IMinigame
         minuteClockhand.rotation = Quaternion.Euler(0f, 0f, 0f);
         hourClockhand.rotation = Quaternion.Euler(0f, 0f, 0f);
 
-        int hour = (int)Random.Range(1, 12);
+        int hour = (int)Random.Range(1, 6);
 
         hourAngle = 360 - (30 * hour);
         auxhourAngle = 360 - (30 * (hour + 1)); 

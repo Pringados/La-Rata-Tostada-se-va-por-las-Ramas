@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Demons
   m_EditorClassIdentifier: 
   minigameType: 0
-  showHint: 1
+  textHint: Haz click en los cuadrados que aparezcan
+  character: {fileID: 21300000, guid: e69e3fd11e2647d42a4232dbcce596f3, type: 3}
+  hint: {fileID: 21300000, guid: 4ad7876b7a55a894795caac726ed0be6, type: 3}

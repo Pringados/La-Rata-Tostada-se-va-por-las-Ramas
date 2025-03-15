@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: SimonSays
   m_EditorClassIdentifier: 
   minigameType: 0
-  showHint: 1
+  textHint: Repite la secuencia de colores
+  character: {fileID: 21300000, guid: 60299d7953466dc4caa68de3778fc7ea, type: 3}
+  hint: {fileID: 21300000, guid: 30f5db79126a6e2459a888b54ed5353e, type: 3}
