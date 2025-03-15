@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
 public class Demons_Controller : IMinigame
@@ -7,8 +6,6 @@ public class Demons_Controller : IMinigame
     [SerializeField] private float resetTime;
 
     [SerializeField] private int maxCounter;
-
-    [SerializeField] private Text message;
 
     [SerializeField] private int points;
 
@@ -18,8 +15,6 @@ public class Demons_Controller : IMinigame
 
     private void OnEnable()
     {
-        message.text = string.Empty; 
-
         counter = 0; 
     }
 
@@ -31,8 +26,6 @@ public class Demons_Controller : IMinigame
 
         if (maxCounter <= counter)
         {
-            message.text = "VICTORIA";
-
             MinigameComplete(true);
 
             StartCoroutine(ResetDemons()); 
@@ -44,8 +37,6 @@ public class Demons_Controller : IMinigame
         reset = true;
 
         yield return new WaitForSeconds(resetTime);
-
-        message.text = string.Empty;
 
         counter = 0; 
 

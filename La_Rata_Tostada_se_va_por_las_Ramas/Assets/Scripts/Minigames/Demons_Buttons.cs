@@ -6,25 +6,32 @@ public class Demons_Buttons : MonoBehaviour
     [SerializeField] private float maxTime;
     [SerializeField] private float minTime;
 
+    [SerializeField] private Sprite hole;
+    [SerializeField]  private Sprite demon;
+
+    private RectTransform rectTransform;
+
     private float resetTime;
     private float time;
 
-    private bool active; 
+    private bool active;
 
     void Start()
     {
-        this.GetComponent<Image>().enabled = true;
+        this.GetComponent<Image>().sprite = demon;
 
-        this.GetComponent<Button>().interactable = true;
+        rectTransform = this.GetComponent<RectTransform>();
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, 90);
 
         active = (Random.Range(0, 2) % 2 == 0); 
 
         if (!active)
         {
-            this.GetComponent<Image>().enabled = false;
-
-            this.GetComponent<Button>().interactable = false; 
+            this.GetComponent<Image>().sprite = hole;
+            rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, 20);
         }
+
+        this.GetComponent<Button>().interactable = active;
 
         resetTime = Random.Range(minTime, maxTime);
 
@@ -41,19 +48,21 @@ public class Demons_Buttons : MonoBehaviour
             {
                 active = false;
 
-                this.GetComponent<Image>().enabled = false;
+                this.GetComponent<Image>().sprite = hole;
 
-                this.GetComponent<Button>().interactable = false;
+                rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, 20);
             }
 
             else
             {
                 active = true;
 
-                this.GetComponent<Image>().enabled = true;
+                this.GetComponent<Image>().sprite = demon;
 
-                this.GetComponent<Button>().interactable = true;
+                rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, 90);
             }
+
+            this.GetComponent<Button>().interactable = active;
 
             time = resetTime; 
         }
@@ -63,7 +72,9 @@ public class Demons_Buttons : MonoBehaviour
     {
         active = false;
 
-        this.GetComponent<Image>().enabled = false;
+        this.GetComponent<Image>().sprite = hole;
+
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, 20);
 
         this.GetComponent<Button>().interactable = false;
     }
