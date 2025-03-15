@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 358940429}
   - component: {fileID: 358940428}
   - component: {fileID: 358940432}
+  - component: {fileID: 358940433}
   m_Layer: 0
   m_Name: Ratatoskr
   m_TagString: Untagged
@@ -574,6 +575,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &358940433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358940427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1528839808
+      Data2: 1305473226
+      Data3: -1548311885
+      Data4: -71167577
+    Path: event:/Pine Taps
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &382671115
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +890,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 582258177067457246, guid: 34ed124995a762c4d802472df0be8d38, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -530
+      objectReference: {fileID: 0}
+    - target: {fileID: 582258177067457246, guid: 34ed124995a762c4d802472df0be8d38, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -111
+      objectReference: {fileID: 0}
     - target: {fileID: 1729546516481696789, guid: 34ed124995a762c4d802472df0be8d38, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -938,9 +978,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3254583471187700644, guid: 34ed124995a762c4d802472df0be8d38, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -439
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254583471187700644, guid: 34ed124995a762c4d802472df0be8d38, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -298
+      objectReference: {fileID: 0}
     - target: {fileID: 5378594093049380436, guid: 34ed124995a762c4d802472df0be8d38, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365898831249092767, guid: 34ed124995a762c4d802472df0be8d38, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -228
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365898831249092767, guid: 34ed124995a762c4d802472df0be8d38, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -156
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

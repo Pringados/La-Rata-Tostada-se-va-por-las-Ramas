@@ -26,6 +26,7 @@ public class DeliveryRoadManager : MonoBehaviour
     FollowMouse player;
 
     BoxCollider2D playerCol;
+    Animator playerAnim;
 
     public bool scrolling;
 
@@ -44,6 +45,7 @@ public class DeliveryRoadManager : MonoBehaviour
         galaxy.scrollSpeed = trunk.scrollSpeed * 0.2f;
         scrolling = true;
         playerCol = player.GetComponent<BoxCollider2D>();
+        playerAnim = player.GetComponent<Animator>();
     }
 
     void Update()
@@ -73,6 +75,7 @@ public class DeliveryRoadManager : MonoBehaviour
         bgBranches.scrolling = false;
         galaxy.scrolling = false;
         playerCol.enabled = false;
+        playerAnim.enabled = false;
         player.stunned = true;
         StartCoroutine(restoreScroll(seconds));
     }
@@ -88,6 +91,7 @@ public class DeliveryRoadManager : MonoBehaviour
             galaxy.scrolling = true;
 
             player.stunned = false;
+            playerAnim.enabled = true;
             //Esperamos un poquito más para rehabilitar la colisión del jugador
             yield return new WaitForSeconds(playerImmuneTime);
             playerCol.enabled = true;
