@@ -1110,10 +1110,20 @@ MonoBehaviour:
   maxWindows: 10
   resetTime: 2
   slides:
-  - {fileID: 21300000, guid: 90560b8a11d5fd243bd08253cb642b21, type: 3}
-  - {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 21300000, guid: 9088984f41c32974ab53b909c6475e87, type: 3}
+  - {fileID: 21300000, guid: 32eb1f0f1b0e31a42a127c0ec85f42b8, type: 3}
+  - {fileID: 21300000, guid: 9e0b24e6f434c7647abbc3d5b641dfcf, type: 3}
+  - {fileID: 21300000, guid: aee8ed4f3d7834041b954bc2ee85bc7b, type: 3}
+  - {fileID: 21300000, guid: aee8ed4f3d7834041b954bc2ee85bc7b, type: 3}
+  - {fileID: 21300000, guid: f24cc344dc6f44f4a9c01992e73f5890, type: 3}
+  - {fileID: 21300000, guid: 7e018aaedf9cafa4d9526edaeba352a4, type: 3}
+  - {fileID: 21300000, guid: 1a1097557e90dac4eb10e1ef459436c6, type: 3}
+  - {fileID: 21300000, guid: 4ad7876b7a55a894795caac726ed0be6, type: 3}
+  - {fileID: 21300000, guid: 30f5db79126a6e2459a888b54ed5353e, type: 3}
+  - {fileID: 21300000, guid: 3e323e26870132a4b97877d614156f7d, type: 3}
+  - {fileID: 21300000, guid: 00fb0f4179d556d4fa6663bb0bc63069, type: 3}
+  - {fileID: 21300000, guid: e6c4d52690b82cf4584a73ff8672305a, type: 3}
+  - {fileID: 21300000, guid: 7592589892a94354f9a8afb244157ca1, type: 3}
   window: {fileID: 1708723382}
   text: {fileID: 493573015}
   nextButton: {fileID: 1041304145}

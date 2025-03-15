@@ -48,7 +48,7 @@ public class Mensaje
             {
                 i.changeUIstate((int)col, estadoActual);
             }
-            Debug.Log("reseteando tiempo");
+            //Debug.Log("reseteando tiempo");
             tActual = 0;
             
         }

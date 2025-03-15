@@ -63,7 +63,7 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        Debug.Log("estado inicializado");
+        //Debug.Log("estado inicializado");
     }
 
     // Update is called once per frame
@@ -106,8 +106,8 @@ public class UIManager : MonoBehaviour
 
     public void changeLetterState(int id, int estado)
     {
-        Debug.Log("cambiando estado desde UI");
+        //Debug.Log("cambiando estado desde UI");
         letters[id].GetComponent<Image>().sprite = estadosCartas[estado];
-        Debug.Log(estadosCartas[estado]);
+        //Debug.Log(estadosCartas[estado]);
     }
 }
