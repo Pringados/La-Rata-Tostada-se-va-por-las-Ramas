@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.MemoryProfiler;
 using UnityEngine;
 //using UnityEngine.UIElements;
@@ -21,10 +22,11 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     List<Sprite> estadosCartas = new List<Sprite>();
 
-    [SerializeField] protected Slider snake;
+    [SerializeField] protected Image snake;
+    private float snakeStartingPos;
+    [SerializeField] private float snakeEndPos;
 
-    [SerializeField] private float increaseTime;
-    private float time; 
+    LTDescr snakeTween;
 
     private void Awake()
     {
@@ -36,7 +38,7 @@ public class UIManager : MonoBehaviour
     }
     void Start()
     {
-        for(int i = 0; i < letters.Count; i++)
+        for (int i = 0; i < letters.Count; i++)
         {
             busyLetters.Add(false);
             letters[i].SetActive(false);
@@ -44,17 +46,17 @@ public class UIManager : MonoBehaviour
 
         if (snake != null)
         {
-            snake.value = GameManager.instance.getTimeToRagnarok();
-
-            time = increaseTime;
+            snakeStartingPos = snake.transform.position.x;
         }
+        Debug.Log(GameManager.instance + ",   " + snake + "    " + snakeEndPos);
+        snakeTween = LeanTween.moveX(snake.gameObject, snakeEndPos, GameManager.instance.totalTimeToRagnarok);
     }
 
     public void setInitialState(List<Mensaje> mensajes)
     {
         for (int i = 0;i < mensajes.Count;i++)
         {
-            Debug.Log(i);
+            //Debug.Log(i);
             if (mensajes[i] != null && !mensajes[i].isDestroyed())
             {
                 busyLetters[mensajes[i].getID()] = true;
@@ -62,29 +64,17 @@ public class UIManager : MonoBehaviour
                 letters[mensajes[i].getID()].SetActive(true);
             }
         }
-
-        //Debug.Log("estado inicializado");
     }
 
     // Update is called once per frame
     void Update()
     {
-        time -= Time.deltaTime; 
-
-        if (time < 0f)
-        {
-            time = increaseTime;
-
-            GameManager.instance.increaseTimeToRagnarok(0.05f);
-
-            if (snake != null)
-                snake.value += 0.05f; 
-        }
+        //snake.transform.position = new Vector3(Mathf.Lerp(snakeStartingPos, snakeEndPos, 1f - GameManager.instance.getRemainingTimePortion()), snake.transform.position.y, 0f);
     }
 
     public int getFreeLetterSpace()
     {
-        for(int i = 0; i <letters.Count; i++)
+        for(int i = 0; i < letters.Count; i++)
         {
             if (!busyLetters[i])
             {
@@ -93,7 +83,6 @@ public class UIManager : MonoBehaviour
                 busyLetters[i] = true;
                 return i;
             }
-                
         }
         return -1;
     }
@@ -109,5 +98,20 @@ public class UIManager : MonoBehaviour
         //Debug.Log("cambiando estado desde UI");
         letters[id].GetComponent<Image>().sprite = estadosCartas[estado];
         //Debug.Log(estadosCartas[estado]);
+    }
+
+
+    // Devuelve la posici�n en x de la serpiente que representa la cantidad de tiempo restante.
+    private float GetSnakeX()
+    {
+        return snakeStartingPos + (snakeEndPos - snakeStartingPos) * (1 - GameManager.instance.GetRemainingTimePortion());
+    }
+
+    public void DelaySnake()
+    {
+        float snakeRecoilDuration = 0.5f;
+        LeanTween.cancel(snakeTween.id);
+        LeanTween.moveX(snake.gameObject, GetSnakeX(), snakeRecoilDuration).setEase(LeanTweenType.easeOutQuad);
+        snakeTween = LeanTween.moveX(snake.gameObject, snakeEndPos, GameManager.instance.totalTimeToRagnarok).setDelay(snakeRecoilDuration);
     }
 }

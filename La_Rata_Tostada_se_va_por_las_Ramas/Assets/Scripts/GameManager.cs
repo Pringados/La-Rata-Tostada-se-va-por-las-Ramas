@@ -9,13 +9,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [SerializeField] protected float timeToRagnarok;
-
-    //float time = 0f;
+    public float totalTimeToRagnarok;
+    public float remainingTimeToRagnarok;
 
     public int score;
+    public bool timerPaused = false;
 
-    void Start()
+    void Awake()
     {
         if (instance == null)
         {
@@ -24,15 +24,19 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(this.gameObject);
+
+        remainingTimeToRagnarok = totalTimeToRagnarok;
     }
 
     void Update()
     {
+        if(!timerPaused)
+            remainingTimeToRagnarok -= Time.deltaTime;
         //if ((int)time < (int)(time += Time.deltaTime))
             //Debug.Log((int)time);
 
         if (Input.GetKeyDown(KeyCode.Space))
-            ChangeScene();
+            increaseTimeToRagnarok(1f);
     }
 
     public void ChangeScene()
@@ -47,19 +51,24 @@ public class GameManager : MonoBehaviour
 
     public void increaseTimeToRagnarok(float n)
     {
-        timeToRagnarok += n;
+        remainingTimeToRagnarok += n;
+        if (remainingTimeToRagnarok > totalTimeToRagnarok)
+            remainingTimeToRagnarok = totalTimeToRagnarok;
 
-        if (timeToRagnarok >= 1)
+        UIManager.Instance.DelaySnake();
+
+        if (remainingTimeToRagnarok >= 1)
             return; 
     }
 
     public void decreaseTimeToRagnarok(float n)
     {
-        timeToRagnarok -= n;
+        remainingTimeToRagnarok -= n;
 
-        if (timeToRagnarok <= 0)
-            timeToRagnarok = 0;
+        if (remainingTimeToRagnarok <= 0)
+            remainingTimeToRagnarok = 0;
     }
 
-    public float getTimeToRagnarok() { return timeToRagnarok; }
+    // Devuelve el tiempo restante como float de 0 a 1 (tiempo máximo)
+    public float GetRemainingTimePortion() { return remainingTimeToRagnarok / totalTimeToRagnarok; }
 }
