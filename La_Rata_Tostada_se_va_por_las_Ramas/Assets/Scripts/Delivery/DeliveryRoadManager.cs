@@ -26,6 +26,9 @@ public class DeliveryRoadManager : MonoBehaviour
     FollowMouse player;
 
     [SerializeField]
+    GameObject stars;
+
+    [SerializeField]
     GradientTransition gradient;
 
     BoxCollider2D playerCol;
@@ -49,9 +52,11 @@ public class DeliveryRoadManager : MonoBehaviour
         scrolling = true;
         playerCol = player.GetComponent<BoxCollider2D>();
         playerAnim = player.GetComponent<Animator>();
+        stars.SetActive(false);
 
         player.transform.position = new Vector3(0f, -15f, 0f);
         LeanTween.moveY(player.gameObject, -2.65f, 2f);
+        Invoke("StartLevel()", 1.5f);
     }
 
     void Update()
@@ -88,6 +93,7 @@ public class DeliveryRoadManager : MonoBehaviour
         playerCol.enabled = false;
         playerAnim.enabled = false;
         player.stunned = true;
+        stars.SetActive(true);
         StartCoroutine(restoreScroll(seconds));
     }
 
@@ -102,10 +108,17 @@ public class DeliveryRoadManager : MonoBehaviour
             galaxy.scrolling = true;
 
             player.stunned = false;
+            stars.SetActive(false);
             playerAnim.enabled = true;
             //Esperamos un poquito más para rehabilitar la colisión del jugador
             yield return new WaitForSeconds(playerImmuneTime);
             playerCol.enabled = true;
         }
+    }
+
+    private void StartLevel()
+    {
+        playerCol.enabled = true;
+        spawner.enabled = true;
     }
 }

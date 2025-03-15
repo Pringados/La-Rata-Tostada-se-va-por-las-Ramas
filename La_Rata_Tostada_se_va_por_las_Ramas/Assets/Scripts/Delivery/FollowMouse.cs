@@ -26,7 +26,6 @@ public class FollowMouse : MonoBehaviour
 
     public bool stunned;
 
-
     void Start()
     {
         stunned = false;
