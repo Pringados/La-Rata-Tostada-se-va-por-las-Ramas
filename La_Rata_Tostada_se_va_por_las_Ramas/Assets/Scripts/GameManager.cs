@@ -39,16 +39,18 @@ public class GameManager : MonoBehaviour
         if (!timerPaused && remainingTimeToRagnarok >= 0f)
             remainingTimeToRagnarok -= Time.deltaTime;
 
-        //if ((int)time < (int)(time += Time.deltaTime))
-            //Debug.Log((int)time);
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            increaseTimeToRagnarok(1f);
+        if (remainingTimeToRagnarok <= 0)
+            OnDefeat(); 
     }
 
     public void ChangeScene(string scene)
     {
         SceneManager.LoadScene(scene);
+    }
+
+    public void OnDefeat()
+    {
+        ChangeScene("End");
     }
 
     public void OpenMapScene()
