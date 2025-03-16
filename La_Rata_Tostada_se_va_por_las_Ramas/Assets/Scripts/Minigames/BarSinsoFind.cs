@@ -11,8 +11,9 @@ public class BarSinsoFind : IMinigame
     int maxObjects;
     float canvaX;
     float canvaY;
-    [SerializeField]
-    Canvas canvas;
+    //[SerializeField]
+    //Canvas canvas;
+    [SerializeField] GameObject canvas; 
     [SerializeField]
     int points;
 
