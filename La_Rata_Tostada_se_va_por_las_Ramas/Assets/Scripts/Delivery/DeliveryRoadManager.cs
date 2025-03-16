@@ -54,7 +54,6 @@ public class DeliveryRoadManager : MonoBehaviour
     {
         if (!map)
         {
-
             if (scrolling)
                 remainingTime -= Time.deltaTime;
 

@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(!timerPaused)
+        if (!timerPaused && remainingTimeToRagnarok >= 0f)
             remainingTimeToRagnarok -= Time.deltaTime;
         //if ((int)time < (int)(time += Time.deltaTime))
             //Debug.Log((int)time);
