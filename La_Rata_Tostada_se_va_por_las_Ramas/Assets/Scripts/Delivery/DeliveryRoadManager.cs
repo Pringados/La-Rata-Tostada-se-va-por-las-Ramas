@@ -54,6 +54,9 @@ public class DeliveryRoadManager : MonoBehaviour
     {
         if (!map)
         {
+            int numMsg = GameManager.instance.GetComponent<Inventario>().getMensajesActuales();
+            playerAnim.SetInteger("numLetters", numMsg);
+
             if (scrolling)
                 remainingTime -= Time.deltaTime;
 
@@ -105,7 +108,7 @@ public class DeliveryRoadManager : MonoBehaviour
             player.stunned = false;
             stars.SetActive(false);
             playerAnim.enabled = true;
-            //Esperamos un poquito más para rehabilitar la colisión del jugador
+            //Esperamos un poquito mï¿½s para rehabilitar la colisiï¿½n del jugador
             yield return new WaitForSeconds(playerImmuneTime);
             playerCol.enabled = true;
         }
