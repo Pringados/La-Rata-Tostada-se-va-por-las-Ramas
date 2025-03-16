@@ -1544,9 +1544,25 @@ PrefabInstance:
       value: MapCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 4164682962954583164, guid: 0b1f4f5ff2dc7af4fa20b3bb4f80ca39, type: 3}
+      propertyPath: NPCs.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: fb1202e38c2a65446ace55e998acee29, type: 2}
+    - target: {fileID: 4164682962954583164, guid: 0b1f4f5ff2dc7af4fa20b3bb4f80ca39, type: 3}
+      propertyPath: NPCs.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 626cd6db64b19b545a25686a239fae8e, type: 2}
+    - target: {fileID: 4164682962954583164, guid: 0b1f4f5ff2dc7af4fa20b3bb4f80ca39, type: 3}
+      propertyPath: NPCs.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: a2cb07a23e265c345ac86e105ff2de90, type: 2}
+    - target: {fileID: 4164682962954583164, guid: 0b1f4f5ff2dc7af4fa20b3bb4f80ca39, type: 3}
       propertyPath: deliveryRoadManager
       value: 
       objectReference: {fileID: 382671116}
+    - target: {fileID: 4164682962954583164, guid: 0b1f4f5ff2dc7af4fa20b3bb4f80ca39, type: 3}
+      propertyPath: bonusNodes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6256469235023067621, guid: 0b1f4f5ff2dc7af4fa20b3bb4f80ca39, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -84,4 +84,14 @@ public class GameManager : MonoBehaviour
     {
         snake = snek;
     }
+
+    public void shieldedRat()
+    {
+        GameManager.instance.GetComponent<Inventario>().SetShield(true);
+    }
+
+    public void speedRat()
+    {
+        GameManager.instance.GetComponent<Inventario>().SetSpeed(true);
+    }
 }

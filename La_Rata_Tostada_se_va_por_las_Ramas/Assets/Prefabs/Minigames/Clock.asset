@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab7fe7b7db7655458a3c55d87be0198, type: 3}
   m_Name: Clock
   m_EditorClassIdentifier: 
-  minigameType: 0
+  minigameType: 2
   textHint: Haz click en el brazo hasta que la hora sea correcta
   help: 0
+  bonusType: 1

@@ -8,12 +8,16 @@ using System.Collections.Generic;
 
 public class MinigameData : ScriptableObject
 {
-    public enum MinigameType { Pickup, Delivery};
+    public enum MinigameType { Pickup, Delivery, Bonus};
 
     public MinigameType minigameType;
 
     public string textHint;
 
     public bool help;
+
+    public enum BonusType { None, Time, Shield, Speed };
+
+    public BonusType bonusType;
 
 }
