@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
 
     public int getFreeLetterSpace()
     {
-        if (letters.Count == 0)
+        if (letters.Count != 0)
         {
             for (int i = 0; i < letters.Count; i++)
             {

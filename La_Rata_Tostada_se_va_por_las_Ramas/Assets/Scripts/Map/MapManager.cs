@@ -45,6 +45,8 @@ public class MapManager : MonoBehaviour
 
     static int counter = 0;
 
+    private int lastNPC;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -190,6 +192,7 @@ public class MapManager : MonoBehaviour
     {
         if(destiny.GetComponent<Delivery>() != null) {
             GameManager.instance.GetComponent<Inventario>().protectMensaje(destiny.GetComponent<Delivery>().GetId());
+            destino = GameManager.instance.GetComponent<Inventario>().GetMensaje(destiny.GetComponent<Delivery>().GetId()).getDestino().sceneName;
         }
         else if(destiny.GetComponent<Bonus>() != null)
         {
@@ -213,9 +216,9 @@ public class MapManager : MonoBehaviour
         else
         {
             int n = Random.Range(0, NPCs.Count);
-            GameManager.instance.GetComponent<Inventario>().addMensaje(NPCs[n]);
             destino = NPCs[n].sceneName;
             currNPC = NPCs[n];
+            lastNPC = n;
         }
         distance = GetComponentInChildren<Graph>().distance2time(playerPosition, destiny.GetComponent<MapNode>().GetNode());
         UnityEngine.Debug.Log("Distancia: " + distance);
@@ -293,6 +296,16 @@ public class MapManager : MonoBehaviour
     public NPCData getNPCData()
     {
         return currNPC;
+    }
+
+    public void setDelivery()
+    {
+        int n = Random.Range(0, NPCs.Count);
+        if(n == lastNPC)
+        {
+            n = (n + 1) % NPCs.Count;
+        }
+        GameManager.instance.GetComponent<Inventario>().addMensaje(NPCs[n]);
     }
 
 }

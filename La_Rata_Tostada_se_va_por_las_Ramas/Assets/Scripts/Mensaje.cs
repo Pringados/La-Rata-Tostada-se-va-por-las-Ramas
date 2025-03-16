@@ -55,5 +55,7 @@ public class Mensaje
     }
 
     public int getEstado() { return estadoActual; }
+
+    public NPCData getDestino() { return destinatario; }
     public int getID() { return (int) col; }
 }

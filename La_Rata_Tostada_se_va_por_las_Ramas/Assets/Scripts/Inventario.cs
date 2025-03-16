@@ -109,4 +109,9 @@ public class Inventario : MonoBehaviour
     public int getMensajesActuales() {
         return mensajesActuales;
     }
+
+    public Mensaje GetMensaje(int i)
+    {
+        return mensajes[i];
+    }
 }
