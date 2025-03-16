@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTimeToRagnarok: 0
   remainingTimeToRagnarok: 0
+  playerMapPosition: 0
   score: 0
   timerPaused: 0
 --- !u!4 &102310959
@@ -427,17 +428,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &614537861 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1860554218095756084, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
-  m_PrefabInstance: {fileID: 1234244334}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &618496103
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,20 +834,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textHint: {fileID: 306584215}
-  hintImage: {fileID: 2004801771}
-  NPC: {fileID: 614537861}
   data: {fileID: 11400000, guid: 59cc6ba4ff9c93a47b8ec9baa975ed8f, type: 2}
   minObjects: 5
   maxObjects: 10
   canvas: {fileID: 111335502}
   points: 0
   instanciableObjects:
-  - {fileID: 687340963, guid: 37c56d33f6be77c46945b4ecc462264f, type: 3}
-  - {fileID: -1733283252, guid: 37c56d33f6be77c46945b4ecc462264f, type: 3}
-  - {fileID: 36456047, guid: 37c56d33f6be77c46945b4ecc462264f, type: 3}
-  - {fileID: 2039504813, guid: 37c56d33f6be77c46945b4ecc462264f, type: 3}
-  - {fileID: 261645894, guid: 37c56d33f6be77c46945b4ecc462264f, type: 3}
-  - {fileID: -1540418174, guid: 37c56d33f6be77c46945b4ecc462264f, type: 3}
+  - {fileID: 2039639552, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: -784206465, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: 1316558625, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: 1668669168, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: 331149386, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: -110125854, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: 1764753965, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: -68858466, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: -248681364, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: 453072074, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
+  - {fileID: -1693413219, guid: 03420714cf5581640bf74489d9fd16ff, type: 3}
   whatToFind: {fileID: 342088532}
 --- !u!4 &1396235843
 Transform:
@@ -874,17 +867,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2004801771 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7006468845328848914, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
-  m_PrefabInstance: {fileID: 1234244334}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

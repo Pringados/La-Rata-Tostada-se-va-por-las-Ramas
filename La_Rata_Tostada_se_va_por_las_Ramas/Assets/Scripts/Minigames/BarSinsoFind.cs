@@ -16,6 +16,9 @@ public class BarSinsoFind : IMinigame
     [SerializeField]
     int points;
 
+    [SerializeField] float offsetinY;
+    [SerializeField] float paddinginx;
+
     int objToFind;
 
     [SerializeField]
@@ -45,7 +48,7 @@ public class BarSinsoFind : IMinigame
 
                     newButton.AddComponent<CanvasRenderer>();
                     trans.SetParent(canvas.transform);
-                    trans.anchoredPosition = new Vector2(Random.Range(-canvaX, canvaX), Random.Range(-canvaY, 0));
+                    trans.anchoredPosition = new Vector2(Random.Range(-canvaX+paddinginx, canvaX-paddinginx), Random.Range(-canvaY, -offsetinY));
 
                     Image img = newButton.AddComponent<Image>();
                     img.sprite = instanciableObjects[i];
