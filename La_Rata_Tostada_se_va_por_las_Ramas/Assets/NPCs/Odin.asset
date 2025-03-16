@@ -12,6 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21802aad357546499c9a1e8fcdf6eb3, type: 3}
   m_Name: Odin
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - array:
+    - text: Ay, Ratatosk, ponte una chaquetita, que parece que no pero hacer frio
+        eh
+      fmodEventPath: 
+  - array:
+    - text: "Estos musphelhelianos, desde luego\u2026 "
+      fmodEventPath: 
+    - text: 'Bueno, no voy a decir nada, que ya no se puede decir nada. '
+      fmodEventPath: 
+    - text: " Maldita generaci\xF3n de cristal."
+      fmodEventPath: 
+  - array:
+    - text: Mis hijos ya no me llaman.
+      fmodEventPath: 
+    - text: "Les aviso de que mi tel\xE9fono se pone raro y vibra y hace sonidos
+        y no me ayudan."
+      fmodEventPath: 
+    - text: Tio..Igual esta carta de suicidio hace que piensen en mi
+      fmodEventPath: 
+  - array:
+    - text: "No me preguntes porqu\xE9 soy de lego. la artista me dibuj\xF3 as\xED. "
+      fmodEventPath: 
+    - text: "El equipo de desarrollo tambi\xE9n est\xE1 confuso. "
+      fmodEventPath: 
+    - text: "Yo estoy confuso tambi\xE9n, pero solo por el avanzado estado de mi
+        demencia senil. "
+      fmodEventPath: 
+    - text: "Que raro est\xE1s, Thor"
+      fmodEventPath: 
   sprite: {fileID: 1067130649, guid: f8cce56c9654aff41a96cdebb030d761, type: 3}
   sceneName: Shooter

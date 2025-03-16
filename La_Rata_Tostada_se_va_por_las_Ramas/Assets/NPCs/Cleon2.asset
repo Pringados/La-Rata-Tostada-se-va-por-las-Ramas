@@ -12,6 +12,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21802aad357546499c9a1e8fcdf6eb3, type: 3}
   m_Name: Cleon2
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - array:
+    - text: "\xBFPero c\xF3mo que el Ragnarok? \xA1Pero no te preocupes por eso,
+        hombre!"
+      fmodEventPath: 
+    - text: " \xA1Si para eso queda! Si el lobo Fenrir ni siquiera ha emergido del
+        suelo para vengarse de los Aesir. "
+      fmodEventPath: 
+    - text: Tenemos tiempo.
+      fmodEventPath: 
+  - array:
+    - text: "\xBFPero c\xF3mo que el Ragnarok? \xA1Pero no te preocupes por eso,
+        hombre!"
+      fmodEventPath: 
+    - text: " \xA1Si para eso queda! Si el lobo Fenrir ni siquiera ha emergido del
+        suelo para vengarse de los Aesir. "
+      fmodEventPath: 
+    - text: Tenemos tiempo.
+      fmodEventPath: 
+  - array:
+    - text: "Enhorabuena por haber llegado hasta aqu\xED. Eres brillante."
+      fmodEventPath: 
+  - array:
+    - text: ' Esto de que estoy infiltrado en el Imperio Romano no se lo digas a
+        los de Asgard que me cortan el chiringuito eh'
+      fmodEventPath: 
+  - array:
+    - text: Pedro Pablo una vez me dijo que el Ragnarok fue idea suya.
+      fmodEventPath: 
+    - text: "Yo le dije \u201CNo hombre no Pedro no hagas eso\u201D, pero justo coincidi\xF3
+        que trajeron una de bravas y ya no me escuch\xF3"
+      fmodEventPath: 
+  - array:
+    - text: "Para hacer acueductos se necesita un vaso de sangr\xEDa. El agua el
+        a\xF1o pasado claro la llevabais con un cubo. Eso aqu\xED ya no se hace."
+      fmodEventPath: 
+    - text: " Y vais a cometer muchos errores. Vais a hacer el acueducto que suba
+        en lugar de que baje y luego vais a decir \u201Cporque no compila mi acueducto?\u201D"
+      fmodEventPath: 
+    - text: " Pues porque no se ha inventado la computaci\xF3n todav\xEDa, chicos.
+        Estamos en el Imperio Romano"
+      fmodEventPath: 
   sprite: {fileID: 21300000, guid: 7e0fd5db32a36644f954a75351fe085d, type: 3}
   sceneName: Popup

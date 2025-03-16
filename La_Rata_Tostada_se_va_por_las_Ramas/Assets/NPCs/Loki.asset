@@ -18,7 +18,7 @@ MonoBehaviour:
       fmodEventPath: 
     - text: "El fraude fiscal est\xE1 mucho m\xE1s cyberaceptado."
       fmodEventPath: 
-    - text: "Anyways por favor no le digas a Hacienda que estoy aqu\xED."
+    - text: "Anyways por favor no le digas a CyberHacienda que estoy aqu\xED."
       fmodEventPath: 
   - array:
     - text: 'mi transplante de cyberpito tuvo complicaciones. '
@@ -32,6 +32,13 @@ MonoBehaviour:
         no es nada extra\xF1o."
       fmodEventPath: 
     - text: '[Susurrando] Echo de menos al caballo.'
+      fmodEventPath: 
+  - array:
+    - text: "A m\xED siempre me ha gustado mas esta vibe. Esta cybervibe."
+      fmodEventPath: 
+    - text: "Voy dur\xEDsimo. como mi brazo. que es de metal. es un cyberbrazo."
+      fmodEventPath: 
+    - text: "Anyways por favor entr\xE9gale esto a CyberHacienda\u201D"
       fmodEventPath: 
   sprite: {fileID: -885574276, guid: f8cce56c9654aff41a96cdebb030d761, type: 3}
   sceneName: Run_Boy_Run
