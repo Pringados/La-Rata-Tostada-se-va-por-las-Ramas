@@ -111,7 +111,7 @@ public class BarSinsoFind : IMinigame
         MinigameComplete(true);
     }
 
-    override public int CalculateScore() 
+    override public float CalculateScore() 
     {
         return points;
     }

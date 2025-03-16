@@ -98,7 +98,7 @@ public class SimonSays : IMinigame
         reset = false;
     }
 
-    public override int CalculateScore()
+    public override float CalculateScore()
     {
         return points;
     }

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public SnakeBar snake;
     //float time = 0f;
 
-    public int score;
+    public float score;
     public bool timerPaused = false;
 
     private bool init = false;
@@ -43,7 +43,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (!timerPaused && remainingTimeToRagnarok >= 0f)
+        {
             remainingTimeToRagnarok -= Time.deltaTime;
+            score += Time.deltaTime * 4;
+        }
 
         if (remainingTimeToRagnarok <= 0)
             OnDefeat(); 

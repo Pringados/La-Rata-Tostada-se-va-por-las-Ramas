@@ -162,7 +162,7 @@ public class Sliding : IMinigame
 
         }
     }
-    public override int CalculateScore()
+    public override float CalculateScore()
     {
         return points;
     }
