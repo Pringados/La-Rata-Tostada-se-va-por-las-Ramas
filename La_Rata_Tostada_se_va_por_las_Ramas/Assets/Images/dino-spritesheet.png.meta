@@ -307,7 +307,7 @@ TextureImporter:
       name: dino-spritesheet_8
       rect:
         serializedVersion: 2
-        x: 337
+        x: 332
         y: 18
         width: 50
         height: 50
@@ -328,12 +328,12 @@ TextureImporter:
       name: dino-spritesheet_9
       rect:
         serializedVersion: 2
-        x: 363
+        x: 362
         y: 18
         width: 25
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0017287827}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

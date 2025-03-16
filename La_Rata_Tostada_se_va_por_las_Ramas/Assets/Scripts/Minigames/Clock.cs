@@ -25,7 +25,7 @@ public class Clock : IMinigame
         ResetHour(); 
     }
 
-    private void OnMouseDown()
+    public void OnClockClick()
     {
         if (reset) return; 
 
