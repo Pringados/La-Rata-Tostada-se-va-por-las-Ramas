@@ -12,6 +12,7 @@ public class Inventario : MonoBehaviour
     [SerializeField]
     int mensajesMáximos;
     int mensajesActuales = 0;
+    int protect = -1;
     private UIManager UI;
     private GameManager gManager;
     [SerializeField]
@@ -27,7 +28,6 @@ public class Inventario : MonoBehaviour
     void Start()
     {
         gManager = gameObject.GetComponent<GameManager>();
-
         //mensajes.Add(new Mensaje());
         //mensajes[0].setAtributos(0, 0, nTiempoEntreEstados, nEstados, this);
         //UI.setInitialState(mensajes);
@@ -53,6 +53,12 @@ public class Inventario : MonoBehaviour
             Mensaje men = new Mensaje();
             men.setAtributos(im, destinatario, nTiempoEntreEstados, nEstados, this);
             mensajes.Add(men);
+
+            MapManager.instance.placeDeliveryNodes(im);
+            if (mensajesActuales == mensajesMáximos)
+            {
+                MapManager.instance.blockPickUps();
+            }
             return men;
         }
 
@@ -71,10 +77,17 @@ public class Inventario : MonoBehaviour
                 if (mensajes[i].isDestroyed())
                 {
                     //comprobación de q está yendo el jugador
-                    mensajes[i] = null;
-                    mensajes.RemoveAt(i);
-                    mensajesActuales--;
-                    UI.deleteLetter(i);
+                    if(mensajes[i].getID() != protect)
+                    {
+                        mensajes[i] = null;
+                        mensajes.RemoveAt(i);
+                        mensajesActuales--;
+                        if(mensajesActuales == mensajesMáximos - 1)
+                        {
+                            MapManager.instance.unblockPickUps();
+                        }
+                        UI.deleteLetter(i);
+                    }
 
                 }
             }
@@ -85,5 +98,10 @@ public class Inventario : MonoBehaviour
     {
         UI.changeLetterState(id, nextState);
 
+    }
+
+    public void protectMensaje(int id)
+    {
+        protect= id;
     }
 }

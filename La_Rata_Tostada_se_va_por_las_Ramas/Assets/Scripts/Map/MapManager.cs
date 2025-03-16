@@ -1,3 +1,4 @@
+using FMOD;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,13 +22,16 @@ public class MapManager : MonoBehaviour
     [SerializeField] public GameObject pickUpNode;
 
     // Entregas
-    [SerializeField] public GameObject deliveryNode;
+    [SerializeField] public List<GameObject> deliveryNodes;
+
+    [SerializeField] public List<GameObject> bonusNodes;
 
     // Nodos libres para spawnear
     public HashSet<int> freeNodes = new HashSet<int>();
 
     public GameObject squirrel;
     public List<GameObject> pickUpList;
+    private bool blocks = false;
 
     // Start is called before the first frame update
     private void Awake()
@@ -52,7 +56,7 @@ public class MapManager : MonoBehaviour
         placePlayer(playerPosition);
 
         // Generar nuevos nodes,  Spawnea puntos de recogida
-        placePickUpNodes();
+        //placePickUpNodes();
 
         // placeDeliveryNodes();
 
@@ -65,7 +69,7 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    void placePickUpNodes() {
+    public void placePickUpNodes() {
         int n = Random.Range(1, 4);
         for (int i = 0; i < n; i++) {
 
@@ -78,13 +82,16 @@ public class MapManager : MonoBehaviour
 
                 // Spawn pickup
                 GameObject recogida = Instantiate(pickUpNode, this.transform);
-                pickUpList.Add(recogida);
-                pickUpList[pickUpList.Count -1].GetComponent<MapNode>().SetNode(j);
+                recogida.GetComponent<MapNode>().SetNode(j);
 
                 int x = GetComponentInChildren<Graph>().getXNode(j);
                 int y = GetComponentInChildren<Graph>().getYNode(j);
                 recogida.transform.localPosition = new Vector3(x, y, 0);
                 recogida.GetComponent<Button>().onClick.AddListener(delegate{Pulsado(recogida);});
+                if (blocks)
+                {
+                    recogida.GetComponent<Button>().enabled = false;
+                }
 
                 // Remove free node
                 freeNodes.Remove(j);
@@ -93,11 +100,56 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    void placeDeliveryNodes() {
+    public void placeDeliveryNodes(int nSobre) {
         // int x = GetComponentInChildren<Graph>().getXNode(deliveryNode);
         // int y = GetComponentInChildren<Graph>().getYNode(deliveryNode);
+        if (freeNodes.Count > 0)
+        {
+            // Get free node
+            int j = Random.Range(0, 18);
+            while (!freeNodes.Contains(j))
+            {
+                j = Random.Range(0, 18);
+            }
 
+            // Spawn pickup
+            GameObject delivery = Instantiate(deliveryNodes[nSobre], this.transform);
+            delivery.GetComponent<MapNode>().SetNode(j);
 
+            int x = GetComponentInChildren<Graph>().getXNode(j);
+            int y = GetComponentInChildren<Graph>().getYNode(j);
+            delivery.transform.localPosition = new Vector3(x, y, 0);
+            delivery.GetComponent<Button>().onClick.AddListener(delegate { Pulsado(delivery); });
+
+            // Remove free node
+            freeNodes.Remove(j);
+        }
+
+    }
+
+    public void placeBonusNodes(int id)
+    {
+        if (freeNodes.Count > 0)
+        {
+            // Get free node
+            int j = Random.Range(0, 18);
+            while (!freeNodes.Contains(j))
+            {
+                j = Random.Range(0, 18);
+            }
+
+            // Spawn pickup
+            GameObject bonus = Instantiate(bonusNodes[id], this.transform);
+            bonus.GetComponent<MapNode>().SetNode(j);
+
+            int x = GetComponentInChildren<Graph>().getXNode(j);
+            int y = GetComponentInChildren<Graph>().getYNode(j);
+            bonus.transform.localPosition = new Vector3(x, y, 0);
+            bonus.GetComponent<Button>().onClick.AddListener(delegate { Pulsado(bonus); });
+
+            // Remove free node
+            freeNodes.Remove(j);
+        }
     }
 
     void placePlayer(int pn) {
@@ -112,6 +164,14 @@ public class MapManager : MonoBehaviour
         squirrel.GetComponent<MapNode>().SetNode(pn);
 
         freeNodes.Remove(pn);
+
+        //Esto son las cosas que tienen que pasar cuando se abre el mapa
+        placePickUpNodes();
+        //if (Random.Range(0, 10) == 9) {
+        //    placeBonusNodes(Random.Range(0,4));
+        //}
+        placeBonusNodes(Random.Range(0, 4));
+        checkNodes();
     }
 
     public void updatePlayerMapPosition(int n)
@@ -122,10 +182,61 @@ public class MapManager : MonoBehaviour
 
     public void Pulsado(GameObject destiny)
     {
+        if(destiny.GetComponent<Delivery>() != null) {
+            GameManager.instance.GetComponent<Inventario>().protectMensaje(destiny.GetComponent<Delivery>().GetId());
+        }
+        else if(destiny.GetComponent<Bonus>() != null)
+        {
+            
+        }
+        else
+        {
+            GameManager.instance.GetComponent<Inventario>().addMensaje(8);
+        }
         updatePlayerMapPosition(destiny.GetComponent<MapNode>().GetNode());
         placePlayer(playerPosition);
+        
         Destroy(destiny);
 
+    }
+
+    public void checkNodes()
+    {
+        PickUp[] objects = GetComponentsInChildren<PickUp>();
+        foreach (PickUp obj in objects) {
+            if (obj.GetTime() > 0)
+            {
+                obj.SetTime(obj.GetTime() - 1);
+            }
+            else
+            {
+                UnityEngine.Debug.Log("Adios " + obj.GetNode());
+                Destroy(obj.gameObject);
+            }
+        }
+
+        Bonus objetos = GetComponentInChildren<Bonus>();
+        Destroy(objetos.gameObject);
+    }
+
+    public void blockPickUps()
+    {
+        blocks = true;
+        PickUp[] objects = GetComponentsInChildren<PickUp>();
+        foreach (PickUp obj in objects)
+        {
+            obj.gameObject.GetComponent<Button>().enabled = false;
+        }
+    }
+
+    public void unblockPickUps()
+    {
+        blocks = false;
+        PickUp[] objects = GetComponentsInChildren<PickUp>();
+        foreach (PickUp obj in objects)
+        {
+            obj.gameObject.GetComponent<Button>().enabled = true;
+        }
     }
 
 }
