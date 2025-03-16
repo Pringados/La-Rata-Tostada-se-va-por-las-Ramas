@@ -6,8 +6,6 @@ public class Popups : IMinigame
 {
     [SerializeField] private GameObject window;
 
-    [SerializeField] private Text message; 
-
     [SerializeField] private float resetTime;
 
     [SerializeField] private int points;
@@ -21,8 +19,6 @@ public class Popups : IMinigame
     private void OnEnable()
     {
         counter = 0;
-
-        message.text = "HOLA";
 
         maxCounter = Random.Range(1, maxWindows + 1);
 
@@ -43,8 +39,6 @@ public class Popups : IMinigame
         else
         {
             counter = 0; 
-
-            message.text = "CORRECT";
 
             MinigameComplete(true);
 
@@ -73,8 +67,6 @@ public class Popups : IMinigame
         yield return new WaitForSeconds(resetTime);
 
         maxCounter = Random.Range(1, maxWindows + 1);
-
-        message.text = "HOLA";
 
         reset = false;
     }
