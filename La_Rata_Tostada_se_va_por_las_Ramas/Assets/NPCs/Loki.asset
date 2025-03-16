@@ -33,5 +33,5 @@ MonoBehaviour:
       fmodEventPath: 
     - text: '[Susurrando] Echo de menos al caballo.'
       fmodEventPath: 
-  sprite: {fileID: 0}
+  sprite: {fileID: -885574276, guid: f8cce56c9654aff41a96cdebb030d761, type: 3}
   sceneName: Run_Boy_Run
