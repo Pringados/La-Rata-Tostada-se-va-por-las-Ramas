@@ -67,7 +67,7 @@ public class MapManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //GameManager.instance.SetMusicAction(false);
+        GameManager.instance.SetMusicAction(false);
     }
 
     void initFreeNodes() {
