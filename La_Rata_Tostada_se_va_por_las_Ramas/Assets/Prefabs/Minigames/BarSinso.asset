@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: BarSinso
   m_EditorClassIdentifier: 
   minigameType: 0
-  showHint: 1
+  textHint: Encuentra el objeto entre el desorden
+  help: 0

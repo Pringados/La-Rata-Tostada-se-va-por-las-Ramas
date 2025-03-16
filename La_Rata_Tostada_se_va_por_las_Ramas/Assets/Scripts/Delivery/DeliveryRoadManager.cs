@@ -51,6 +51,7 @@ public class DeliveryRoadManager : MonoBehaviour
     void Start()
     {
         map = true;
+        GameManager.instance.timerPaused = true;
         Time.timeScale = 0f;
     }
 
@@ -72,14 +73,13 @@ public class DeliveryRoadManager : MonoBehaviour
                 gradient.LevelEnd();
                 Debug.Log("Road Complete");
                 playerCol.enabled = false;
-                LeanTween.moveY(player.gameObject, 17f, 2f);
-                Invoke("EnterDestination", 2f);
+                GameObject npc = gradient.getCanva().transform.Find("NPC").gameObject;
+                LeanTween.moveY(player.gameObject, 17f, 2f).setOnComplete(() => { npc.SetActive(true); });
+
+
+                //Invoke("destinyReached", 2f);
             }
         }
-    }
-    private void EnterDestination()
-    {
-        GameManager.instance.ChangeScene(MapManager.instance.getDestino());
     }
 
     public void AddBranch(DeliveryHazard branch)
@@ -132,6 +132,7 @@ public class DeliveryRoadManager : MonoBehaviour
 
     public void initialize()
     {
+        GameManager.instance.timerPaused = false;
         branches = new List<DeliveryHazard>();
         duration = MapManager.instance.getDistance() *2 +5;
         UnityEngine.Debug.Log("Duration " + duration);
@@ -151,5 +152,11 @@ public class DeliveryRoadManager : MonoBehaviour
         LeanTween.moveY(player.gameObject, -2.65f, 2f);
         Invoke("StartLevel", 1.5f);
         map = false;
+    }
+
+    public void destinyReached()
+    {
+        MapManager.instance.setDelivery();
+        GameManager.instance.ChangeScene(MapManager.instance.getDestino());
     }
 }

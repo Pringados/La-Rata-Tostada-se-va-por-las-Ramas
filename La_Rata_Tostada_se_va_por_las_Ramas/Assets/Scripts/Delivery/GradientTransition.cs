@@ -18,4 +18,9 @@ public class GradientTransition : MonoBehaviour
         transform.position = new Vector3(transform.position.x, 2232f, 0f);
         LeanTween.moveY(this.gameObject, -41f, outroFadeDuration).setEase(LeanTweenType.easeInSine).setDelay(0.5f);
     }
+
+    public GameObject getCanva()
+    {
+        return gameObject.transform.parent.gameObject;
+    }
 }
