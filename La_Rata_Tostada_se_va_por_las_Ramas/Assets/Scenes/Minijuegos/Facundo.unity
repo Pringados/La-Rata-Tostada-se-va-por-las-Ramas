@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ba33e810a07db4296449933fa5e9ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textHint: {fileID: 0}
-  data: {fileID: 0}
+  textHint: {fileID: 229300290}
+  data: {fileID: 11400000, guid: 576011c9df9eba041a948b6296c7ceb2, type: 2}
   facundo: {fileID: 1788735868}
   trackingActive: 0
   clickTime: 0
@@ -171,6 +171,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &229300290 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3564566520728517060, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
+  m_PrefabInstance: {fileID: 2068022199}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &317713766
 PrefabInstance:
   m_ObjectHideFlags: 0

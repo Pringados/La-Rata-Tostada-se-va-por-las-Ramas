@@ -932,9 +932,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1659538423}
+  - {fileID: 595802437}
   - {fileID: 2146285237}
   - {fileID: 1604817776}
-  - {fileID: 595802437}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1342,14 +1342,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.645283, g: 0.645283, b: 0.645283, a: 1}
+  m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 77e4da6838d16154c990f3ca4fd77673, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1527,7 +1527,6 @@ MonoBehaviour:
   textHint: {fileID: 1604817777}
   data: {fileID: 11400000, guid: 5c437e7aa5e4fb74d80efefffc5e6637, type: 2}
   window: {fileID: 1708723380}
-  message: {fileID: 997411521}
   resetTime: 2
   points: 3
   maxWindows: 8
