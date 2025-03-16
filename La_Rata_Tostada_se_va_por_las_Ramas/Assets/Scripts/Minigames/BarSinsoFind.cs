@@ -86,9 +86,15 @@ public class BarSinsoFind : IMinigame
         GameObject objButt = new GameObject();
         RectTransform transform = objButt.AddComponent<RectTransform>();
 
+        Vector2 p = new Vector2(Random.Range(-canvaX + paddinginx, canvaX - paddinginx), Random.Range(-canvaY + 10, -offsetinY));
+        while (p.x >= forbIni.x && p.y <= forbIni.y)    //si está en el forbREct
+        {
+            p = new Vector2(Random.Range(-canvaX + paddinginx, canvaX - paddinginx), Random.Range(-canvaY + 10, -offsetinY));
+        }
+
         objButt.AddComponent<CanvasRenderer>();
         transform.SetParent(canvas.transform);
-        transform.anchoredPosition = new Vector2(Random.Range(-canvaX, canvaX), Random.Range(-canvaY, 0));
+        transform.anchoredPosition = p;
 
         objButt.AddComponent<Image>().sprite = instanciableObjects[objToFind];
 

@@ -12,6 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21802aad357546499c9a1e8fcdf6eb3, type: 3}
   m_Name: Loki
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - array:
+    - text: Que no te sorprenda verme por aqui.
+      fmodEventPath: 
+    - text: "El fraude fiscal est\xE1 mucho m\xE1s cyberaceptado."
+      fmodEventPath: 
+    - text: "Anyways por favor no le digas a Hacienda que estoy aqu\xED."
+      fmodEventPath: 
+  - array:
+    - text: 'mi transplante de cyberpito tuvo complicaciones. '
+      fmodEventPath: 
+    - text: ' No quiero hablar de ello.'
+      fmodEventPath: 
+    - text: "No s\xE9 porqu\xE9 te estoy contando esto."
+      fmodEventPath: 
+  - array:
+    - text: "Gracias por traerme esto. S\xE9 que tiene una forma sospechosa, pero
+        no es nada extra\xF1o."
+      fmodEventPath: 
+    - text: '[Susurrando] Echo de menos al caballo.'
+      fmodEventPath: 
   sprite: {fileID: 0}
   sceneName: Run_Boy_Run
