@@ -21,8 +21,14 @@ public class GameManager : MonoBehaviour
 
     private bool init = false;
 
+    private int actionDownCounters = 0;
+
+    StudioEventEmitter emitter;
+
     void Awake()
     {
+        emitter = GetComponentInChildren<StudioEventEmitter>();
+
         if (instance == null)
         {
             instance = this;
@@ -44,6 +50,8 @@ public class GameManager : MonoBehaviour
 
         if (remainingTimeToRagnarok <= 0)
             OnDefeat(); 
+
+        emitter.SetParameter("RemainingTime", remainingTimeToRagnarok / totalTimeToRagnarok);
     }
 
     public void ChangeScene(string scene)
@@ -54,6 +62,7 @@ public class GameManager : MonoBehaviour
     public void OnDefeat()
     {
         ChangeScene("End");
+        emitter.SetParameter("End", 1);
     }
 
     public void OpenMapScene()
@@ -90,6 +99,17 @@ public class GameManager : MonoBehaviour
         snake = snek;
     }
 
+    public void SetMusicAction(bool action)
+    {
+        if (action && --actionDownCounters <= 0)
+            emitter.SetParameter("Action", 1f);
+        else
+        {
+            emitter.SetParameter("Action", 0f);
+            actionDownCounters++;
+        }
+    }
+    
     public void shieldedRat()
     {
         GameManager.instance.GetComponent<Inventario>().SetShield(true);

@@ -44,6 +44,11 @@ public class DeliveryRoadManager : MonoBehaviour
 
     private bool map;
 
+    void Awake()
+    {
+        GameManager.instance.SetMusicAction(true);
+    }
+
     void Start()
     {
         MapManager.instance.deliveryRoadManager = this;
@@ -61,8 +66,8 @@ public class DeliveryRoadManager : MonoBehaviour
             //playerAnim.SetInteger("numLetters", numMsg);
 
             if (scrolling)
-            { 
-                remainingTime -= Time.deltaTime; 
+            {
+                remainingTime -= Time.deltaTime;
             }
 
             if (remainingTime < 0f && !GameManager.instance.timerPaused)
@@ -136,7 +141,7 @@ public class DeliveryRoadManager : MonoBehaviour
     {
         GameManager.instance.timerPaused = false;
         branches = new List<DeliveryHazard>();
-        duration = MapManager.instance.getDistance() *2 +5;
+        duration = MapManager.instance.getDistance() *2 + 5;
         if (GameManager.instance.GetComponent<Inventario>().GetSpeed())
         {
             duration /= 2;
