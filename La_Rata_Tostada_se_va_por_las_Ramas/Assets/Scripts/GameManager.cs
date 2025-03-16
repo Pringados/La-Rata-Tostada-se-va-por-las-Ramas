@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
 
     public float totalTimeToRagnarok;
     public float remainingTimeToRagnarok;
- 
 
+    public SnakeBar snake;
     //float time = 0f;
 
     public int score;
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
         if (remainingTimeToRagnarok > totalTimeToRagnarok)
             remainingTimeToRagnarok = totalTimeToRagnarok;
 
-        UIManager.Instance.DelaySnake();
+        snake.DelaySnake();
 
         if (remainingTimeToRagnarok >= 1)
             return; 
@@ -78,4 +78,8 @@ public class GameManager : MonoBehaviour
     // Devuelve el tiempo restante como float de 0 a 1 (tiempo m�ximo)
     public float GetRemainingTimePortion() { return remainingTimeToRagnarok / totalTimeToRagnarok; }
 
+    public void SetSnake(SnakeBar snek)
+    {
+        snake = snek;
+    }
 }

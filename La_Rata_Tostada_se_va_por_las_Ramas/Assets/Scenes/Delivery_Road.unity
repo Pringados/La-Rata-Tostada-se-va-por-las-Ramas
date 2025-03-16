@@ -373,8 +373,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1393351182}
     - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
-      propertyPath: snakeEndPos
-      value: 1470.448
+      propertyPath: letters.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
       propertyPath: letters.Array.data[0]
@@ -388,6 +388,10 @@ PrefabInstance:
       propertyPath: letters.Array.data[2]
       value: 
       objectReference: {fileID: 8163668527687563463}
+    - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
+      propertyPath: estadosCartas.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
       propertyPath: estadosCartas.Array.data[0]
       value: 
@@ -862,7 +866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "mensajesM\xE1ximos": 3
   nEstados: 4
-  nTiempoEntreEstados: 2
+  nTiempoEntreEstados: 20
 --- !u!1 &728574357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,8 +1210,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8885663649285065162, guid: 2b54b6057512f144c8183a5cb88dc748, type: 3}
+      propertyPath: timerPaused
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885663649285065162, guid: 2b54b6057512f144c8183a5cb88dc748, type: 3}
       propertyPath: totalTimeToRagnarok
-      value: 6
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

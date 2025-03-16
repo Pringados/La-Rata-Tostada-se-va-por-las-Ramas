@@ -11,6 +11,7 @@ public class PauseGame : MonoBehaviour
     private void OnEnable()
     {
         pause = true;
+        GameManager.instance.timerPaused = true;
 
         Time.timeScale = pause ? 0 : 1;
 
@@ -20,7 +21,7 @@ public class PauseGame : MonoBehaviour
     public void OnClickPause()
     {
         pause = !pause;
-
+        GameManager.instance.timerPaused = pause;
         Time.timeScale = pause ? 0 : 1;
 
         hint.SetActive(pause);

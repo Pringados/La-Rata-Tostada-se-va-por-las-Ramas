@@ -26,7 +26,7 @@ public class MapManager : MonoBehaviour
 
     [SerializeField] public List<GameObject> bonusNodes;
 
-    [SerializeField] DeliveryRoadManager deliveryRoadManager;
+    public DeliveryRoadManager deliveryRoadManager;
 
     [SerializeField] public List<NPCData> NPCs;
     NPCData currNPC;
@@ -173,10 +173,10 @@ public class MapManager : MonoBehaviour
 
         //Esto son las cosas que tienen que pasar cuando se abre el mapa
         placePickUpNodes();
-        //if (Random.Range(0, 10) == 9) {
-        //    placeBonusNodes(Random.Range(0,4));
-        //}
-        placeBonusNodes(Random.Range(0, 4));
+        if (Random.Range(0, 4) == 3)
+        {
+            placeBonusNodes(Random.Range(0, 4));
+        }
         checkNodes();
     }
 
@@ -193,7 +193,22 @@ public class MapManager : MonoBehaviour
         }
         else if(destiny.GetComponent<Bonus>() != null)
         {
-            
+            int id = destiny.GetComponent<Bonus>().GetId();
+            switch (id)
+            {
+                case 0:
+                    destino = "Vending_Machine_Scene";
+                    break;
+                case 1:
+                    destino = "Captcha";
+                    break;
+                case 2:
+                    destino = "Reloj";
+                    break;
+                case 3:
+                    destino = "Letter";
+                    break;
+            }
         }
         else
         {
@@ -203,6 +218,7 @@ public class MapManager : MonoBehaviour
             currNPC = NPCs[n];
         }
         distance = GetComponentInChildren<Graph>().distance2time(playerPosition, destiny.GetComponent<MapNode>().GetNode());
+        UnityEngine.Debug.Log("Distancia: " + distance);
         updatePlayerMapPosition(destiny.GetComponent<MapNode>().GetNode());
         placePlayer(playerPosition);
         deliveryRoadManager.initialize();
