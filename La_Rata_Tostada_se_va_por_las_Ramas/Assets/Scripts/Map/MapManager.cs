@@ -1,11 +1,4 @@
-using FMOD;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Xml.Linq;
-using TreeEditor;
-using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
 
