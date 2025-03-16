@@ -1,30 +1,118 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class MapManager : MonoBehaviour
 {
-    [SerializeField] public GameObject playerPrefab;
+
+    public static MapManager instance;
+    
+    // Player
+    [SerializeField] public GameObject playerNode;
+    private int playerPosition;
+
+    // Recogidas
+    [SerializeField] public GameObject pickUpNode;
+
+    // Entregas
+    [SerializeField] public GameObject deliveryNode;
+
+    // Nodos libres para spawnear
+    public HashSet<int> freeNodes = new HashSet<int>();
+
+    public GameObject squirrel;
+    public List<GameObject> pickUpList;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+            Destroy(this.gameObject);
+
+        playerPosition = 10;
+
+        // Inicia la lista de nodos libres
+        initFreeNodes();
+    }
+
     void Start()
     {
-        placePlayer();
+        // Posiciona al jugador en el nodo inicial
+        placePlayer(playerPosition);
+
+        // Generar nuevos nodes,  Spawnea puntos de recogida
+        placePickUpNodes();
+
+        // placeDeliveryNodes();
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void initFreeNodes() {
+
+        for (int i = 0; i < 18; i++) { 
+            freeNodes.Add(i);
+        }
     }
 
-    void placePlayer() {
-        int playerNode = GameManager.instance.getPlayerMapPosition();
-        int x = GetComponentInChildren<Graph>().getXNode(playerNode);
-        int y = GetComponentInChildren<Graph>().getYNode(playerNode);
+    void placePickUpNodes() {
+        int n = Random.Range(1, 4);
+        for (int i = 0; i < n; i++) {
 
-        GameObject squirrel = Instantiate(playerPrefab, this.transform);
+            if (freeNodes.Count > 0) { 
+                // Get free node
+                int j = Random.Range(0, 18);
+                while (!freeNodes.Contains(j)) { 
+                    j = Random.Range(0, 18);
+                }
+
+                // Spawn pickup
+                pickUpList.Add(Instantiate(pickUpNode, this.transform));
+                pickUpList[pickUpList.Count -1].GetComponent<MapNode>().SetNode(j);
+
+                int x = GetComponentInChildren<Graph>().getXNode(j);
+                int y = GetComponentInChildren<Graph>().getYNode(j);
+                pickUpList[pickUpList.Count - 1].transform.localPosition = new Vector3(x, y, 0);
+
+
+                // Remove free node
+                freeNodes.Remove(j);
+            }
+
+        }
+    }
+
+    void placeDeliveryNodes() {
+        // int x = GetComponentInChildren<Graph>().getXNode(deliveryNode);
+        // int y = GetComponentInChildren<Graph>().getYNode(deliveryNode);
+
+
+    }
+
+    void placePlayer(int pn) {
+        int x = GetComponentInChildren<Graph>().getXNode(pn);
+        int y = GetComponentInChildren<Graph>().getYNode(pn);
+
+        if(squirrel == null) {
+            squirrel = Instantiate(playerNode, this.transform);
+            squirrel.GetComponent<MapNode>().SetNode(pn);
+        }
         squirrel.transform.localPosition = new Vector3(x, y, 0);
+        squirrel.GetComponent<MapNode>().SetNode(pn);
 
+        freeNodes.Remove(pn);
     }
+
+    public void updatePlayerMapPosition(int n)
+    {
+        playerPosition = n;
+    }
+
 }
