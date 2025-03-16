@@ -822,7 +822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff6434f3e1e3bb4ba60cf9200945611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "mensajesM\xE1ximos": 3
   nEstados: 4
   nTiempoEntreEstados: 2
 --- !u!114 &278662085 stripped
@@ -972,7 +971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 561817e2e9497154eb4f81151759d9fb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
