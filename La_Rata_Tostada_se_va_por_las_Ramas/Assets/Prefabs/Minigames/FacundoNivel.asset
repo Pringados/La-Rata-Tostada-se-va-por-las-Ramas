@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FacundoNivel
   m_EditorClassIdentifier: 
   minigameType: 0
-  textHint: "Haz click sobre Facundo y sigue su rastro con el rat\xF3n"
-  help: 1
+  textHint: "Manten click sobre Facundo y cuando pare sigue su rastro con el rat\xF3n."
+  help: 0

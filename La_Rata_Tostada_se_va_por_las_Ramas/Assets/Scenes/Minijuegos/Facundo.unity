@@ -1113,6 +1113,10 @@ PrefabInstance:
       value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3564566520728517060, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
+      propertyPath: m_Text
+      value: "Manten click sobre Facundo y cuando pare sigue su rastro con el rat\xF3n."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564566520728517060, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 59e6d3d866a8daa4db7a6b43113342d7, type: 3}
@@ -1218,19 +1222,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7613697140125792503, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 386.8268
+      value: 449.6471
       objectReference: {fileID: 0}
     - target: {fileID: 7613697140125792503, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 166.33
+      value: 229.1504
       objectReference: {fileID: 0}
     - target: {fileID: 7613697140125792503, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.5362
+      value: 6.2477
       objectReference: {fileID: 0}
     - target: {fileID: 7613697140125792503, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.1448
+      value: -6.4194
       objectReference: {fileID: 0}
     - target: {fileID: 7872974673864230457, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
       propertyPath: m_Sprite
