@@ -102,7 +102,7 @@ public class Powerpoint : IMinigame
         reset = false;
     }
 
-    public override int CalculateScore()
+    public override float CalculateScore()
     {
         return points;
     }

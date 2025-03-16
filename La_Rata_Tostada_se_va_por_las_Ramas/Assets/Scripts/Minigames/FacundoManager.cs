@@ -11,7 +11,7 @@ public class FacundoManager : IMinigame
     float immuneTime = 1f;
     public float clickTime;
 
-    public override int CalculateScore()
+    public override float CalculateScore()
     {
         return 50;
     }

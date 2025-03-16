@@ -12,10 +12,16 @@ public abstract class IMinigame : MonoBehaviour
         textHint.text = data.textHint; 
     }
 
+    void Update()
+    {
+        GameManager.instance.score += Time.deltaTime * 10;
+    }
+
     public void MinigameComplete(bool success)
     {
-        int score = CalculateScore();
-        if(data.minigameType == MinigameData.MinigameType.Bonus)
+        float score = 500f;
+        GameManager.instance.score += score;
+        if (data.minigameType == MinigameData.MinigameType.Bonus)
         {
             switch (data.bonusType)
             {
@@ -35,9 +41,8 @@ public abstract class IMinigame : MonoBehaviour
         else { 
             GameManager.instance.increaseTimeToRagnarok(score / 100); 
         }
-        GameManager.instance.score += score;
         GameManager.instance.OpenMapScene();
     }
 
-    public abstract int CalculateScore();
+    public abstract float CalculateScore();
 }
