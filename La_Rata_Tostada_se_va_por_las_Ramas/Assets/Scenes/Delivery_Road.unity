@@ -373,8 +373,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1393351182}
     - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
-      propertyPath: snakeEndPos
-      value: 1470.448
+      propertyPath: letters.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
       propertyPath: letters.Array.data[0]
@@ -388,6 +388,10 @@ PrefabInstance:
       propertyPath: letters.Array.data[2]
       value: 
       objectReference: {fileID: 8163668527687563463}
+    - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
+      propertyPath: estadosCartas.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
       propertyPath: estadosCartas.Array.data[0]
       value: 

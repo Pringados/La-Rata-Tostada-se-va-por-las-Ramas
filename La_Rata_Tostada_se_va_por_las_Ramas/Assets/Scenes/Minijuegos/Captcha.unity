@@ -1295,10 +1295,18 @@ PrefabInstance:
     - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
       propertyPath: snake
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2082076263}
     - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
       propertyPath: increaseTime
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
+      propertyPath: letters.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658194254947969139, guid: 19a4ec96844ca604cb9f84fff1b7d84f, type: 3}
+      propertyPath: estadosCartas.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2295,7 +2303,7 @@ MonoBehaviour:
   - {fileID: 484000769}
   message: {fileID: 646325914}
   resetTime: 2
-  points: 8
+  points: 12
 --- !u!1 &1901411380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,6 +2835,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6372770482130923436, guid: 435d6ac3f92223f4db8da13edc510e19, type: 3}
   m_PrefabInstance: {fileID: 2082076261}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2082076263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1015122775364527285, guid: 435d6ac3f92223f4db8da13edc510e19, type: 3}
+  m_PrefabInstance: {fileID: 2082076261}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8601126942397160775
 PrefabInstance:
   m_ObjectHideFlags: 0

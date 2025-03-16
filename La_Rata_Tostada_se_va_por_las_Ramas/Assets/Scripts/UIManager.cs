@@ -38,10 +38,13 @@ public class UIManager : MonoBehaviour
     }
     void Start()
     {
-        for (int i = 0; i < letters.Count; i++)
+        if (letters.Count != 0)
         {
-            busyLetters.Add(false);
-            letters[i].SetActive(false);
+            for (int i = 0; i < letters.Count; i++)
+            {
+                busyLetters.Add(false);
+                letters[i].SetActive(false);
+            }
         }
 
         if (snake != null)
@@ -53,14 +56,16 @@ public class UIManager : MonoBehaviour
 
     public void setInitialState(List<Mensaje> mensajes)
     {
-        for (int i = 0;i < mensajes.Count;i++)
+        if (mensajes.Count != 0)
         {
-            //Debug.Log(i);
-            if (mensajes[i] != null && !mensajes[i].isDestroyed())
+            for (int i = 0; i < mensajes.Count; i++)
             {
-                busyLetters[mensajes[i].getID()] = true;
-                changeLetterState(mensajes[i].getID(), mensajes[i].getEstado());
-                letters[mensajes[i].getID()].SetActive(true);
+                if (mensajes[i] != null && !mensajes[i].isDestroyed())
+                {
+                    busyLetters[mensajes[i].getID()] = true;
+                    changeLetterState(mensajes[i].getID(), mensajes[i].getEstado());
+                    letters[mensajes[i].getID()].SetActive(true);
+                }
             }
         }
     }
@@ -73,30 +78,36 @@ public class UIManager : MonoBehaviour
 
     public int getFreeLetterSpace()
     {
-        for(int i = 0; i < letters.Count; i++)
+        if (letters.Count == 0)
         {
-            if (!busyLetters[i])
+            for (int i = 0; i < letters.Count; i++)
             {
-                letters[i].SetActive(true);
-                changeLetterState(i, 0);
-                busyLetters[i] = true;
-                return i;
+                if (!busyLetters[i])
+                {
+                    letters[i].SetActive(true);
+                    changeLetterState(i, 0);
+                    busyLetters[i] = true;
+                    return i;
+                }
             }
         }
+
         return -1;
     }
 
     public void deleteLetter(int im)
     {
-        letters[im].SetActive(false);
-        busyLetters[im] = false;
+        if (letters[im] != null)
+        {
+            letters[im].SetActive(false);
+            busyLetters[im] = false;
+        }
     }
 
     public void changeLetterState(int id, int estado)
     {
-        //Debug.Log("cambiando estado desde UI");
-        letters[id].GetComponent<Image>().sprite = estadosCartas[estado];
-        //Debug.Log(estadosCartas[estado]);
+        if (letters[id] != null)
+            letters[id].GetComponent<Image>().sprite = estadosCartas[estado];
     }
 
 
