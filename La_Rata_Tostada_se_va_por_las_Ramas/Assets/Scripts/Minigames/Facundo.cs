@@ -13,6 +13,10 @@ public class Facundo : MonoBehaviour
     [SerializeField, Range(1f, 10f)]
     float acceleration;
 
+    [SerializeField]
+    float minTrailSeparation;
+    Transform lastTrail = null;
+
     float speed;
 
     [SerializeField]
@@ -37,8 +41,10 @@ public class Facundo : MonoBehaviour
     public void StopMoving()
     {
         moving = false;
+        col.enabled = true;
         LeanTween.cancelAll(this.gameObject);
     }
+
     private void Update()
     {
         if (moving) 
@@ -52,15 +58,14 @@ public class Facundo : MonoBehaviour
                 Debug.Log("END of path");
                 trailComplete = true;
                 moving = false;
+                col.enabled = true;
             }
-        }
-    }
 
-    void FixedUpdate()
-    {
-        if (moving)
-        {
-            manager.addTrailObject(Instantiate(trail, transform.position, Quaternion.identity));
+            if (moving && (lastTrail == null || Vector3.Distance(transform.position, lastTrail.position) > minTrailSeparation))
+            {
+                lastTrail = Instantiate(trail, transform.position, Quaternion.identity).transform;
+                manager.addTrailObject(lastTrail.gameObject);
+            }
         }
     }
 
@@ -71,9 +76,11 @@ public class Facundo : MonoBehaviour
             trailComplete = false;
             manager.trackingActive = true;
             moving = true;
+            col.enabled = false;
             nextNode = 0;
             speed = 0f;
             path = new Vector3[numberOfPathNodes];
+            manager.clickTime = Time.time;
             for (int i = 0; i < numberOfPathNodes; i++)
             {
                 path[i] = DestinationPoint(i);

@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class RastroFacundo : MonoBehaviour
 {
+    Collider2D col;
 
     void Start()
     {
+        col = GetComponent<Collider2D>();
+        col.enabled = false;
         Vector3 finalScale = transform.localScale;
         transform.localScale = Vector3.zero;
-        LeanTween.scale(this.gameObject, finalScale, 0.5f).setEase(LeanTweenType.easeOutBack);
+        LeanTween.scale(this.gameObject, finalScale, 0.3f).setEase(LeanTweenType.easeOutBack).setOnComplete(delegate(){
+        col.enabled = true;
+        });
     }
 
     private void OnMouseExit()

@@ -155,6 +155,7 @@ MonoBehaviour:
   data: {fileID: 0}
   facundo: {fileID: 1788735868}
   trackingActive: 0
+  clickTime: 0
 --- !u!4 &33154844
 Transform:
   m_ObjectHideFlags: 0
@@ -616,8 +617,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfPathNodes: 8
-  maxSpeed: 5
-  acceleration: 2
+  maxSpeed: 7.9
+  acceleration: 3.3
+  minTrailSeparation: 0.7
   trail: {fileID: 7329327650899003314, guid: d61a2a6b56be2784da1cc9bcbe352eb0, type: 3}
   manager: {fileID: 33154843}
   moving: 0
@@ -653,10 +655,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.92}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5142086, y: 0.2826087}
     oldSize: {x: 5.512, y: 5.512}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -664,7 +666,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.1, y: 4}
+  m_Size: {x: 4.1, y: 3.36}
   m_EdgeRadius: 0
 --- !u!1 &2096332347
 GameObject:

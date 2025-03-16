@@ -8,6 +8,9 @@ public class FacundoManager : IMinigame
     public bool trackingActive = false;
     List<GameObject> trail;
 
+    float immuneTime = 1f;
+    public float clickTime;
+
     public override int CalculateScore()
     {
         return 50;
@@ -42,6 +45,7 @@ public class FacundoManager : IMinigame
         }
         if (trackingActive)
         {
+            if (Time.time < clickTime + immuneTime) return;
             Ray2D ray = new Ray2D(Camera.main.ScreenToWorldPoint(Input.mousePosition),Vector3.forward);
             RaycastHit2D hit;
             
