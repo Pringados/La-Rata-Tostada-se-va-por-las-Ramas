@@ -26,13 +26,13 @@ public class NPCData : ScriptableObject
 
     public Sprite sprite;
 
+    public string sceneName;
+
     // Siguiente nodo que se devolverá del camino de diálogo activo
     private int dialogueIndex = 0;
 
     // Camino de diálogo actualmente seleccionado
     private int currentDialoguePath = 0;
-
-    public Scene NPCscene;
 
     public string GetDialogue()
     {
