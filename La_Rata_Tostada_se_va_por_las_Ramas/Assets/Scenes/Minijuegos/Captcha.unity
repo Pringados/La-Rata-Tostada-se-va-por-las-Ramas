@@ -546,6 +546,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 6.1448
       objectReference: {fileID: 0}
+    - target: {fileID: 7872974673864230457, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9be6a918aad18d74eb8e2fb04f0bd1b0, type: 3}
+    - target: {fileID: 7872974673864230457, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872974673864230457, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872974673864230457, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8325224368332165242, guid: 7dddfc47253cf2745a5718e694513d7e, type: 3}
       propertyPath: m_Name
       value: Hint_Panel

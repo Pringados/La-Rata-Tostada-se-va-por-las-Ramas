@@ -18,18 +18,19 @@ public class GameManager : MonoBehaviour
     public int score;
     public bool timerPaused = false;
 
+    private bool init = false;
+
     void Awake()
     {
-
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
+            remainingTimeToRagnarok = totalTimeToRagnarok;
         }
         else
             Destroy(this.gameObject);
-
-        remainingTimeToRagnarok = totalTimeToRagnarok;
+        
     }
 
     void Update()
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void OpenMapScene()
     {
         SceneManager.LoadScene("Delivery_Road");
+        MapManager.instance.gameObject.SetActive(true);
     }
 
     public void increaseTimeToRagnarok(float n)

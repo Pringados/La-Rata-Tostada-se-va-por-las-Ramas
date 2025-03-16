@@ -4,26 +4,39 @@ public class Run_Player : MonoBehaviour
 {
     [SerializeField] private float force;
     [SerializeField] private float radius;
-
-    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float scrollSpeed;
 
     [SerializeField] private LayerMask ground;
 
-    private Rigidbody2D rb2D; 
+    [SerializeField] private Transform groundCheck;
+
+    private Rigidbody2D rb2D;
+
+    private float distanceGround;
 
     void Start()
     {
-        rb2D = this.GetComponent<Rigidbody2D>(); 
+        rb2D = this.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, radius, ground); 
+        transform.Translate(Vector2.right * scrollSpeed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, radius, ground);
+
             if (isGrounded)
-                rb2D.AddForce(Vector2.up * force);
+            {
+                rb2D.AddForce(Vector3.up * force);
+            }
+
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, radius); 
     }
 }

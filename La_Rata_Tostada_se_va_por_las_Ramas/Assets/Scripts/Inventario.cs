@@ -39,7 +39,7 @@ public class Inventario : MonoBehaviour
         UI.setInitialState(mensajes);
     }
 
-    public Mensaje addMensaje(int destinatario)
+    public Mensaje addMensaje(NPCData destinatario)
     {
         int im = UI.getFreeLetterSpace();
         Debug.Log(im);
