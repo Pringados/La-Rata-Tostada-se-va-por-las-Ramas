@@ -633,7 +633,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42893834529704a4eb69e3d4266214ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 5457707758646424794, guid: 2df5b6a3109a7eb4b9de178a1f1eb8dc, type: 3}
+  playerNode: {fileID: 5457707758646424794, guid: 2df5b6a3109a7eb4b9de178a1f1eb8dc, type: 3}
+  pickUpNodesInstances: []
+  deliveryNodesInstances: []
+  freeNodes: 
+  squirrel: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
