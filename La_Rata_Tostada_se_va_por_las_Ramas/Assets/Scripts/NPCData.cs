@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "NewNPC", menuName = "ScriptableObjects/NPCData", order = 2)]
 
@@ -30,6 +31,8 @@ public class NPCData : ScriptableObject
 
     // Camino de diálogo actualmente seleccionado
     private int currentDialoguePath = 0;
+
+    public Scene NPCscene;
 
     public string GetDialogue()
     {

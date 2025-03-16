@@ -14,7 +14,6 @@ public class MinigameData : ScriptableObject
 
     public string textHint;
 
-    public Sprite character;
+    public bool help;
 
-    public Sprite hint;
 }

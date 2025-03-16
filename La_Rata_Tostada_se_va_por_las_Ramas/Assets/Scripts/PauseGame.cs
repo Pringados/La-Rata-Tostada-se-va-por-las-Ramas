@@ -12,6 +12,8 @@ public class PauseGame : MonoBehaviour
     {
         pause = true;
 
+        Time.timeScale = pause ? 0 : 1;
+
         hint.SetActive(pause);
     }
 
@@ -19,7 +21,7 @@ public class PauseGame : MonoBehaviour
     {
         pause = !pause;
 
-        //Time.timeScale = pause ? 0 : 1;
+        Time.timeScale = pause ? 0 : 1;
 
         hint.SetActive(pause);
     }
