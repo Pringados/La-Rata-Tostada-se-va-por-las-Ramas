@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class Run_Player : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class Run_Player : MonoBehaviour
     [SerializeField] private LayerMask ground;
 
     [SerializeField] private Transform groundCheck;
+    [SerializeField] private GameObject butt;
 
     private Rigidbody2D rb2D;
 
@@ -17,6 +20,8 @@ public class Run_Player : MonoBehaviour
     void Start()
     {
         rb2D = this.GetComponent<Rigidbody2D>();
+
+        butt.GetComponent<Button>().onClick.AddListener(win);
     }
 
     void Update()
@@ -37,6 +42,13 @@ public class Run_Player : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(groundCheck.position, radius); 
+        Gizmos.DrawWireSphere(groundCheck.position, radius);
+    }
+
+    public void win()
+    {
+        GameManager.instance.increaseTimeToRagnarok(50 / 100);
+        GameManager.instance.score += 50;
+        GameManager.instance.OpenMapScene();
     }
 }
