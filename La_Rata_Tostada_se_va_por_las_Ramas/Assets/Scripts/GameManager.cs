@@ -43,14 +43,14 @@ public class GameManager : MonoBehaviour
             increaseTimeToRagnarok(1f);
     }
 
-    public void ChangeScene()
+    public void ChangeScene(string scene)
     {
-        SceneManager.LoadScene("Example minigame");
+        SceneManager.LoadScene(scene);
     }
 
     public void OpenMapScene()
     {
-        Debug.LogError("NOT IMPLEMENTED");
+        SceneManager.LoadScene("Delivery_Road");
     }
 
     public void increaseTimeToRagnarok(float n)

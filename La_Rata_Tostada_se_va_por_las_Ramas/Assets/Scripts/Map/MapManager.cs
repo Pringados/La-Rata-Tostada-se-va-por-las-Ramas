@@ -26,12 +26,16 @@ public class MapManager : MonoBehaviour
 
     [SerializeField] public List<GameObject> bonusNodes;
 
+    [SerializeField] DeliveryRoadManager deliveryRoadManager;
+
     // Nodos libres para spawnear
     public HashSet<int> freeNodes = new HashSet<int>();
 
     public GameObject squirrel;
     public List<GameObject> pickUpList;
     private bool blocks = false;
+
+    private int distance;
 
     // Start is called before the first frame update
     private void Awake()
@@ -53,6 +57,7 @@ public class MapManager : MonoBehaviour
     void Start()
     {
         // Posiciona al jugador en el nodo inicial
+        this.gameObject.SetActive(true);
         placePlayer(playerPosition);
 
     }
@@ -79,8 +84,8 @@ public class MapManager : MonoBehaviour
                 GameObject recogida = Instantiate(pickUpNode, this.transform);
                 recogida.GetComponent<MapNode>().SetNode(j);
 
-                int x = GetComponentInChildren<Graph>().getXNode(j);
-                int y = GetComponentInChildren<Graph>().getYNode(j);
+                float x = GetComponentInChildren<Graph>().getXNode(j);
+                float y = GetComponentInChildren<Graph>().getYNode(j);
                 recogida.transform.localPosition = new Vector3(x, y, 0);
                 recogida.GetComponent<Button>().onClick.AddListener(delegate{Pulsado(recogida);});
                 if (blocks)
@@ -109,8 +114,8 @@ public class MapManager : MonoBehaviour
             GameObject delivery = Instantiate(deliveryNodes[nSobre], this.transform);
             delivery.GetComponent<MapNode>().SetNode(j);
 
-            int x = GetComponentInChildren<Graph>().getXNode(j);
-            int y = GetComponentInChildren<Graph>().getYNode(j);
+            float x = GetComponentInChildren<Graph>().getXNode(j);
+            float y = GetComponentInChildren<Graph>().getYNode(j);
             delivery.transform.localPosition = new Vector3(x, y, 0);
             delivery.GetComponent<Button>().onClick.AddListener(delegate { Pulsado(delivery); });
 
@@ -135,8 +140,8 @@ public class MapManager : MonoBehaviour
             GameObject bonus = Instantiate(bonusNodes[id], this.transform);
             bonus.GetComponent<MapNode>().SetNode(j);
 
-            int x = GetComponentInChildren<Graph>().getXNode(j);
-            int y = GetComponentInChildren<Graph>().getYNode(j);
+            float x = GetComponentInChildren<Graph>().getXNode(j);
+            float y = GetComponentInChildren<Graph>().getYNode(j);
             bonus.transform.localPosition = new Vector3(x, y, 0);
             bonus.GetComponent<Button>().onClick.AddListener(delegate { Pulsado(bonus); });
 
@@ -146,10 +151,10 @@ public class MapManager : MonoBehaviour
     }
 
     void placePlayer(int pn) {
-        int x = GetComponentInChildren<Graph>().getXNode(pn);
-        int y = GetComponentInChildren<Graph>().getYNode(pn);
+        float x = GetComponentInChildren<Graph>().getXNode(pn);
+        float y = GetComponentInChildren<Graph>().getYNode(pn);
 
-        if(squirrel == null) {
+        if (squirrel == null) {
             squirrel = Instantiate(playerNode, this.transform);
             squirrel.GetComponent<MapNode>().SetNode(pn);
         }
@@ -186,10 +191,12 @@ public class MapManager : MonoBehaviour
         {
             GameManager.instance.GetComponent<Inventario>().addMensaje(8);
         }
+        distance = GetComponentInChildren<Graph>().distance2time(playerPosition, destiny.GetComponent<MapNode>().GetNode());
         updatePlayerMapPosition(destiny.GetComponent<MapNode>().GetNode());
         placePlayer(playerPosition);
-        
+        deliveryRoadManager.initialize();
         Destroy(destiny);
+        this.gameObject.SetActive(false);
 
     }
 
@@ -245,6 +252,11 @@ public class MapManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public int getDistance()
+    {
+        return distance;
     }
 
 }

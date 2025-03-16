@@ -161,7 +161,7 @@ public class Graph : MonoBehaviour
         graph.Add(new Node(new Pair<int, int>(-16, -8), new List<Pair<int, int>> { new Pair<int, int>(6, 1), new Pair<int, int>(7, 1), new Pair<int, int>(11, 1) }));
         graph.Add(new Node(new Pair<int, int>(-4, -72), new List<Pair<int, int>> { new Pair<int, int>(10, 1), new Pair<int, int>(12, 1), new Pair<int, int>(13, 1), new Pair<int, int>(14, 1), new Pair<int, int>(15, 2) }));
         graph.Add(new Node(new Pair<int, int>(-54, -78), new List<Pair<int, int>> { new Pair<int, int>(11, 1), new Pair<int, int>(15, 1) }));
-        graph.Add(new Node(new Pair<int, int>(53, 81), new List<Pair<int, int>> { new Pair<int, int>(11, 1), new Pair<int, int>(16, 1) }));
+        graph.Add(new Node(new Pair<int, int>(53, -81), new List<Pair<int, int>> { new Pair<int, int>(11, 1), new Pair<int, int>(16, 1) }));
         graph.Add(new Node(new Pair<int, int>(6, -116), new List<Pair<int, int>> { new Pair<int, int>(11, 1), new Pair<int, int>(16, 2), new Pair<int, int>(17, 1) }));
         graph.Add(new Node(new Pair<int, int>(-43, -131), new List<Pair<int, int>> { new Pair<int, int>(11, 2), new Pair<int, int>(12, 1) }));
         graph.Add(new Node(new Pair<int, int>(63, -137), new List<Pair<int, int>> { new Pair<int, int>(13, 1), new Pair<int, int>(14, 2) }));

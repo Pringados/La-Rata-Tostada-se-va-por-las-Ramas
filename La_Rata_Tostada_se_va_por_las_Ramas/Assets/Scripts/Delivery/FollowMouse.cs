@@ -28,7 +28,7 @@ public class FollowMouse : MonoBehaviour
 
     void Start()
     {
-        stunned = false;
+        stunned = true;
     }
 
     void Update()
@@ -52,5 +52,10 @@ public class FollowMouse : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, camPos, maxSpeed * Time.deltaTime);
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, (-maxRotation * (transform.position.x - oldPos) / (maxSpeed * Time.deltaTime))), rotationSpeed * Time.deltaTime);
+    }
+
+    public void unStun()
+    {
+        stunned = false;
     }
 }

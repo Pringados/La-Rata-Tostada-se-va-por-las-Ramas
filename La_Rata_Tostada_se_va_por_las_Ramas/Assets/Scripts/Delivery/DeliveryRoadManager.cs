@@ -31,6 +31,7 @@ public class DeliveryRoadManager : MonoBehaviour
     [SerializeField]
     GradientTransition gradient;
 
+
     BoxCollider2D playerCol;
     Animator playerAnim;
 
@@ -41,36 +42,30 @@ public class DeliveryRoadManager : MonoBehaviour
 
     private List<DeliveryHazard> branches;
 
+    private bool map;
+
     void Start()
     {
-        branches = new List<DeliveryHazard>();
-        remainingTime = duration;
-        spawner.manager = this;
-        trunk.scrollSpeed = scrollSpeed / trunk.GetComponent<SpriteRenderer>().bounds.size.y;
-        bgBranches.scrollSpeed = trunk.scrollSpeed * 0.4f;
-        galaxy.scrollSpeed = trunk.scrollSpeed * 0.2f;
-        scrolling = true;
-        playerCol = player.GetComponent<BoxCollider2D>();
-        playerAnim = player.GetComponent<Animator>();
-        stars.SetActive(false);
-
-        player.transform.position = new Vector3(0f, -15f, 0f);
-        LeanTween.moveY(player.gameObject, -2.65f, 2f);
-        Invoke("StartLevel", 1.5f);
+        map = true;
+        Time.timeScale = 0f;
     }
 
     void Update()
     {
-        if (scrolling)
-            remainingTime -= Time.deltaTime;
-
-        if (remainingTime < 0f && !GameManager.instance.timerPaused)
+        if (!map)
         {
-            GameManager.instance.timerPaused = true;
-            gradient.LevelEnd();
-            Debug.Log("Delivery Complete");
-            playerCol.enabled = false;
-            LeanTween.moveY(player.gameObject, 17f, 2f);
+
+            if (scrolling)
+                remainingTime -= Time.deltaTime;
+
+            if (remainingTime < 0f && !GameManager.instance.timerPaused)
+            {
+                GameManager.instance.timerPaused = true;
+                gradient.LevelEnd();
+                Debug.Log("Delivery Complete");
+                playerCol.enabled = false;
+                LeanTween.moveY(player.gameObject, 17f, 2f);
+            }
         }
     }
 
@@ -120,5 +115,27 @@ public class DeliveryRoadManager : MonoBehaviour
     {
         playerCol.enabled = true;
         spawner.enabled = true;
+    }
+
+    public void initialize()
+    {
+        branches = new List<DeliveryHazard>();
+        duration = MapManager.instance.getDistance() *2 +5;
+        remainingTime = duration;
+        spawner.manager = this;
+        trunk.scrollSpeed = scrollSpeed / trunk.GetComponent<SpriteRenderer>().bounds.size.y;
+        bgBranches.scrollSpeed = trunk.scrollSpeed * 0.4f;
+        galaxy.scrollSpeed = trunk.scrollSpeed * 0.2f;
+        scrolling = true;
+        playerCol = player.GetComponent<BoxCollider2D>();
+        playerAnim = player.GetComponent<Animator>();
+        stars.SetActive(false);
+        Time.timeScale = 1f;
+        spawner.StartSpawning();
+        player.unStun();
+        player.transform.position = new Vector3(0f, -15f, 0f);
+        LeanTween.moveY(player.gameObject, -2.65f, 2f);
+        Invoke("StartLevel", 1.5f);
+        map = false;
     }
 }
