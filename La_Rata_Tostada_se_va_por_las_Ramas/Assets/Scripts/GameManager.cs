@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public float totalTimeToRagnarok;
     public float remainingTimeToRagnarok;
-    [SerializeField] protected int playerMapPosition;
+ 
 
     //float time = 0f;
 
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        this.updatePlayerMapPosition(10);
+
         if (instance == null)
         {
             instance = this;
@@ -43,14 +43,14 @@ public class GameManager : MonoBehaviour
             increaseTimeToRagnarok(1f);
     }
 
-    public void ChangeScene()
+    public void ChangeScene(string scene)
     {
-        SceneManager.LoadScene("Example minigame");
+        SceneManager.LoadScene(scene);
     }
 
     public void OpenMapScene()
     {
-        Debug.LogError("NOT IMPLEMENTED");
+        SceneManager.LoadScene("Delivery_Road");
     }
 
     public void increaseTimeToRagnarok(float n)
@@ -76,9 +76,4 @@ public class GameManager : MonoBehaviour
     // Devuelve el tiempo restante como float de 0 a 1 (tiempo m�ximo)
     public float GetRemainingTimePortion() { return remainingTimeToRagnarok / totalTimeToRagnarok; }
 
-
-    public void updatePlayerMapPosition(int n) { 
-        playerMapPosition = n;
-    }
-    public int getPlayerMapPosition() { return playerMapPosition; }
 }

@@ -21,7 +21,7 @@ public class HazardSpawner : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(SpawnObstacle());
+        
     }
 
     IEnumerator SpawnObstacle()
@@ -41,6 +41,11 @@ public class HazardSpawner : MonoBehaviour
             if (manager.scrolling)
                 cooldown -= Time.deltaTime;
         }
+        StartCoroutine(SpawnObstacle());
+    }
+
+    public void StartSpawning()
+    {
         StartCoroutine(SpawnObstacle());
     }
 }
