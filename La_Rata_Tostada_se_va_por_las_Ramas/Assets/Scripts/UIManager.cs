@@ -46,9 +46,9 @@ public class UIManager : MonoBehaviour
 
         if (snake != null)
         {
-            snakeStartingPos = snake.transform.position.x;
+            snakeStartingPos = snake.transform.position.x; 
+            snakeTween = LeanTween.moveX(snake.gameObject, snakeEndPos, GameManager.instance.totalTimeToRagnarok);
         }
-        snakeTween = LeanTween.moveX(snake.gameObject, snakeEndPos, GameManager.instance.totalTimeToRagnarok);
     }
 
     public void setInitialState(List<Mensaje> mensajes)

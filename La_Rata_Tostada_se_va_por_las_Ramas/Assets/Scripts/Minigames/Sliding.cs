@@ -2,72 +2,24 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 
 public class Sliding : IMinigame
 {
     [SerializeField] private Transform gameTransform;
 
-    [SerializeField] private Transform prefab;
-
-    [SerializeField] private float resetTime;
+    [SerializeField] private Transform piecePrefab;
 
     [SerializeField] private int points;
 
     private List<Transform> pieces;
 
-    private bool reset = false;
-
-    private float gapWidth = 0.5f; 
+    private int size;
 
     private int emptyLocation;
 
-    private int size;
+    private bool shuffling = false;
 
-    void Start()
-    {
-        pieces = new List<Transform>();
-
-        size = Random.Range(2, 5);
-
-        CreateGamePieces();
-    }
-
-    void Update()
-    {
-        if (reset) return; 
-
-        if (Check())
-        {
-            MinigameComplete(true); 
-
-            StartCoroutine(WaitShuffle());
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D collider = Physics2D.OverlapPoint(mouseWorldPosition);
-
-            if (collider != null)
-            {
-                Transform hit = collider.transform;
-
-                for (int i = 0; i < pieces.Count; i++)
-                {
-                    if (pieces[i] == hit.transform)
-                    {
-                        if (canSwap(i, -size, size)) break;
-                        if (canSwap(i, size, size)) break;
-                        if (canSwap(i, -1, 0)) break;
-                        if (canSwap(i, 1, size - 1)) break;
-                    }
-                }
-            }
-        }
-    }
-
-    private void CreateGamePieces()
+    private void CreateGamePieces(float gapThickness)
     {
         float width = 1 / (float)size;
 
@@ -75,17 +27,20 @@ public class Sliding : IMinigame
         {
             for (int col = 0; col < size; col++)
             {
-                Transform piece = Instantiate(prefab, gameTransform);
+                Transform piece = Instantiate(piecePrefab, gameTransform);
 
                 pieces.Add(piece);
 
+                // Las piezas iran de -1 a +1.
                 piece.localPosition = new Vector3(-1 + (2 * width * col) + width,
-                                                   1 - (2 * width * row) - width, 0);
+                                                  +1 - (2 * width * row) - width,
+                                                  0);
 
-                piece.localScale = ((2 * width) - gapWidth) * Vector3.one;
+                piece.localScale = ((2 * width) - gapThickness) * Vector3.one;
 
                 piece.name = $"{(row * size) + col}";
 
+                // Hueco vacio en el ultimo lugar
                 if ((row == size - 1) && (col == size - 1))
                 {
                     emptyLocation = (size * size) - 1;
@@ -95,38 +50,70 @@ public class Sliding : IMinigame
 
                 else
                 {
+                    // Coordenadas UV, que son 0->1.
+                    float gap = gapThickness / 2;
+
                     Mesh mesh = piece.GetComponent<MeshFilter>().mesh;
 
                     Vector2[] uv = new Vector2[4];
 
-                    float gap = gapWidth / 2; 
+                    // UV coord orden: (0, 1), (1, 1), (0, 0), (1, 0)
+                    uv[0] = new Vector2((width * col) + gap, 1 - ((width * (row + 1)) - gap));
+                    uv[1] = new Vector2((width * (col + 1)) - gap, 1 - ((width * (row + 1)) - gap));
+                    uv[2] = new Vector2((width * col) + gap, 1 - ((width * row) + gap));
+                    uv[3] = new Vector2((width * (col + 1)) - gap, 1 - ((width * row) + gap));
 
-                    float widthCol = width * col;
-                    float widthColPlus = width * (col + 1);
-
-                    float widthRow = width * row;
-                    float widthRowPlus = width * (row + 1);
-
-                    uv[0] = new Vector2(widthCol + gap, 1 - widthRowPlus - gap);
-                    uv[1] = new Vector2(widthColPlus - gap, 1 - widthRowPlus - gap);
-                    uv[2] = new Vector2(widthCol + gap, 1 - widthRow + gap);
-                    uv[3] = new Vector2(widthColPlus - gap, 1 - widthRow + gap);
-
-                    mesh.uv = uv; 
+                    mesh.uv = uv;
                 }
             }
         }
     }
 
-    private bool canSwap(int i, int offset, int colCheck)
+    void Start()
     {
-        if ((i % size != colCheck) && (i + offset == emptyLocation))
-        {     
+        pieces = new List<Transform>();
+
+        size = 4;
+
+        CreateGamePieces(0.01f);
+    }
+
+    void Update()
+    {
+        if (!shuffling && CheckCompletion())
+        {
+            shuffling = true;
+            StartCoroutine(WaitShuffle(0.5f));
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+            if (hit)
+            {
+                for (int i = 0; i < pieces.Count; i++)
+                {
+                    if (pieces[i] == hit.transform)
+                    {
+                        if (SwapIfValid(i, -size, size)) { break; }
+                        if (SwapIfValid(i, size, size)) { break; }
+                        if (SwapIfValid(i, -1, 0)) { break; }
+                        if (SwapIfValid(i, 1, size - 1)) { break; }
+                    }
+                }
+            }
+        }
+    }
+
+    private bool SwapIfValid(int i, int offset, int colCheck)
+    {
+        if (((i % size) != colCheck) && ((i + offset) == emptyLocation))
+        {
             (pieces[i], pieces[i + offset]) = (pieces[i + offset], pieces[i]);
-            
-            (pieces[i].localPosition, pieces[i + offset].localPosition) = 
-                ((pieces[i + offset].localPosition, pieces[i].localPosition));
-            
+
+            (pieces[i].localPosition, pieces[i + offset].localPosition) = ((pieces[i + offset].localPosition, pieces[i].localPosition));
+
             emptyLocation = i;
 
             return true;
@@ -135,7 +122,7 @@ public class Sliding : IMinigame
         return false;
     }
 
-    private bool Check()
+    private bool CheckCompletion()
     {
         for (int i = 0; i < pieces.Count; i++)
         {
@@ -146,15 +133,13 @@ public class Sliding : IMinigame
         return true;
     }
 
-    private IEnumerator WaitShuffle()
+    private IEnumerator WaitShuffle(float duration)
     {
-        reset = true; 
-
-        yield return new WaitForSeconds(resetTime);
+        yield return new WaitForSeconds(duration);
 
         Shuffle();
 
-        reset = false;
+        shuffling = false;
     }
 
     private void Shuffle()
@@ -165,18 +150,18 @@ public class Sliding : IMinigame
 
         while (count < (size * size * size))
         {
-            int n = Random.Range(0, size * size);
+            int rnd = Random.Range(0, size * size);
 
-            if (n == last) continue;
+            if (rnd == last) { continue; }
 
             last = emptyLocation;
 
-            if (canSwap(n, -size, size) || canSwap(n, size, size) ||
-                canSwap(n, -1, 0) || canSwap(n, 1, size - 1)) 
+            if (SwapIfValid(rnd, -size, size) || SwapIfValid(rnd, size, size) || 
+                SwapIfValid(rnd, -1, 0) || SwapIfValid(rnd, 1, size - 1))
                 count++;
+
         }
     }
-
     public override int CalculateScore()
     {
         return points;

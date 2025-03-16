@@ -14,7 +14,7 @@ TagManager:
   - Ground
   - Branches
   - Player
-  - 
+  - InFrontUI
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Obstacle
     uniqueID: 2814402227
+    locked: 0
+  - name: InFrontUI
+    uniqueID: 3808992851
     locked: 0
   - name: UI
     uniqueID: 246706811
