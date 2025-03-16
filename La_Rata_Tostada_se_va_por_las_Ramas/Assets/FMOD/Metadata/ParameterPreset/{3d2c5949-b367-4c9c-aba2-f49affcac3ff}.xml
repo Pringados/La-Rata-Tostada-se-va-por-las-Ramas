@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{3d2c5949-b367-4c9c-aba2-f49affcac3ff}">
+		<property name="name">
+			<value>RemainingTime</value>
+		</property>
+		<relationship name="folder">
+			<destination>{15e7db44-c6ac-4fe7-8aa9-8f5dfad7b3ae}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c5146a08-4507-4d73-bc08-04e7e49e5713}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c5146a08-4507-4d73-bc08-04e7e49e5713}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.34999999403953552</value>
+		</property>
+	</object>
+</objects>

@@ -23,7 +23,7 @@ public class PauseGame : MonoBehaviour
         pause = !pause;
         GameManager.instance.timerPaused = pause;
         Time.timeScale = pause ? 0 : 1;
-
         hint.SetActive(pause);
+        //GameManager.instance.SetMusicAction(false);
     }
 }

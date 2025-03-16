@@ -70,7 +70,11 @@ public class MapManager : MonoBehaviour
         GameManager.instance.mapManager = this;
         // Posiciona al jugador en el nodo inicial
         placePlayer(playerPosition);
+    }
 
+    private void OnEnable()
+    {
+        //GameManager.instance.SetMusicAction(false);
     }
 
     void initFreeNodes() {
