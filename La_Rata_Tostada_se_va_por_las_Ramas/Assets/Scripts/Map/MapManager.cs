@@ -178,13 +178,13 @@ public class MapManager : MonoBehaviour
 
         freeNodes.Remove(pn);
 
+        checkNodes();
         //Esto son las cosas que tienen que pasar cuando se abre el mapa
         placePickUpNodes();
-        if (Random.Range(0, 4) == 3)
-        {
-            placeBonusNodes(Random.Range(0, 4));
-        }
-        checkNodes();
+        //if (Random.Range(0, 4) == 3)
+        //{
+            placeBonusNodes(Random.Range(0, 3));
+        //}
     }
 
     public void updatePlayerMapPosition(int n)
@@ -213,7 +213,7 @@ public class MapManager : MonoBehaviour
                     destino = "Captcha";
                     break;
                 case 2:
-                    destino = "Reloj";
+                    destino = "Clock";
                     break;
                 //case 3:
                 //    destino = "Letter";
@@ -242,7 +242,7 @@ public class MapManager : MonoBehaviour
     {
         PickUp[] objects = GetComponentsInChildren<PickUp>();
         foreach (PickUp obj in objects) {
-            if (obj.GetTime() > 0)
+            if (obj.GetTime() > 1)
             {
                 obj.SetTime(obj.GetTime() - 1);
             }

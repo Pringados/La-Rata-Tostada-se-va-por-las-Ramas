@@ -72,6 +72,10 @@ public class DeliveryRoadManager : MonoBehaviour
 
             if (remainingTime < 0f && !GameManager.instance.timerPaused)
             {
+                if(GameManager.instance.GetComponent<Inventario>().GetSpeed())
+                {
+                    GameManager.instance.GetComponent<Inventario>().SetSpeed(false);
+                }
                 GameManager.instance.timerPaused = true;
                 gradient.LevelEnd();
                 Debug.Log("Road Complete");
@@ -137,7 +141,13 @@ public class DeliveryRoadManager : MonoBehaviour
     {
         GameManager.instance.timerPaused = false;
         branches = new List<DeliveryHazard>();
-        duration = MapManager.instance.getDistance() * 2 + 5;
+        duration = MapManager.instance.getDistance() *2 + 5;
+        if (GameManager.instance.GetComponent<Inventario>().GetSpeed())
+        {
+            duration /= 2;
+            scrollSpeed *= 1.5f;
+
+        }
         UnityEngine.Debug.Log("Duration " + duration);
         remainingTime = duration;
         spawner.manager = this;
@@ -153,6 +163,7 @@ public class DeliveryRoadManager : MonoBehaviour
         player.unStun();
         player.transform.position = new Vector3(0f, -15f, 0f);
         LeanTween.moveY(player.gameObject, -2.65f, 2f);
+
         Invoke("StartLevel", 1.5f);
         map = false;
     }

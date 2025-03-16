@@ -30,11 +30,19 @@ public class DeliveryHazard : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<FollowMouse>() != null) 
+        if (collision.GetComponent<FollowMouse>() != null)
         {
-            emitter.Play();
-            manager.pauseScroll(1f);
+            if (GameManager.instance.GetComponent<Inventario>().GetShield())
+            {
+                GameManager.instance.GetComponent<Inventario>().SetShield(false);
+            }
+            else
+            {
+                emitter.Play();
+                manager.pauseScroll(1f);
+            }
         }
+
         Destroy(this.gameObject);
     }
 

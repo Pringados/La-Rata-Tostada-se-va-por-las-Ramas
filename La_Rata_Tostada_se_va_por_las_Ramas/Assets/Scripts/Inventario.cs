@@ -10,7 +10,7 @@ public class Inventario : MonoBehaviour
     // Start is called before the first frame update
     //List<Mensaje> mensajes = new List<Mensaje>();
     //[SerializeField]
-    //int mensajesMáximos;
+    //int mensajesMï¿½ximos;
     //int mensajesActuales = 0;
     int protect = -1;
     private UIManager UI;
@@ -19,6 +19,8 @@ public class Inventario : MonoBehaviour
     int nEstados;
     [SerializeField]
     int nTiempoEntreEstados;
+    bool shielded = false;
+    bool speed = false;
 
     private void Awake()
     {
@@ -45,7 +47,7 @@ public class Inventario : MonoBehaviour
     //    Debug.Log(im);
     //    if (im == -1)
     //    {
-    //        Debug.LogError("esto no debería pasar nunca Eduardo por favor detente");
+    //        Debug.LogError("esto no deberï¿½a pasar nunca Eduardo por favor detente");
     //    }
     //    else
     //    {
@@ -55,7 +57,7 @@ public class Inventario : MonoBehaviour
     //        mensajes.Add(men);
 
     //        MapManager.instance.placeDeliveryNodes(im);
-    //        if (mensajesActuales == mensajesMáximos)
+    //        if (mensajesActuales == mensajesMï¿½ximos)
     //        {
     //            MapManager.instance.blockPickUps();
     //        }
@@ -76,14 +78,14 @@ public class Inventario : MonoBehaviour
         //        mensajes[i].updateEstado();
         //        if (mensajes[i].isDestroyed())
         //        {
-        //            //comprobación de q está yendo el jugador
+        //            //comprobaciï¿½n de q estï¿½ yendo el jugador
         //            if(mensajes[i].getID() != protect)
         //            {
         //                MapManager.instance.destroyDelivery(mensajes[i].getID());
         //                mensajes[i] = null;
         //                mensajes.RemoveAt(i);
         //                mensajesActuales--;
-        //                if(mensajesActuales == mensajesMáximos - 1)
+        //                if(mensajesActuales == mensajesMï¿½ximos - 1)
         //                {
         //                    MapManager.instance.unblockPickUps();
         //                }
@@ -110,8 +112,28 @@ public class Inventario : MonoBehaviour
     //    return mensajesActuales;
     //}
 
-    //public Mensaje GetMensaje(int i)
-    //{
-    //    return mensajes[i];
-    //}
+    // public Mensaje GetMensaje(int i)
+    // {
+    //     return mensajes[i];
+    // }
+
+    public void SetShield(bool s)
+    {
+        shielded = s;
+    }
+
+    public bool GetShield()
+    {
+        return shielded;
+    }
+
+    public void SetSpeed(bool s)
+    {
+        speed = s;
+    }
+
+    public bool GetSpeed()
+    {
+        return speed;
+    }
 }

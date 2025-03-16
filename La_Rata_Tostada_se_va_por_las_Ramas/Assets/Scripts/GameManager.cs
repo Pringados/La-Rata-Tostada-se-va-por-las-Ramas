@@ -106,4 +106,14 @@ public class GameManager : MonoBehaviour
             actionDownCounters++;
         }
     }
+    
+    public void shieldedRat()
+    {
+        GameManager.instance.GetComponent<Inventario>().SetShield(true);
+    }
+
+    public void speedRat()
+    {
+        GameManager.instance.GetComponent<Inventario>().SetSpeed(true);
+    }
 }

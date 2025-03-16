@@ -21,6 +21,10 @@ public class NPCcontroller : MonoBehaviour
     {
         //ponemos un maravilloso npc en su sitio
         data = MapManager.instance.getNPCData();
+        if(data == null)
+        {
+            GameManager.instance.ChangeScene(MapManager.instance.getDestino());
+        }
         NPCSprite.GetComponent<Image>().sprite = data.sprite;
 
         //seleccionamos un dialogo aleatoriamente
