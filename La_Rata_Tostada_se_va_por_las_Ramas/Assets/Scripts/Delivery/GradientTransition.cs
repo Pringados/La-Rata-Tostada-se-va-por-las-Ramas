@@ -15,7 +15,7 @@ public class GradientTransition : MonoBehaviour
     public void LevelEnd()
     {
         transform.eulerAngles = new Vector3(0f, 0f, 180f);
-        transform.position = new Vector3(transform.position.x, 1558f, 0f);
-        LeanTween.moveY(this.gameObject, 51f, outroFadeDuration).setEase(LeanTweenType.easeInSine).setDelay(0.5f);
+        transform.position = new Vector3(transform.position.x, 2232f, 0f);
+        LeanTween.moveY(this.gameObject, -41f, outroFadeDuration).setEase(LeanTweenType.easeInSine).setDelay(0.5f);
     }
 }

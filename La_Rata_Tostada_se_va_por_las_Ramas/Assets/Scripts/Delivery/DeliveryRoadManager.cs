@@ -56,7 +56,7 @@ public class DeliveryRoadManager : MonoBehaviour
 
         player.transform.position = new Vector3(0f, -15f, 0f);
         LeanTween.moveY(player.gameObject, -2.65f, 2f);
-        Invoke("StartLevel()", 1.5f);
+        Invoke("StartLevel", 1.5f);
     }
 
     void Update()
