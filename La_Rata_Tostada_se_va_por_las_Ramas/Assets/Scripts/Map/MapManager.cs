@@ -55,11 +55,6 @@ public class MapManager : MonoBehaviour
         // Posiciona al jugador en el nodo inicial
         placePlayer(playerPosition);
 
-        // Generar nuevos nodes,  Spawnea puntos de recogida
-        //placePickUpNodes();
-
-        // placeDeliveryNodes();
-
     }
 
     void initFreeNodes() {
@@ -101,8 +96,6 @@ public class MapManager : MonoBehaviour
     }
 
     public void placeDeliveryNodes(int nSobre) {
-        // int x = GetComponentInChildren<Graph>().getXNode(deliveryNode);
-        // int y = GetComponentInChildren<Graph>().getYNode(deliveryNode);
         if (freeNodes.Count > 0)
         {
             // Get free node
@@ -215,8 +208,10 @@ public class MapManager : MonoBehaviour
             }
         }
 
-        Bonus objetos = GetComponentInChildren<Bonus>();
-        Destroy(objetos.gameObject);
+        Bonus[] objetos = GetComponentsInChildren<Bonus>();
+        foreach (Bonus obj in objetos) { 
+            Destroy(obj.gameObject);
+        }
     }
 
     public void blockPickUps()
@@ -236,6 +231,19 @@ public class MapManager : MonoBehaviour
         foreach (PickUp obj in objects)
         {
             obj.gameObject.GetComponent<Button>().enabled = true;
+        }
+    }
+
+    public void destroyDelivery(int id)
+    {
+        Delivery[] objects = GetComponentsInChildren<Delivery>();
+        foreach (Delivery obj in objects)
+        {
+            if(obj.gameObject.GetComponent<Delivery>().GetId() == id)
+            {
+                Destroy(obj.gameObject);
+                break;
+            }
         }
     }
 

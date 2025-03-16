@@ -79,6 +79,7 @@ public class Inventario : MonoBehaviour
                     //comprobación de q está yendo el jugador
                     if(mensajes[i].getID() != protect)
                     {
+                        MapManager.instance.destroyDelivery(mensajes[i].getID());
                         mensajes[i] = null;
                         mensajes.RemoveAt(i);
                         mensajesActuales--;
