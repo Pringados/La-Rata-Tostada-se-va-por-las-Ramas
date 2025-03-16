@@ -1323,10 +1323,6 @@ PrefabInstance:
       propertyPath: timerPaused
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8885663649285065162, guid: 2b54b6057512f144c8183a5cb88dc748, type: 3}
-      propertyPath: totalTimeToRagnarok
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

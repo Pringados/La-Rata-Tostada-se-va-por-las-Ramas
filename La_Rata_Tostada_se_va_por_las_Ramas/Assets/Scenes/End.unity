@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 229518535}
   - component: {fileID: 229518534}
   - component: {fileID: 229518533}
+  - component: {fileID: 229518536}
   m_Layer: 5
   m_Name: Regresar
   m_TagString: Untagged
@@ -381,16 +382,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 278662085}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 229518536}
+        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
+        m_MethodName: ReturnToMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Menu
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &229518534
@@ -431,6 +432,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229518531}
   m_CullTransparentMesh: 1
+--- !u!114 &229518536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229518531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92850d01dac53b41813b975fc5846ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &262298449
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,10 +579,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8885663649285065162, guid: 2b54b6057512f144c8183a5cb88dc748, type: 3}
-      propertyPath: totalTimeToRagnarok
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -597,17 +606,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nEstados: 4
   nTiempoEntreEstados: 2
---- !u!114 &278662085 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8885663649285065162, guid: 2b54b6057512f144c8183a5cb88dc748, type: 3}
-  m_PrefabInstance: {fileID: 278662082}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278662083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8c9ec6e929e42e45a91929e95e5bc3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &447436962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,7 +1150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1720559995}
   - component: {fileID: 1720559994}
-  - component: {fileID: 1720559993}
+  - component: {fileID: 1720559996}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1160,14 +1158,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1720559993
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720559992}
-  m_Enabled: 1
 --- !u!20 &1720559994
 Camera:
   m_ObjectHideFlags: 0
@@ -1234,6 +1224,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1720559996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720559992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &1933398258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1370,10 @@ PrefabInstance:
     - target: {fileID: 2070777921460910052, guid: 090a47defb8a471468a9d72f66e2b354, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610609396422021891, guid: 090a47defb8a471468a9d72f66e2b354, type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6851951823109615395, guid: 090a47defb8a471468a9d72f66e2b354, type: 3}
       propertyPath: m_Name

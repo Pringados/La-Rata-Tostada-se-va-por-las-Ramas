@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
     public float score;
     public bool timerPaused = false;
 
-    private bool init = false;
-
     private int actionDownCounters = 0;
 
     StudioEventEmitter emitter;
@@ -37,7 +35,6 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(this.gameObject);
-        
     }
 
     void Update()
@@ -59,10 +56,22 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
+    public void ResetGame()
+    {
+        remainingTimeToRagnarok = totalTimeToRagnarok;
+        score = 0;
+        emitter.Stop();
+        emitter.SetParameter("End", 0);
+        emitter.Play();
+        ChangeScene("Menu");
+    }
+
     public void OnDefeat()
     {
-        ChangeScene("End");
+        remainingTimeToRagnarok = totalTimeToRagnarok;
         emitter.SetParameter("End", 1);
+        timerPaused = true;
+        ChangeScene("End");
     }
 
     public void OpenMapScene()
