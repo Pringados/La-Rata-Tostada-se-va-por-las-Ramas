@@ -8,7 +8,7 @@ public class PauseGame : MonoBehaviour
 
     private bool pause; 
 
-    private void OnEnable()
+    private void Start()
     {
         pause = true;
         GameManager.instance.timerPaused = true;
