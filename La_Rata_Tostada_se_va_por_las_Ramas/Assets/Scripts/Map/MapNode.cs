@@ -24,7 +24,7 @@ public class MapNode : MonoBehaviour
         node = n;
     }
 
-    public int GetNode(int n)
+    public int GetNode()
     {
         return node;
     }

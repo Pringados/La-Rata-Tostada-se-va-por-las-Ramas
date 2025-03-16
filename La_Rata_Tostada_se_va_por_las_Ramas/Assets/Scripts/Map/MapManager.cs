@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
+using TreeEditor;
+using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
@@ -74,13 +77,14 @@ public class MapManager : MonoBehaviour
                 }
 
                 // Spawn pickup
-                pickUpList.Add(Instantiate(pickUpNode, this.transform));
+                GameObject recogida = Instantiate(pickUpNode, this.transform);
+                pickUpList.Add(recogida);
                 pickUpList[pickUpList.Count -1].GetComponent<MapNode>().SetNode(j);
 
                 int x = GetComponentInChildren<Graph>().getXNode(j);
                 int y = GetComponentInChildren<Graph>().getYNode(j);
-                pickUpList[pickUpList.Count - 1].transform.localPosition = new Vector3(x, y, 0);
-
+                recogida.transform.localPosition = new Vector3(x, y, 0);
+                recogida.GetComponent<Button>().onClick.AddListener(delegate{Pulsado(recogida);});
 
                 // Remove free node
                 freeNodes.Remove(j);
@@ -112,7 +116,16 @@ public class MapManager : MonoBehaviour
 
     public void updatePlayerMapPosition(int n)
     {
+        freeNodes.Add(playerPosition);
         playerPosition = n;
+    }
+
+    public void Pulsado(GameObject destiny)
+    {
+        updatePlayerMapPosition(destiny.GetComponent<MapNode>().GetNode());
+        placePlayer(playerPosition);
+        Destroy(destiny);
+
     }
 
 }
