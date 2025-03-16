@@ -862,7 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "mensajesM\xE1ximos": 3
   nEstados: 4
-  nTiempoEntreEstados: 2
+  nTiempoEntreEstados: 20
 --- !u!1 &728574357
 GameObject:
   m_ObjectHideFlags: 0

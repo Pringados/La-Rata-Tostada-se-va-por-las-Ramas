@@ -44,6 +44,10 @@ public class DeliveryRoadManager : MonoBehaviour
 
     private bool map;
 
+    void Awake()
+    {
+        MapManager.instance.deliveryRoadManager = this;
+    }
     void Start()
     {
         map = true;
@@ -58,16 +62,17 @@ public class DeliveryRoadManager : MonoBehaviour
             playerAnim.SetInteger("numLetters", numMsg);
 
             if (scrolling)
-                remainingTime -= Time.deltaTime;
+            { 
+                remainingTime -= Time.deltaTime; 
+                UnityEngine.Debug.Log("Remaining Time " + remainingTime);
+            }
 
             if (remainingTime < 0f && !GameManager.instance.timerPaused)
             {
-                GameManager.instance.timerPaused = true;
                 gradient.LevelEnd();
                 Debug.Log("Road Complete");
                 playerCol.enabled = false;
-                LeanTween.moveY(player.gameObject, 17f, 2f);
-                GameManager.instance.ChangeScene(MapManager.instance.getDestino());
+                LeanTween.moveY(player.gameObject, 17f, 2f).setOnComplete(delegate () { GameManager.instance.ChangeScene(MapManager.instance.getDestino()); });
             }
         }
     }
@@ -124,6 +129,7 @@ public class DeliveryRoadManager : MonoBehaviour
     {
         branches = new List<DeliveryHazard>();
         duration = MapManager.instance.getDistance() *2 +5;
+        UnityEngine.Debug.Log("Duration " + duration);
         remainingTime = duration;
         spawner.manager = this;
         trunk.scrollSpeed = scrollSpeed / trunk.GetComponent<SpriteRenderer>().bounds.size.y;
