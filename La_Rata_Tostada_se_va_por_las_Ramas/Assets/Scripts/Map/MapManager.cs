@@ -28,6 +28,8 @@ public class MapManager : MonoBehaviour
 
     [SerializeField] DeliveryRoadManager deliveryRoadManager;
 
+    [SerializeField] public List<NPCData> NPCs;
+
     // Nodos libres para spawnear
     public HashSet<int> freeNodes = new HashSet<int>();
 
@@ -36,6 +38,10 @@ public class MapManager : MonoBehaviour
     private bool blocks = false;
 
     private int distance;
+    private string destino;
+    private bool init = false;
+
+    static int counter = 0;
 
     // Start is called before the first frame update
     private void Awake()
@@ -44,20 +50,20 @@ public class MapManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
+            playerPosition = 10;
+            init = true;
+            // Inicia la lista de nodos libres
+            initFreeNodes();
         }
         else
+        {
             Destroy(this.gameObject);
-
-        playerPosition = 10;
-
-        // Inicia la lista de nodos libres
-        initFreeNodes();
+        }
     }
 
     void Start()
     {
         // Posiciona al jugador en el nodo inicial
-        this.gameObject.SetActive(true);
         placePlayer(playerPosition);
 
     }
@@ -189,7 +195,9 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            GameManager.instance.GetComponent<Inventario>().addMensaje(8);
+            int n = Random.Range(0, NPCs.Count);
+            GameManager.instance.GetComponent<Inventario>().addMensaje(NPCs[n]);
+            destino = NPCs[n].sceneName;
         }
         distance = GetComponentInChildren<Graph>().distance2time(playerPosition, destiny.GetComponent<MapNode>().GetNode());
         updatePlayerMapPosition(destiny.GetComponent<MapNode>().GetNode());
@@ -257,6 +265,11 @@ public class MapManager : MonoBehaviour
     public int getDistance()
     {
         return distance;
+    }
+
+    public string getDestino()
+    {
+        return destino;
     }
 
 }

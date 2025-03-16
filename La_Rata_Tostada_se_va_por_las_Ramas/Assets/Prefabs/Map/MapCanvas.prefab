@@ -1,5 +1,76 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3023959264553550025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3885461422036401222}
+  - component: {fileID: 4164682962954583164}
+  m_Layer: 5
+  m_Name: MapParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3885461422036401222
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3023959264553550025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.1, y: 1.8, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2800694871465715722}
+  m_Father: {fileID: 6256469235023067621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 288.6124, y: 577.2246}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4164682962954583164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3023959264553550025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42893834529704a4eb69e3d4266214ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNode: {fileID: 5457707758646424794, guid: 2df5b6a3109a7eb4b9de178a1f1eb8dc, type: 3}
+  pickUpNode: {fileID: 519805072226147879, guid: 6876b90b344aa44408e95fabb118ca50, type: 3}
+  deliveryNodes:
+  - {fileID: 7168297421589704330, guid: 59ae02d5773453c44bb78c54fd902b9b, type: 3}
+  - {fileID: 7168297421589704330, guid: 19e777bcfdc3db946ac9d9efcedb8ef0, type: 3}
+  - {fileID: 7168297421589704330, guid: e55603a18c1729948a3094aae04d9a3f, type: 3}
+  bonusNodes:
+  - {fileID: 4339043903453077090, guid: 4ddfc23b884aec44a8927ac270c864dd, type: 3}
+  - {fileID: 4591629269287806603, guid: ab37e4a34d1badb468c6028c4860d04c, type: 3}
+  - {fileID: 263346216717923055, guid: e25c1226694f3a84abfc4f231f543331, type: 3}
+  - {fileID: 6218389112255731308, guid: 146b19d957f7d52419809ad1b7e02a7b, type: 3}
+  deliveryRoadManager: {fileID: 0}
+  NPCs:
+  - {fileID: 11400000, guid: 717c50f3b44f5994cb5799efe5687658, type: 2}
+  - {fileID: 11400000, guid: bf064e9ca21e0834193984b8b3e56da8, type: 2}
+  - {fileID: 11400000, guid: 9304e70d1e19c9a47a6eed0dde21507c, type: 2}
+  - {fileID: 11400000, guid: f12626934e4537c4885981dec51ca61c, type: 2}
+  - {fileID: 11400000, guid: fb1202e38c2a65446ace55e998acee29, type: 2}
+  - {fileID: 11400000, guid: 626cd6db64b19b545a25686a239fae8e, type: 2}
+  - {fileID: 11400000, guid: a2cb07a23e265c345ac86e105ff2de90, type: 2}
+  squirrel: {fileID: 0}
+  pickUpList: []
 --- !u!1 &4113663437449403202
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,8 +83,7 @@ GameObject:
   - component: {fileID: 8176156660542274382}
   - component: {fileID: 3351303899476182919}
   - component: {fileID: 3696106985044177428}
-  - component: {fileID: 7534965255361651856}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: MapCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,10 +99,10 @@ RectTransform:
   m_GameObject: {fileID: 4113663437449403202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2800694871465715722}
+  - {fileID: 3885461422036401222}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -61,7 +131,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &3351303899476182919
 MonoBehaviour:
@@ -103,32 +173,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7534965255361651856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4113663437449403202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42893834529704a4eb69e3d4266214ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNode: {fileID: 5457707758646424794, guid: 2df5b6a3109a7eb4b9de178a1f1eb8dc, type: 3}
-  pickUpNode: {fileID: 519805072226147879, guid: 6876b90b344aa44408e95fabb118ca50, type: 3}
-  deliveryNodes:
-  - {fileID: 7168297421589704330, guid: 59ae02d5773453c44bb78c54fd902b9b, type: 3}
-  - {fileID: 7168297421589704330, guid: 19e777bcfdc3db946ac9d9efcedb8ef0, type: 3}
-  - {fileID: 7168297421589704330, guid: e55603a18c1729948a3094aae04d9a3f, type: 3}
-  bonusNodes:
-  - {fileID: 4339043903453077090, guid: 4ddfc23b884aec44a8927ac270c864dd, type: 3}
-  - {fileID: 4591629269287806603, guid: ab37e4a34d1badb468c6028c4860d04c, type: 3}
-  - {fileID: 263346216717923055, guid: e25c1226694f3a84abfc4f231f543331, type: 3}
-  - {fileID: 6218389112255731308, guid: 146b19d957f7d52419809ad1b7e02a7b, type: 3}
-  deliveryRoadManager: {fileID: 0}
-  squirrel: {fileID: 0}
-  pickUpList: []
 --- !u!1 &4193411773203504586
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +185,7 @@ GameObject:
   - component: {fileID: 3211780471904064263}
   - component: {fileID: 6548705097781061497}
   - component: {fileID: 4352560480474456786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: _Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,15 +201,15 @@ RectTransform:
   m_GameObject: {fileID: 4193411773203504586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6256469235023067621}
+  m_Father: {fileID: 3885461422036401222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 144.3062, y: 288.6123}
+  m_SizeDelta: {x: 144, y: 289}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3211780471904064263
 CanvasRenderer:

@@ -62,9 +62,10 @@ public class DeliveryRoadManager : MonoBehaviour
             {
                 GameManager.instance.timerPaused = true;
                 gradient.LevelEnd();
-                Debug.Log("Delivery Complete");
+                Debug.Log("Road Complete");
                 playerCol.enabled = false;
                 LeanTween.moveY(player.gameObject, 17f, 2f);
+                GameManager.instance.ChangeScene(MapManager.instance.getDestino());
             }
         }
     }

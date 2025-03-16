@@ -12,7 +12,7 @@ enum coloresIndex
 public class Mensaje 
 {
 
-    int destinatario;
+    NPCData destinatario;
     float tiempoEntreEstados;
     int nEstados;
     int estadoActual; float tActual;
@@ -21,7 +21,7 @@ public class Mensaje
     Inventario i;
     coloresIndex col;
 
-    public void setAtributos(int id, int dest, int tEntreEstados, int nE, Inventario inv)
+    public void setAtributos(int id, NPCData dest, int tEntreEstados, int nE, Inventario inv)
     {
         destinatario = dest;
         tiempoEntreEstados = tEntreEstados;
