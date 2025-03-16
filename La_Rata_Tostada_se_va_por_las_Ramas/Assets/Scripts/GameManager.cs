@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public MapManager mapManager;
 
     public float totalTimeToRagnarok;
     public float remainingTimeToRagnarok;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         if (!timerPaused && remainingTimeToRagnarok >= 0f)
             remainingTimeToRagnarok -= Time.deltaTime;
+
         //if ((int)time < (int)(time += Time.deltaTime))
             //Debug.Log((int)time);
 
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour
     public void OpenMapScene()
     {
         SceneManager.LoadScene("Delivery_Road");
-        MapManager.instance.gameObject.SetActive(true);
+        mapManager.gameObject.SetActive(true);
     }
 
     public void increaseTimeToRagnarok(float n)

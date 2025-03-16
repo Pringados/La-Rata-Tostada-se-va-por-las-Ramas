@@ -44,12 +44,10 @@ public class DeliveryRoadManager : MonoBehaviour
 
     private bool map;
 
-    void Awake()
-    {
-        MapManager.instance.deliveryRoadManager = this;
-    }
     void Start()
     {
+        MapManager.instance.deliveryRoadManager = this;
+
         map = true;
         GameManager.instance.timerPaused = true;
         Time.timeScale = 0f;
@@ -59,8 +57,8 @@ public class DeliveryRoadManager : MonoBehaviour
     {
         if (!map)
         {
-            int numMsg = GameManager.instance.GetComponent<Inventario>().getMensajesActuales();
-            playerAnim.SetInteger("numLetters", numMsg);
+            //int numMsg = GameManager.instance.GetComponent<Inventario>().getMensajesActuales();
+            //playerAnim.SetInteger("numLetters", numMsg);
 
             if (scrolling)
             { 
@@ -156,7 +154,7 @@ public class DeliveryRoadManager : MonoBehaviour
 
     public void destinyReached()
     {
-        MapManager.instance.setDelivery();
+        //MapManager.instance.setDelivery();
         GameManager.instance.ChangeScene(MapManager.instance.getDestino());
     }
 }

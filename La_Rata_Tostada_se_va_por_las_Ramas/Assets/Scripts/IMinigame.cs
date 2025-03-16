@@ -12,6 +12,12 @@ public abstract class IMinigame : MonoBehaviour
         textHint.text = data.textHint; 
     }
 
+    private void Update()
+    {
+        if (GameManager.instance.remainingTimeToRagnarok <= 0)
+            GameManager.instance.ChangeScene("End");
+    }
+
     public void MinigameComplete(bool success)
     {
         int score = CalculateScore();

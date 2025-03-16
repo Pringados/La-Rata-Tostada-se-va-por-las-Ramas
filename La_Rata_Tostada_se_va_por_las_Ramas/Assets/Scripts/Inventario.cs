@@ -8,10 +8,10 @@ using UnityEngine.UIElements;
 public class Inventario : MonoBehaviour
 {
     // Start is called before the first frame update
-    List<Mensaje> mensajes = new List<Mensaje>();
-    [SerializeField]
-    int mensajesMáximos;
-    int mensajesActuales = 0;
+    //List<Mensaje> mensajes = new List<Mensaje>();
+    //[SerializeField]
+    //int mensajesMáximos;
+    //int mensajesActuales = 0;
     int protect = -1;
     private UIManager UI;
     private GameManager gManager;
@@ -36,82 +36,82 @@ public class Inventario : MonoBehaviour
     {
         //Debug.Log("INVENTARIO PILLA EL UI MANAGER");
         UI = UIManager.Instance;
-        UI.setInitialState(mensajes);
+        //UI.setInitialState(mensajes);
     }
 
-    public Mensaje addMensaje(NPCData destinatario)
-    {
-        int im = UI.getFreeLetterSpace();
-        Debug.Log(im);
-        if (im == -1)
-        {
-            Debug.LogError("esto no debería pasar nunca Eduardo por favor detente");
-        }
-        else
-        {
-            mensajesActuales++;
-            Mensaje men = new Mensaje();
-            men.setAtributos(im, destinatario, nTiempoEntreEstados, nEstados, this);
-            mensajes.Add(men);
+    //public Mensaje addMensaje(NPCData destinatario)
+    //{
+    //    int im = UI.getFreeLetterSpace();
+    //    Debug.Log(im);
+    //    if (im == -1)
+    //    {
+    //        Debug.LogError("esto no debería pasar nunca Eduardo por favor detente");
+    //    }
+    //    else
+    //    {
+    //        mensajesActuales++;
+    //        Mensaje men = new Mensaje();
+    //        men.setAtributos(im, destinatario, nTiempoEntreEstados, nEstados, this);
+    //        mensajes.Add(men);
 
-            MapManager.instance.placeDeliveryNodes(im);
-            if (mensajesActuales == mensajesMáximos)
-            {
-                MapManager.instance.blockPickUps();
-            }
-            return men;
-        }
+    //        MapManager.instance.placeDeliveryNodes(im);
+    //        if (mensajesActuales == mensajesMáximos)
+    //        {
+    //            MapManager.instance.blockPickUps();
+    //        }
+    //        return men;
+    //    }
 
-        return null;
+    //    return null;
 
-    }
+    //}
     // Update is called once per frame
-    void Update()
-    {
-        for (int i = 0; i < mensajes.Count; i++)
+    //void Update()
+    //{
+    //    //for (int i = 0; i < mensajes.Count; i++)
 
-        {
-            if (mensajes[i] != null)
-            {
-                mensajes[i].updateEstado();
-                if (mensajes[i].isDestroyed())
-                {
-                    //comprobación de q está yendo el jugador
-                    if(mensajes[i].getID() != protect)
-                    {
-                        MapManager.instance.destroyDelivery(mensajes[i].getID());
-                        mensajes[i] = null;
-                        mensajes.RemoveAt(i);
-                        mensajesActuales--;
-                        if(mensajesActuales == mensajesMáximos - 1)
-                        {
-                            MapManager.instance.unblockPickUps();
-                        }
-                        UI.deleteLetter(i);
-                    }
+        //{
+        //    if (mensajes[i] != null)
+        //    {
+        //        mensajes[i].updateEstado();
+        //        if (mensajes[i].isDestroyed())
+        //        {
+        //            //comprobación de q está yendo el jugador
+        //            if(mensajes[i].getID() != protect)
+        //            {
+        //                MapManager.instance.destroyDelivery(mensajes[i].getID());
+        //                mensajes[i] = null;
+        //                mensajes.RemoveAt(i);
+        //                mensajesActuales--;
+        //                if(mensajesActuales == mensajesMáximos - 1)
+        //                {
+        //                    MapManager.instance.unblockPickUps();
+        //                }
+        //                UI.deleteLetter(i);
+        //            }
 
-                }
-            }
-        }
-    }
+        //        }
+        //    }
+        //}
+    //}
 
-    public void changeUIstate(int id, int nextState)
-    {
-        UI.changeLetterState(id, nextState);
+    //public void changeUIstate(int id, int nextState)
+    //{
+    //    UI.changeLetterState(id, nextState);
 
-    }
+    //}
 
-    public void protectMensaje(int id)
-    {
-        protect= id;
-    }
+    //public void protectMensaje(int id)
+    //{
+    //    protect= id;
+    //}
 
-    public int getMensajesActuales() {
-        return mensajesActuales;
-    }
+    //public int getMensajesActuales() {
+    //    return mensajesActuales;
+    //}
 
-    public Mensaje GetMensaje(int i)
-    {
-        return mensajes[i];
-    }
+    //public Mensaje GetMensaje(int i)
+    //{
+    //    return mensajes[i];
+    //}
 }

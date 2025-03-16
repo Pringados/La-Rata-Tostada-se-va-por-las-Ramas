@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minijuegos/Vending_Machine_Scene.unity
     guid: fd82641c3bc65e14bbc7def38645163c
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: be0bcc2eb8a0aed4b814d4d1e20bca2e
   m_configObjects: {}

@@ -15,12 +15,12 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     public static UIManager Instance;
 
-    [SerializeField]
-    List<GameObject> letters = new List<GameObject>();
-    private List<bool> busyLetters = new List<bool>();
+    //[SerializeField]
+    //List<GameObject> letters = new List<GameObject>();
+    //private List<bool> busyLetters = new List<bool>();
 
-    [SerializeField]
-    List<Sprite> estadosCartas = new List<Sprite>();
+    //[SerializeField]
+    //List<Sprite> estadosCartas = new List<Sprite>();
 
 
     private void Awake()
@@ -31,71 +31,71 @@ public class UIManager : MonoBehaviour
             Destroy(this.gameObject);
 
     }
-    void Start()
-    {
-        if (letters.Count != 0)
-        {
-            for (int i = 0; i < letters.Count; i++)
-            {
-                busyLetters.Add(false);
-                letters[i].SetActive(false);
-            }
-        }
-    }
+    //void Start()
+    //{
+    //    if (letters.Count != 0)
+    //    {
+    //        for (int i = 0; i < letters.Count; i++)
+    //        {
+    //            busyLetters.Add(false);
+    //            letters[i].SetActive(false);
+    //        }
+    //    }
+    //}
 
-    public void setInitialState(List<Mensaje> mensajes)
-    {
-        if (mensajes.Count != 0)
-        {
-            for (int i = 0; i < mensajes.Count; i++)
-            {
-                if (mensajes[i] != null && !mensajes[i].isDestroyed())
-                {
-                    busyLetters[mensajes[i].getID()] = true;
-                    changeLetterState(mensajes[i].getID(), mensajes[i].getEstado());
-                    letters[mensajes[i].getID()].SetActive(true);
-                }
-            }
-        }
-    }
+    //public void setInitialState(List<Mensaje> mensajes)
+    //{
+    //    if (mensajes.Count != 0)
+    //    {
+    //        for (int i = 0; i < mensajes.Count; i++)
+    //        {
+    //            if (mensajes[i] != null && !mensajes[i].isDestroyed())
+    //            {
+    //                busyLetters[mensajes[i].getID()] = true;
+    //                changeLetterState(mensajes[i].getID(), mensajes[i].getEstado());
+    //                letters[mensajes[i].getID()].SetActive(true);
+    //            }
+    //        }
+    //    }
+    //}
 
     // Update is called once per frame
-    void Update()
-    {
-        //snake.transform.position = new Vector3(Mathf.Lerp(snakeStartingPos, snakeEndPos, 1f - GameManager.instance.getRemainingTimePortion()), snake.transform.position.y, 0f);
-    }
+    //void Update()
+    //{
+    //    //snake.transform.position = new Vector3(Mathf.Lerp(snakeStartingPos, snakeEndPos, 1f - GameManager.instance.getRemainingTimePortion()), snake.transform.position.y, 0f);
+    //}
 
-    public int getFreeLetterSpace()
-    {
-        if (letters.Count != 0)
-        {
-            for (int i = 0; i < letters.Count; i++)
-            {
-                if (!busyLetters[i])
-                {
-                    letters[i].SetActive(true);
-                    changeLetterState(i, 0);
-                    busyLetters[i] = true;
-                    return i;
-                }
-            }
-        }
+    //public int getFreeLetterSpace()
+    //{
+    //    if (letters.Count != 0)
+    //    {
+    //        for (int i = 0; i < letters.Count; i++)
+    //        {
+    //            if (!busyLetters[i])
+    //            {
+    //                letters[i].SetActive(true);
+    //                changeLetterState(i, 0);
+    //                busyLetters[i] = true;
+    //                return i;
+    //            }
+    //        }
+    //    }
 
-        return -1;
-    }
+    //    return -1;
+    //}
 
-    public void deleteLetter(int im)
-    {
-        if (letters[im] != null)
-        {
-            letters[im].SetActive(false);
-            busyLetters[im] = false;
-        }
-    }
+    //public void deleteLetter(int im)
+    //{
+    //    if (letters[im] != null)
+    //    {
+    //        letters[im].SetActive(false);
+    //        busyLetters[im] = false;
+    //    }
+    //}
 
-    public void changeLetterState(int id, int estado)
-    {
-        if (letters[id] != null)
-            letters[id].GetComponent<Image>().sprite = estadosCartas[estado];
-    }
+    //public void changeLetterState(int id, int estado)
+    //{
+    //    if (letters[id] != null)
+    //        letters[id].GetComponent<Image>().sprite = estadosCartas[estado];
+    //}
 }
