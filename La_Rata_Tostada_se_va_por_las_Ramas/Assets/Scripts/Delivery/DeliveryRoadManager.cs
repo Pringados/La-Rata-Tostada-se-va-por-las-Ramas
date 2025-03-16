@@ -47,7 +47,7 @@ public class DeliveryRoadManager : MonoBehaviour
         remainingTime = duration;
         spawner.manager = this;
         trunk.scrollSpeed = scrollSpeed / trunk.GetComponent<SpriteRenderer>().bounds.size.y;
-        bgBranches.scrollSpeed = trunk.scrollSpeed * 0.7f;
+        bgBranches.scrollSpeed = trunk.scrollSpeed * 0.4f;
         galaxy.scrollSpeed = trunk.scrollSpeed * 0.2f;
         scrolling = true;
         playerCol = player.GetComponent<BoxCollider2D>();
