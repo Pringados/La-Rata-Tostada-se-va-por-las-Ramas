@@ -105,4 +105,8 @@ public class Inventario : MonoBehaviour
     {
         protect= id;
     }
+
+    public int getMensajesActuales() {
+        return mensajesActuales;
+    }
 }
