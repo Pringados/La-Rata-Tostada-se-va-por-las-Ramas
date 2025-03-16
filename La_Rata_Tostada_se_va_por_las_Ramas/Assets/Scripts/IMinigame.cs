@@ -9,7 +9,7 @@ public abstract class IMinigame : MonoBehaviour
 
     void Awake()
     {
-        //textHint.text = data.textHint; 
+        textHint.text = data.textHint; 
     }
 
     public void MinigameComplete(bool success)
