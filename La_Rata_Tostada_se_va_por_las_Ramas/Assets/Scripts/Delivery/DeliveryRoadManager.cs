@@ -64,17 +64,22 @@ public class DeliveryRoadManager : MonoBehaviour
             if (scrolling)
             { 
                 remainingTime -= Time.deltaTime; 
-                UnityEngine.Debug.Log("Remaining Time " + remainingTime);
             }
 
             if (remainingTime < 0f && !GameManager.instance.timerPaused)
             {
+                GameManager.instance.timerPaused = true;
                 gradient.LevelEnd();
                 Debug.Log("Road Complete");
                 playerCol.enabled = false;
-                LeanTween.moveY(player.gameObject, 17f, 2f).setOnComplete(delegate () { GameManager.instance.ChangeScene(MapManager.instance.getDestino()); });
+                LeanTween.moveY(player.gameObject, 17f, 2f);
+                Invoke("EnterDestination", 2f);
             }
         }
+    }
+    private void EnterDestination()
+    {
+        GameManager.instance.ChangeScene(MapManager.instance.getDestino());
     }
 
     public void AddBranch(DeliveryHazard branch)

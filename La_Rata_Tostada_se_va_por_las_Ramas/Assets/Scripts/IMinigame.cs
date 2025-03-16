@@ -9,12 +9,14 @@ public abstract class IMinigame : MonoBehaviour
 
     void Awake()
     {
-        textHint.text = data.textHint; 
+        //textHint.text = data.textHint; 
     }
 
     public void MinigameComplete(bool success)
     {
-        GameManager.instance.score += CalculateScore();
+        int score = CalculateScore();
+        GameManager.instance.increaseTimeToRagnarok(score / 100);
+        GameManager.instance.score += score;
         GameManager.instance.OpenMapScene();
     }
 

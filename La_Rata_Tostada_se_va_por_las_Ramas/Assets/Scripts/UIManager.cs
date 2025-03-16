@@ -22,11 +22,6 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     List<Sprite> estadosCartas = new List<Sprite>();
 
-    [SerializeField] protected Image snake;
-    private float snakeStartingPos;
-    [SerializeField] private float snakeEndPos;
-
-    LTDescr snakeTween;
 
     private void Awake()
     {
@@ -45,12 +40,6 @@ public class UIManager : MonoBehaviour
                 busyLetters.Add(false);
                 letters[i].SetActive(false);
             }
-        }
-
-        if (snake != null)
-        {
-            snakeStartingPos = snake.transform.position.x; 
-            snakeTween = LeanTween.moveX(snake.gameObject, snakeEndPos, GameManager.instance.totalTimeToRagnarok);
         }
     }
 
@@ -108,20 +97,5 @@ public class UIManager : MonoBehaviour
     {
         if (letters[id] != null)
             letters[id].GetComponent<Image>().sprite = estadosCartas[estado];
-    }
-
-
-    // Devuelve la posici�n en x de la serpiente que representa la cantidad de tiempo restante.
-    private float GetSnakeX()
-    {
-        return snakeStartingPos + (snakeEndPos - snakeStartingPos) * (1 - GameManager.instance.GetRemainingTimePortion());
-    }
-
-    public void DelaySnake()
-    {
-        float snakeRecoilDuration = 0.5f;
-        LeanTween.cancel(snakeTween.id);
-        LeanTween.moveX(snake.gameObject, GetSnakeX(), snakeRecoilDuration).setEase(LeanTweenType.easeOutQuad);
-        snakeTween = LeanTween.moveX(snake.gameObject, snakeEndPos, GameManager.instance.totalTimeToRagnarok).setDelay(snakeRecoilDuration);
     }
 }
