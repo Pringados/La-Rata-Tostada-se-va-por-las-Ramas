@@ -29,6 +29,8 @@ public class MapManager : MonoBehaviour
     [SerializeField] DeliveryRoadManager deliveryRoadManager;
 
     [SerializeField] public List<NPCData> NPCs;
+    NPCData currNPC;
+    [SerializeField] public GameObject NPCPrefab;
 
     // Nodos libres para spawnear
     public HashSet<int> freeNodes = new HashSet<int>();
@@ -198,6 +200,7 @@ public class MapManager : MonoBehaviour
             int n = Random.Range(0, NPCs.Count);
             GameManager.instance.GetComponent<Inventario>().addMensaje(NPCs[n]);
             destino = NPCs[n].sceneName;
+            currNPC = NPCs[n];
         }
         distance = GetComponentInChildren<Graph>().distance2time(playerPosition, destiny.GetComponent<MapNode>().GetNode());
         updatePlayerMapPosition(destiny.GetComponent<MapNode>().GetNode());
@@ -270,6 +273,10 @@ public class MapManager : MonoBehaviour
     public string getDestino()
     {
         return destino;
+    }
+    public NPCData getNPCData()
+    {
+        return currNPC;
     }
 
 }

@@ -66,8 +66,10 @@ public class DeliveryRoadManager : MonoBehaviour
                 gradient.LevelEnd();
                 Debug.Log("Road Complete");
                 playerCol.enabled = false;
-                LeanTween.moveY(player.gameObject, 17f, 2f);
-                GameManager.instance.ChangeScene(MapManager.instance.getDestino());
+                GameObject npc = gradient.getCanva().transform.Find("NPC").gameObject;
+                LeanTween.moveY(player.gameObject, 17f, 2f).setOnComplete(() => { npc.SetActive(true); });
+                
+                //GameManager.instance.ChangeScene(MapManager.instance.getDestino());
             }
         }
     }
