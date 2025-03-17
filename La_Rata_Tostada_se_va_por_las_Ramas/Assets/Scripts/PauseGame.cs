@@ -34,7 +34,7 @@ public class PauseGame : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(pause + "   " + Input.GetMouseButtonDown(0));
+        //Debug.Log(pause + "   " + Input.GetMouseButtonDown(0));
         if (pause && Input.GetMouseButtonDown(0))
             TogglePause();
     }

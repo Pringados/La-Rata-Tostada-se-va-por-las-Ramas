@@ -11,7 +11,7 @@ public class SimonSays : IMinigame
     [SerializeField] private GameObject[] notes;
 
     int buttonsClicked = 0;
-    int colorOrderCount = 3;
+    int colorOrderCount = 4;
     bool next = false;
     bool won = false;
     bool reset = false;
@@ -28,12 +28,14 @@ public class SimonSays : IMinigame
         if (button == lightOrder[buttonsClicked - 1])
         {
             next = true;
+            Debug.Log("vAS BIEN");
         }
         else
         {
             won = false;
             next = false;
             buttonsClicked = 0;
+            Debug.Log("MAL");
             StartCoroutine(ResetSimonSaysCode());
         }
         if (buttonsClicked == colorOrderCount && next)
@@ -49,7 +51,6 @@ public class SimonSays : IMinigame
     {
         //Aqui va el codigo para el spawneo de colores
         buttonsClicked = 0;
-        colorOrderCount++;
         DisableButtons();
         for (int i = 0; i < colorOrderCount; i++)
         {
@@ -90,6 +91,8 @@ public class SimonSays : IMinigame
     private IEnumerator ResetSimonSaysCode()
     {
         reset = true;
+
+        DisableButtons();
 
         yield return new WaitForSeconds(resetTime);
 
