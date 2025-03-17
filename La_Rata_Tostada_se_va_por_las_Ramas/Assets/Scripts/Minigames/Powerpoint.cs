@@ -60,13 +60,13 @@ public class Powerpoint : IMinigame
             else
                 window.sprite = slides[powerpoint[counter]];
         }
-
         else
         {
             StartCoroutine(ResetPowerPoint());
 
             MinigameComplete(true);
         }
+        endButton.SetActive(false);
     }
 
     private void ModifyPowerPoint()
@@ -88,7 +88,10 @@ public class Powerpoint : IMinigame
 
         yield return new WaitForSeconds(resetTime);
 
-        endButton.SetActive(true);
+        if (terminado)
+        {
+            endButton.SetActive(true);
+        }
     }
 
     private IEnumerator ResetPowerPoint()
