@@ -13,7 +13,7 @@ public class FacundoManager : IMinigame
 
     public override float CalculateScore()
     {
-        return 50;
+        return 500;
     }
 
 
@@ -27,7 +27,7 @@ public class FacundoManager : IMinigame
         trail.Add(o);
     }
 
-    private void clearTrail()
+    private void ClearTrail()
     {
         foreach (GameObject o in trail)
         {
@@ -39,7 +39,7 @@ public class FacundoManager : IMinigame
     void Update()
     {
         if (Input.GetMouseButtonUp(0)) {
-            clearTrail();
+            ClearTrail();
             facundo.StopMoving();
             trackingActive = false; 
         }
@@ -53,10 +53,11 @@ public class FacundoManager : IMinigame
             //Debug.Log("hit: " + hit + "    collider: " + hit.collider + "   Layer: " + LayerMask.NameToLayer("Background"));
             if (hit.collider?.gameObject.layer == LayerMask.NameToLayer("Background"))
             {
-                clearTrail();
+                ClearTrail();
                 facundo.StopMoving();
                 trackingActive = false;
             }
         }
     }
 }
+

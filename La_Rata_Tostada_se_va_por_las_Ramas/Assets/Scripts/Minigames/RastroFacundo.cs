@@ -19,8 +19,8 @@ public class RastroFacundo : MonoBehaviour
 
     private void OnMouseExit()
     {
-        if (Input.GetMouseButton(0))
-            Destroy(gameObject);
+        //if (Input.GetMouseButton(0))
+        //    Destroy(gameObject);
     }
 
 }
