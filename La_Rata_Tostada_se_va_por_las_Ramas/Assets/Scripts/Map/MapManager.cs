@@ -46,7 +46,6 @@ public class MapManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
             playerPosition = 10;
             init = true;
             // Inicia la lista de nodos libres
@@ -60,7 +59,7 @@ public class MapManager : MonoBehaviour
 
     void Start()
     {
-        GameManager.instance.mapManager = this;
+        DontDestroyOnLoad(transform.parent.gameObject);
         // Posiciona al jugador en el nodo inicial
         placePlayer(playerPosition);
     }

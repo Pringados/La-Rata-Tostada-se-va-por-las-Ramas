@@ -8,4 +8,9 @@ public class MenuButton : MonoBehaviour
     {
         GameManager.instance.ResetGame();
     }
+
+    public void StartGame()
+    {
+        GameManager.instance.OpenMapScene();
+    }
 }

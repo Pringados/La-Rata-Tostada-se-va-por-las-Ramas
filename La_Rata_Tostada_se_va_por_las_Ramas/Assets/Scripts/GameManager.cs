@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    [SerializeField]
+    GameObject mapManagerPrefab;
     public MapManager mapManager;
 
     public float totalTimeToRagnarok;
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
             remainingTimeToRagnarok = totalTimeToRagnarok;
+            mapManager = Instantiate(mapManagerPrefab).GetComponentInChildren<MapManager>();
+            mapManager.gameObject.SetActive(false);
         }
         else
             Destroy(this.gameObject);
@@ -76,7 +80,7 @@ public class GameManager : MonoBehaviour
 
     public void OpenMapScene()
     {
-        SceneManager.LoadScene("Delivery_Road");
+        ChangeScene("Delivery_Road");
         mapManager.gameObject.SetActive(true);
     }
 

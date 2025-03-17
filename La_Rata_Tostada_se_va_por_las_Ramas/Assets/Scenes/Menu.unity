@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 229518535}
   - component: {fileID: 229518534}
   - component: {fileID: 229518533}
+  - component: {fileID: 229518536}
   m_Layer: 5
   m_Name: Jugar
   m_TagString: Untagged
@@ -532,9 +533,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 278662085}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OpenMapScene
+      - m_Target: {fileID: 229518536}
+        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -582,6 +583,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229518531}
   m_CullTransparentMesh: 1
+--- !u!114 &229518536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229518531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92850d01dac53b41813b975fc5846ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &234439132
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,17 +837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nEstados: 4
   nTiempoEntreEstados: 2
---- !u!114 &278662085 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8885663649285065162, guid: 2b54b6057512f144c8183a5cb88dc748, type: 3}
-  m_PrefabInstance: {fileID: 278662082}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278662083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8c9ec6e929e42e45a91929e95e5bc3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &306795746
 GameObject:
   m_ObjectHideFlags: 0

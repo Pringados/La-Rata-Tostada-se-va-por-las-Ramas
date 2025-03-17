@@ -69,6 +69,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fb1202e38c2a65446ace55e998acee29, type: 2}
   - {fileID: 11400000, guid: 626cd6db64b19b545a25686a239fae8e, type: 2}
   - {fileID: 11400000, guid: a2cb07a23e265c345ac86e105ff2de90, type: 2}
+  NPCPrefab: {fileID: 0}
   squirrel: {fileID: 0}
   pickUpList: []
 --- !u!1 &4113663437449403202
