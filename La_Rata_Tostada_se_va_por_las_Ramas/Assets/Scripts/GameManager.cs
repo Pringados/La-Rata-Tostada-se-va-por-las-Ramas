@@ -67,9 +67,12 @@ public class GameManager : MonoBehaviour
     {
         remainingTimeToRagnarok = totalTimeToRagnarok;
         score = 0;
-        emitter.Stop();
-        emitter.SetParameter("End", 0);
-        emitter.Play();
+        if(emitter != null)
+        {
+            emitter.Stop();
+            emitter.SetParameter("End", 0);
+            emitter.Play();
+        }
         ChangeScene("Menu");
     }
 
@@ -135,4 +138,6 @@ public class GameManager : MonoBehaviour
     {
         GameManager.instance.GetComponent<Inventario>().SetSpeed(true);
     }
+
+    public void QuitGame() { Application.Quit(); }
 }

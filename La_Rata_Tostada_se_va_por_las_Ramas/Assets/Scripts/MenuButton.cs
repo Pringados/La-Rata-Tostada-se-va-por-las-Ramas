@@ -13,4 +13,9 @@ public class MenuButton : MonoBehaviour
     {
         GameManager.instance.OpenMapScene();
     }
+
+    public void QuitGame()
+    {
+        GameManager.instance.QuitGame();
+    }
 }
