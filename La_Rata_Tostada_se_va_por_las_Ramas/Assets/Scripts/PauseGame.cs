@@ -8,10 +8,11 @@ public class PauseGame : MonoBehaviour
     [SerializeField] private GameObject hint;
     [SerializeField] private GameObject showHintButton;
 
-    public bool pause = false; 
+    bool pause = true; 
 
     private void Start()
     {
+        Debug.Log(pause);
         if (pause) Pause();
     }
 

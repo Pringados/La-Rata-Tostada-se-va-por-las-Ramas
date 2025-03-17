@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c9ec6e929e42e45a91929e95e5bc3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapManagerPrefab: {fileID: 0}
   mapManager: {fileID: 0}
   totalTimeToRagnarok: 0
   remainingTimeToRagnarok: 0
@@ -228,11 +229,11 @@ RectTransform:
   m_Children:
   - {fileID: 2001620892}
   - {fileID: 641088554}
+  - {fileID: 446484486}
   - {fileID: 1163674167}
   - {fileID: 1261923700}
   - {fileID: 391787095}
   - {fileID: 612197348}
-  - {fileID: 446484486}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

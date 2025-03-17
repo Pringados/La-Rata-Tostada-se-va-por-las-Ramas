@@ -65,10 +65,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 717c50f3b44f5994cb5799efe5687658, type: 2}
   - {fileID: 11400000, guid: bf064e9ca21e0834193984b8b3e56da8, type: 2}
   - {fileID: 11400000, guid: 9304e70d1e19c9a47a6eed0dde21507c, type: 2}
-  - {fileID: 11400000, guid: f12626934e4537c4885981dec51ca61c, type: 2}
-  - {fileID: 11400000, guid: fb1202e38c2a65446ace55e998acee29, type: 2}
   - {fileID: 11400000, guid: 626cd6db64b19b545a25686a239fae8e, type: 2}
   - {fileID: 11400000, guid: a2cb07a23e265c345ac86e105ff2de90, type: 2}
+  - {fileID: 11400000, guid: fb1202e38c2a65446ace55e998acee29, type: 2}
+  - {fileID: 11400000, guid: f12626934e4537c4885981dec51ca61c, type: 2}
   NPCPrefab: {fileID: 0}
   squirrel: {fileID: 0}
   pickUpList: []

@@ -52,7 +52,10 @@ public class GameManager : MonoBehaviour
         if (remainingTimeToRagnarok <= 0)
             OnDefeat(); 
 
-        emitter.SetParameter("RemainingTime", remainingTimeToRagnarok / totalTimeToRagnarok);
+        if(emitter != null)
+        {
+            emitter.SetParameter("RemainingTime", remainingTimeToRagnarok / totalTimeToRagnarok);
+        }
     }
 
     public void ChangeScene(string scene)
