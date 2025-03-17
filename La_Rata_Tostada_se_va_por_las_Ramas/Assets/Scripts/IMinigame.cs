@@ -14,7 +14,7 @@ public abstract class IMinigame : MonoBehaviour
 
     void Update()
     {
-        GameManager.instance.score += Time.deltaTime * 10;
+        GameManager.instance.score -= Time.deltaTime*3;
     }
 
     public void MinigameComplete(bool success)
