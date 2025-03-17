@@ -7,12 +7,14 @@ public class PauseGame : MonoBehaviour
 {
     [SerializeField] private GameObject hint;
     [SerializeField] private GameObject showHintButton;
+    [SerializeField] private GameObject menuButton;
 
     bool pause = true; 
 
     private void Start()
     {
         if (pause) Pause();
+        menuButton.SetActive(false);
     }
 
     public void TogglePause()
@@ -27,6 +29,7 @@ public class PauseGame : MonoBehaviour
         GameManager.instance.timerPaused = pause;
         Time.timeScale = pause ? 0 : 1;
         hint.SetActive(pause);
+        menuButton.SetActive(pause);
         showHintButton.SetActive(!pause);
         GameManager.instance.SetMusicAction(false);
     }

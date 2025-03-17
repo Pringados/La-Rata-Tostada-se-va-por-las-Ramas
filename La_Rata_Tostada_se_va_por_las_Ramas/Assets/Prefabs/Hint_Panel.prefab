@@ -194,7 +194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -5.9691, y: 255.4867}
+  m_AnchoredPosition: {x: 0, y: 255.4867}
   m_SizeDelta: {x: 515.2094, y: 287.4877}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3955430786279488189
@@ -578,6 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hint: {fileID: 941522239481536863}
   showHintButton: {fileID: 5554382733771880962}
+  menuButton: {fileID: 7000282153956139967}
 --- !u!1001 &1468644185707275678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -668,11 +669,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7126302949266521426, guid: d231dfd250c4ac54ab359e4631ac3692, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7126302949266521426, guid: d231dfd250c4ac54ab359e4631ac3692, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -165
+      value: 205
       objectReference: {fileID: 0}
     - target: {fileID: 7126302949266521426, guid: d231dfd250c4ac54ab359e4631ac3692, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -695,6 +696,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d231dfd250c4ac54ab359e4631ac3692, type: 3}
+--- !u!1 &7000282153956139967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8449970733094372897, guid: d231dfd250c4ac54ab359e4631ac3692, type: 3}
+  m_PrefabInstance: {fileID: 1468644185707275678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8539980332078667980 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7126302949266521426, guid: d231dfd250c4ac54ab359e4631ac3692, type: 3}
