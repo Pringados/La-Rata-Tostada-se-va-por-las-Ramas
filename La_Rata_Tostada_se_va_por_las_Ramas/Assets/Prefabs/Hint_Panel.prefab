@@ -31,6 +31,7 @@ RectTransform:
   - {fileID: 1103445048766851130}
   - {fileID: 3654465566429010451}
   - {fileID: 4602249750163315810}
+  - {fileID: 8539980332078667980}
   m_Father: {fileID: 6021688576819303933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -556,7 +557,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8607511322898855375}
-  - {fileID: 8539980332078667980}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -584,7 +584,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6021688576819303933}
+    m_TransformParent: {fileID: 8607511322898855375}
     m_Modifications:
     - target: {fileID: 2133887868230672390, guid: d231dfd250c4ac54ab359e4631ac3692, type: 3}
       propertyPath: m_Color.b
@@ -672,7 +672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7126302949266521426, guid: d231dfd250c4ac54ab359e4631ac3692, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -196
+      value: -165
       objectReference: {fileID: 0}
     - target: {fileID: 7126302949266521426, guid: d231dfd250c4ac54ab359e4631ac3692, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
