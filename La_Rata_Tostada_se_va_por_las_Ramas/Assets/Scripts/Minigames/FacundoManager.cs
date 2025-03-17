@@ -6,7 +6,7 @@ public class FacundoManager : IMinigame
 {
     [SerializeField] Facundo facundo;
     public bool trackingActive = false;
-    List<GameObject> trail;
+    List<RastroFacundo> trail;
 
     float immuneTime = 1f;
     public float clickTime;
@@ -16,24 +16,29 @@ public class FacundoManager : IMinigame
         return 500;
     }
 
-
     void Awake()
     {
-        trail = new List<GameObject>();
+        trail = new List<RastroFacundo>();
     }
 
-    public void addTrailObject(GameObject o)
+    public void AddTrailObject(RastroFacundo o)
     {
+        Debug.Log("AddObject");
         trail.Add(o);
+    }
+
+    public void RemoveTrailObject(RastroFacundo o)
+    {
+        trail.Remove(o);
     }
 
     private void ClearTrail()
     {
-        foreach (GameObject o in trail)
+        foreach (RastroFacundo o in trail)
         {
-            Destroy(o);
+            o.RemoveTrail();
         }
-        trail.Clear();
+        //trail.Clear();
     }
 
     void Update()

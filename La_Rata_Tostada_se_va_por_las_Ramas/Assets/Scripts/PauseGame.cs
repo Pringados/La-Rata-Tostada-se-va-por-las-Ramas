@@ -12,14 +12,13 @@ public class PauseGame : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(pause);
         if (pause) Pause();
     }
 
     public void TogglePause()
     {
-        Debug.Log("PAUSE");
         pause = !pause;
+        Debug.Log("PAUSE: " + pause);
         Pause();
     }
 

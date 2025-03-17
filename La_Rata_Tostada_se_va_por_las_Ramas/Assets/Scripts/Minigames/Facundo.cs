@@ -15,7 +15,7 @@ public class Facundo : MonoBehaviour
 
     [SerializeField]
     float minTrailSeparation;
-    Transform lastTrail = null;
+    [SerializeField]Transform lastTrail = null;
 
     float speed;
 
@@ -55,7 +55,6 @@ public class Facundo : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, path[nextNode], speed * Time.deltaTime);
             if (Vector3.Distance(transform.position, path[nextNode]) < 0.1f && ++nextNode >= numberOfPathNodes)
             {
-                Debug.Log("END of path");
                 trailComplete = true;
                 moving = false;
                 col.enabled = true;
@@ -64,7 +63,7 @@ public class Facundo : MonoBehaviour
             if (moving && (lastTrail == null || Vector3.Distance(transform.position, lastTrail.position) > minTrailSeparation))
             {
                 lastTrail = Instantiate(trail, transform.position, Quaternion.identity).transform;
-                manager.addTrailObject(lastTrail.gameObject);
+                lastTrail.GetComponent<RastroFacundo>().manager = manager;
             }
         }
     }
@@ -102,7 +101,6 @@ public class Facundo : MonoBehaviour
                     trailComplete = true;
                     moving = false;
                 });*/
-
         }
     }
 
@@ -118,7 +116,6 @@ public class Facundo : MonoBehaviour
     {
         Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePoint.z = 0f;
-        Debug.Log("Mouse up.  Tracking: " + manager.trackingActive + "   Trail Complete: " + trailComplete + "   Mouse pos: " + mousePoint);
         if (col.bounds.Contains(mousePoint) && trailComplete && manager.trackingActive)
         {
             Debug.Log("COMPLETE!!!");
