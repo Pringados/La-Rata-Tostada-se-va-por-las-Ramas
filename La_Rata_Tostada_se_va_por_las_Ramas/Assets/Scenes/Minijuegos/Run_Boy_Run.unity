@@ -258,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 244697284}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 398.5, y: -5.8, z: 0}
+  m_LocalPosition: {x: 423.30002, y: -5.8, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -851,7 +851,7 @@ Transform:
   m_GameObject: {fileID: 967236813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 476.19998, y: -9.1, z: 0}
+  m_LocalPosition: {x: 501, y: -9.1, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1088,7 +1088,7 @@ Transform:
   m_GameObject: {fileID: 1234375978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 689.2, y: -2.8999984, z: 0}
+  m_LocalPosition: {x: 714, y: -2.8999984, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1291,6 +1291,7 @@ GameObject:
   - component: {fileID: 1286443873}
   - component: {fileID: 1286443876}
   - component: {fileID: 1286443877}
+  - component: {fileID: 1286443878}
   m_Layer: 0
   m_Name: La Creatura
   m_TagString: Untagged
@@ -1339,7 +1340,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1789710127, guid: c617b2f48d87e8b47ae9029900470d04, type: 3}
+  m_Sprite: {fileID: -1314048299, guid: 2a2a5287895155b40abe7d1a06932e36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1429,8 +1430,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.13, y: 6.14}
+    pivot: {x: 0.48038897, y: 0.45271716}
+    oldSize: {x: 6.5, y: 6.625}
     newSize: {x: 1.1, y: 1.175}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1461,6 +1462,27 @@ MonoBehaviour:
     m_Bits: 64
   groundCheck: {fileID: 280882845}
   butt: {fileID: 840067808}
+--- !u!95 &1286443878
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286443869}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6f8755b1445288d45aecfe08d841c352, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1296803721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,7 +1785,7 @@ Transform:
   m_GameObject: {fileID: 1536433854}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 599.2, y: -12.1, z: 0}
+  m_LocalPosition: {x: 624, y: -12.1, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2036,7 +2058,7 @@ Transform:
   m_GameObject: {fileID: 1602135673}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 276.19998, y: -11.499998, z: 0}
+  m_LocalPosition: {x: 301, y: -11.499998, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2830,7 +2852,7 @@ Transform:
   m_GameObject: {fileID: 2126910701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 154, y: -4.1, z: 0}
+  m_LocalPosition: {x: 178.8, y: -4.1, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

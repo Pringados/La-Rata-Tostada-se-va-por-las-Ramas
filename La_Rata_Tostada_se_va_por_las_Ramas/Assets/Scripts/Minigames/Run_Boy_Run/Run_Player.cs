@@ -1,3 +1,4 @@
+using System.IO.IsolatedStorage;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class Run_Player : IMinigame
 
     private Vector3 startPos;
     private bool moving = true;
+    private Animator animator;
 
     void Start()
     {
@@ -25,14 +27,18 @@ public class Run_Player : IMinigame
         butt.GetComponent<Button>().onClick.AddListener(win);
 
         startPos = transform.position;
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, radius, ground);
+
+        animator.enabled = isGrounded;
+
         if (Input.GetMouseButtonDown(0))
         {
-            bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, radius, ground);
-
             if (isGrounded)
             {
                 rb2D.AddForce(Vector3.up * force, ForceMode2D.Impulse);
