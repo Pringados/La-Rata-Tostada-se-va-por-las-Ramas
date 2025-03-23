@@ -21,17 +21,21 @@ public class CameraFollow : MonoBehaviour
     //Distancia al objetivo
     float distance;
 
+    [SerializeField]
+    float yPos;
+
     // Start is called before the first frame update
     void Start()
     {
         followPlayer = true;
         speed = playerFollowSpeed;
     }
+
     private void Update()
     {
         if (followPlayer)
         {
-            dest = new Vector3(playerPos.transform.position.x, 122, -10f);
+            dest = new Vector3(playerPos.transform.position.x, yPos, -10f);
         }
         distance = Vector3.Distance(transform.position, dest);
         //Si no estamos en el objetivo, movemos (se usa < 0.01 en vez de == porque son floats)
