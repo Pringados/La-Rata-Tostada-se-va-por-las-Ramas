@@ -29,6 +29,7 @@ public class Run_Player : IMinigame
         startPos = transform.position;
 
         animator = GetComponent<Animator>();
+        rb2D.velocity = new Vector3(speed, rb2D.velocity.y, 0f);
     }
 
     void Update()
@@ -53,8 +54,8 @@ public class Run_Player : IMinigame
 
     private void FixedUpdate()
     {
-        if (moving) rb2D.velocity = new Vector3(speed, rb2D.velocity.y, 0f);
-        else rb2D.velocity = Vector3.zero;
+        //if (moving) rb2D.velocity = new Vector3(speed, rb2D.velocity.y, 0f);
+        //else rb2D.velocity = Vector3.zero;
     }
 
     private void OnDrawGizmos()
