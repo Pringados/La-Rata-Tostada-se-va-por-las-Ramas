@@ -222,7 +222,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203832132}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 830519f8947b93c4ba61ed99190cc990, type: 3}
   m_Name: 
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 244697288}
   - component: {fileID: 244697287}
   - component: {fileID: 244697289}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Block (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 244697284}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 423.30002, y: -5.8, z: 0}
+  m_LocalPosition: {x: 423.30002, y: -8.3, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -382,7 +382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 280882845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 580402280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CamFollowPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 967236817}
   - component: {fileID: 967236816}
   - component: {fileID: 967236818}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Block (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,7 +851,7 @@ Transform:
   m_GameObject: {fileID: 967236813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 501, y: -9.1, z: 0}
+  m_LocalPosition: {x: 501, y: -11.6, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1072,7 +1072,7 @@ GameObject:
   - component: {fileID: 1234375982}
   - component: {fileID: 1234375981}
   - component: {fileID: 1234375983}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Block (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ Transform:
   m_GameObject: {fileID: 1234375978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 714, y: -2.8999984, z: 0}
+  m_LocalPosition: {x: 714, y: -7.3, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1292,7 +1292,7 @@ GameObject:
   - component: {fileID: 1286443876}
   - component: {fileID: 1286443877}
   - component: {fileID: 1286443878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: La Creatura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1360,7 +1360,7 @@ Transform:
   m_GameObject: {fileID: 1286443869}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.0489, y: -14.099998, z: 0}
+  m_LocalPosition: {x: 19.7, y: -4.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1380,10 +1380,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 15
   m_Material: {fileID: 6200000, guid: bebc00d38f22dbb439ae2f02b4db0da8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1454,14 +1454,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textHint: {fileID: 928387837}
   data: {fileID: 11400000, guid: e98a66a7d0cc7e84eae3bbe3ba438c3d, type: 2}
-  force: 30
-  speed: 30
+  force: 600
+  speed: 0
   radius: 2
   ground:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 280882845}
   butt: {fileID: 840067808}
+  groundCtrl: {fileID: 1398294691}
 --- !u!95 &1286443878
 Animator:
   serializedVersion: 5
@@ -1596,6 +1597,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1398294689}
+  - component: {fileID: 1398294691}
+  - component: {fileID: 1398294690}
   m_Layer: 6
   m_Name: _Ground
   m_TagString: Untagged
@@ -1612,7 +1615,7 @@ Transform:
   m_GameObject: {fileID: 1398294688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -15, z: -0.4497293}
+  m_LocalPosition: {x: 0, y: -8.9, z: 0}
   m_LocalScale: {x: 0.4, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1627,6 +1630,47 @@ Transform:
   - {fileID: 1493704438}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1398294690
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398294688}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1398294691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398294688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c45450b48177ed4f9df5d80ea24a93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  hazards: []
 --- !u!1 &1493704437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,7 +1813,7 @@ GameObject:
   - component: {fileID: 1536433858}
   - component: {fileID: 1536433857}
   - component: {fileID: 1536433859}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Block (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1785,8 +1829,8 @@ Transform:
   m_GameObject: {fileID: 1536433854}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 624, y: -12.1, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_LocalPosition: {x: 618.5, y: -14.6, z: 0}
+  m_LocalScale: {x: 1.56, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398294689}
@@ -2042,7 +2086,7 @@ GameObject:
   - component: {fileID: 1602135677}
   - component: {fileID: 1602135676}
   - component: {fileID: 1602135678}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Block (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2058,8 +2102,8 @@ Transform:
   m_GameObject: {fileID: 1602135673}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 301, y: -11.499998, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_LocalPosition: {x: 298.9, y: -10.6, z: 0}
+  m_LocalScale: {x: 1.62, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398294689}
@@ -2692,7 +2736,7 @@ GameObject:
   - component: {fileID: 2042218414}
   - component: {fileID: 2042218413}
   - component: {fileID: 2042218415}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: FinishLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2708,7 +2752,7 @@ Transform:
   m_GameObject: {fileID: 2042218410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 788.2, y: 24.8, z: 0}
+  m_LocalPosition: {x: 788.2, y: 22.3, z: 0}
   m_LocalScale: {x: 1, y: 3.0901, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2824,6 +2868,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 1286443877}
+  triggeringLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2126910701
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,7 +2883,7 @@ GameObject:
   - component: {fileID: 2126910705}
   - component: {fileID: 2126910704}
   - component: {fileID: 2126910706}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2852,8 +2899,8 @@ Transform:
   m_GameObject: {fileID: 2126910701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 178.8, y: -4.1, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_LocalPosition: {x: 178.8, y: -4, z: 0}
+  m_LocalScale: {x: 0.4, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1398294689}

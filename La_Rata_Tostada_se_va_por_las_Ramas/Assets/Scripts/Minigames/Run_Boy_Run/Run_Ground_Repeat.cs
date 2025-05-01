@@ -1,21 +1,34 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Run_Ground_Repeat : MonoBehaviour
 {
-    [SerializeField] private GameObject squirrel; 
+    [SerializeField] private float speed;
 
-    private float width; 
+    Vector3 startPos;
 
-    void Start()
+    bool scrolling = true;
+
+    public List<RunHazard> hazards;
+
+    void Awake()
     {
-        BoxCollider2D collider = GetComponent<BoxCollider2D>();
-
-        width = collider.size.x;
+        startPos = transform.position;
+        hazards = new List<RunHazard>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (squirrel.transform.position.x > transform.position.x + width / 2)
-            transform.Translate(Vector2.right * 2f * width); 
+        if (scrolling) transform.position = transform.position + Vector3.left * speed * Time.deltaTime;
+    }
+
+    public void Reset(float resetTime)
+    {
+        scrolling = false;
+        LeanTween.move(this.gameObject, startPos, resetTime).setEase(LeanTweenType.easeOutQuad).setOnComplete(delegate () { scrolling = true; });
+        foreach(RunHazard hazard in hazards)
+        {
+            hazard.Reset();
+        }
     }
 }

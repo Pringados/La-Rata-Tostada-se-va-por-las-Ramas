@@ -7,7 +7,7 @@ public abstract class IMinigame : MonoBehaviour
 
     [SerializeField] protected MinigameData data;
 
-    void Awake()
+    protected void Awake()
     {
         textHint.text = data.textHint; 
     }

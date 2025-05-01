@@ -16,8 +16,9 @@ public class FacundoManager : IMinigame
         return 500;
     }
 
-    void Awake()
+    new void Awake()
     {
+        base.Awake();
         trail = new List<RastroFacundo>();
     }
 

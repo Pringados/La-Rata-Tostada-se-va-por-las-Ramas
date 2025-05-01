@@ -12,13 +12,14 @@ public class Run_Player : IMinigame
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private GameObject butt;
-
+    [SerializeField] private Run_Ground_Repeat groundCtrl;
 
     private Rigidbody2D rb2D;
 
-    private Vector3 startPos;
-    private bool moving = true;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
+
+    private Vector3 startPos;
 
     void Start()
     {
@@ -26,10 +27,9 @@ public class Run_Player : IMinigame
 
         butt.GetComponent<Button>().onClick.AddListener(win);
 
-        startPos = transform.position;
-
         animator = GetComponent<Animator>();
-        rb2D.velocity = new Vector3(speed, rb2D.velocity.y, 0f);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        startPos = transform.position;
     }
 
     void Update()
@@ -45,17 +45,16 @@ public class Run_Player : IMinigame
                 rb2D.AddForce(Vector3.up * force, ForceMode2D.Impulse);
             }
         }
-        if (Input.GetMouseButtonUp(0))
+        /*if (Input.GetMouseButtonUp(0))
         {
             rb2D.velocity = new Vector3(rb2D.velocity.x, Mathf.Min(0f, rb2D.velocity.y), 0f);
             rb2D.AddForce(Vector3.down * force, ForceMode2D.Impulse);
-        }
+        }*/
     }
 
     private void FixedUpdate()
     {
-        //if (moving) rb2D.velocity = new Vector3(speed, rb2D.velocity.y, 0f);
-        //else rb2D.velocity = Vector3.zero;
+        rb2D.velocity = new Vector3(0f, rb2D.velocity.y, 0f);
     }
 
     private void OnDrawGizmos()
@@ -72,7 +71,16 @@ public class Run_Player : IMinigame
 
     public void Reset()
     {
+        float resetTime = 1f;
         transform.position = startPos;
+        spriteRenderer.enabled = false;
+        groundCtrl.Reset(resetTime);
+        Invoke("ReactivateSprite", resetTime);
+    }
+
+    private void ReactivateSprite()
+    {
+        spriteRenderer.enabled = true;
     }
 
     public override float CalculateScore()

@@ -7,8 +7,14 @@ public class LevelCompleteZone : MonoBehaviour
     [SerializeField]
     IMinigame levelManager;
 
+    [SerializeField]
+    LayerMask triggeringLayers;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        levelManager.MinigameComplete(true);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            levelManager.MinigameComplete(true);
+        }
     }
 }
