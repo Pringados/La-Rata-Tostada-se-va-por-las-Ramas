@@ -85,13 +85,16 @@ public class Powerpoint : IMinigame
 
     private IEnumerator ButtonSpawn()
     {
+        float waitTime = resetTime;
 
-        yield return new WaitForSeconds(resetTime);
+        while (waitTime > 0 && terminado)
+        {
+            yield return null;
+            waitTime -= Time.deltaTime;
+        }
 
         if (terminado)
-        {
             endButton.SetActive(true);
-        }
     }
 
     private IEnumerator ResetPowerPoint()
