@@ -30,7 +30,7 @@ public class Powerpoint : IMinigame
 
     private void OnEnable()
     {
-        ModifyPowerPoint(); 
+        ModifyPowerPoint(true); 
     }
 
     public void OnButtonClick(bool next)
@@ -69,7 +69,7 @@ public class Powerpoint : IMinigame
         endButton.SetActive(false);
     }
 
-    private void ModifyPowerPoint()
+    private void ModifyPowerPoint(bool starting = false)
     {
         counter = 0; 
 
@@ -77,8 +77,13 @@ public class Powerpoint : IMinigame
 
         powerpoint = new int[maxCounter];
 
+        Debug.Assert(powerpoint.Length > 1);
+
         for (int i = 0; i < maxCounter; i++)
-            powerpoint[i] = Random.Range(0, slides.Length);
+            powerpoint[i] = Random.Range(1, slides.Length);
+
+        if (starting)
+            powerpoint[0] = 0;
 
         window.sprite = slides[powerpoint[counter]];
     }
