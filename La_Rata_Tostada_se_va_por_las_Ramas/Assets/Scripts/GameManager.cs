@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     private int actionDownCounters = 0;
 
     StudioEventEmitter emitter;
+    private bool musicPlaying = false;
 
     void Awake()
     {
@@ -43,6 +44,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if(musicPlaying == false && Input.anyKeyDown)
+        {
+            emitter.Play();
+            musicPlaying = true;
+        }
+
         if (!timerPaused && remainingTimeToRagnarok >= 0f)
         {
             remainingTimeToRagnarok -= Time.deltaTime;
